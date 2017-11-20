@@ -6,14 +6,10 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context="guide.athletes.thai.muay.project_mtag_rachelsoderberg.HomeActivity">
+    tools:context="guide.athletes.thai.muay.project_mtag_rachelsoderberg.SkillsActivity">
 
-    <Button
-        android:id="@+id/skillsButton"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:onClick="onSkillsActivity"
-        android:text="@string/skills" />
-
+        android:text="Testing Skills activity" />
 </LinearLayout>
