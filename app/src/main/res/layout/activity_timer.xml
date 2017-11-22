@@ -9,8 +9,38 @@
     tools:context="guide.athletes.thai.muay.project_mtag_rachelsoderberg.TimerActivity">
 
     <TextView
+        android:id="@+id/time_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TODO: Insert timer functionality here"/>
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="56sp" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickStart"
+        android:text="@string/start" />
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:onClick="onClickStop"
+        android:text="@string/stop" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:onClick="onClickReset"
+        android:text="@string/reset" />
 
 </LinearLayout>
