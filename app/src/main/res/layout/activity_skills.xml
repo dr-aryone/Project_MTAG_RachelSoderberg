@@ -8,8 +8,36 @@
     android:orientation="vertical"
     tools:context="guide.athletes.thai.muay.project_mtag_rachelsoderberg.SkillsActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Testing Skills activity" />
+    <Button
+        android:id="@+id/combosButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:onClick="onCombosActivity"
+        android:text="@string/combos" />
+
+    <Button
+        android:id="@+id/stylesButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:onClick="onStylesActivity"
+        android:text="@string/styles" />
+
+    <Button
+        android:id="@+id/selfDefenseButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:onClick="onSelfDefenseActivity"
+        android:text="@string/selfDefense" />
+
+    <Button
+        android:id="@+id/userPortalButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:onClick="onUserPortalActivity"
+        android:text="@string/userPortal" />
+
 </LinearLayout>

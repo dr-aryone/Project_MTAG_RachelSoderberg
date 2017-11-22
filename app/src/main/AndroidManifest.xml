@@ -16,7 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SkillsActivity"></activity>
+        <activity android:name=".SkillsActivity" />
+        <activity android:name=".CombosActivity" />
+        <activity android:name=".BoxingActivity" />
+        <activity android:name=".KickingActivity" />
+        <activity android:name=".AllWeaponsActivity" />
+        <activity android:name=".StylesActivity" />
+        <activity android:name=".SelfDefenseActivity" />
+        <activity android:name=".UserActivity" />
+        <activity android:name=".WorkoutsActivity" />
+        <activity android:name=".WodsActivity" />
+        <activity android:name=".TimerActivity"></activity>
     </application>
 
 </manifest>

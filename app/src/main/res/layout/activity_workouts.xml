@@ -6,22 +6,22 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context="guide.athletes.thai.muay.project_mtag_rachelsoderberg.HomeActivity">
+    tools:context="guide.athletes.thai.muay.project_mtag_rachelsoderberg.WorkoutsActivity">
 
     <Button
-        android:id="@+id/skillsButton"
+        android:id="@+id/wodsButton"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="6dp"
-        android:onClick="onSkillsActivity"
-        android:text="@string/skills" />
+        android:onClick="onWodsActivity"
+        android:text="@string/wods" />
 
     <Button
-        android:id="@+id/workoutsButton"
+        android:id="@+id/timerButton"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="6dp"
-        android:onClick="onWorkoutsActivity"
-        android:text="@string/workouts" />
+        android:onClick="onTimerActivity"
+        android:text="@string/timer" />
 
 </LinearLayout>
