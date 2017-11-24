@@ -14,33 +14,44 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textAppearance="@android:style/TextAppearance.Large"
-        android:textSize="56sp" />
+        android:textSize="100sp" />
 
-    <Button
-        android:id="@+id/start_button"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:onClick="onClickStart"
-        android:text="@string/start" />
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        tools:context="guide.athletes.thai.muay.project_mtag_rachelsoderberg.TimerActivity">
 
-    <Button
-        android:id="@+id/stop_button"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
-        android:onClick="onClickStop"
-        android:text="@string/stop" />
+        <Button
+                android:id="@+id/start_button"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="20dp"
+                android:onClick="onClickStart"
+                android:text="@string/start" />
 
-    <Button
-        android:id="@+id/reset_button"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
-        android:onClick="onClickReset"
-        android:text="@string/reset" />
+            <Button
+                android:id="@+id/stop_button"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:onClick="onClickStop"
+                android:text="@string/stop" />
+
+            <Button
+                android:id="@+id/reset_button"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="8dp"
+                android:onClick="onClickReset"
+                android:text="@string/reset" />
+    </LinearLayout>
 
 </LinearLayout>
