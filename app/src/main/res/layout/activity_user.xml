@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
+    android:background="@color/colorBackground"
     tools:context="guide.athletes.thai.muay.project_mtag_rachelsoderberg.UserActivity">
 
     <TextView
