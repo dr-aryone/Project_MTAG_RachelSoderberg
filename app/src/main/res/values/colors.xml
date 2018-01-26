@@ -27,8 +27,9 @@
     <color name="colorDarkPurple">#490367</color>
 
 <!--Object colors-->
-    <color name="colorBackground">#444141</color>
-    <color name="colorButtons">#C6A700</color>
+    <color name="colorBackground">#444141</color> <!--DarkGrey-->
+    <color name="colorText">#FFFFFF</color> <!--White-->
+    <color name="colorButtons">#C6A700</color> <!--MedGold-->
     <color name="colorTimerGreen">#24A72F</color>
     <color name="colorTimerRed">#c72014</color>
 </resources>

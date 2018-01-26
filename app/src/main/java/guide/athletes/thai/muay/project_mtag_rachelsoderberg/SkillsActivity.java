@@ -28,9 +28,4 @@ public class SkillsActivity extends Activity {
         Intent intent = new Intent(this, SelfDefenseActivity.class);
         startActivity(intent);
     }
-
-    public void onUserPortalActivity(View view) {
-        Intent intent = new Intent(this, UserActivity.class);
-        startActivity(intent);
-    }
 }

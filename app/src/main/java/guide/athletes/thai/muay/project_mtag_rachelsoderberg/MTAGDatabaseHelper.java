@@ -57,6 +57,7 @@ class MTAGDatabaseHelper extends SQLiteOpenHelper {
               + "COUNTRY TEXT);");
               // Populate User table data (for testing)
               insertUser(db, "CL1FF72", "cliffsemail@hotmail.com", "Cliff", "Cliffton", "USA");
+              insertUser(db, "RSODER", "rachsoderberg@gmail.com", "Rachel", "Soderberg", "USA");
 
               // Create Account info table
               db.execSQL("CREATE TABLE ACCOUNT ("
@@ -65,6 +66,7 @@ class MTAGDatabaseHelper extends SQLiteOpenHelper {
               + "PASSWORD TEXT);");
               // Populate Account table data (for testing)
               insertAccount(db, "CL1FF72", "123abc");
+              insertAccount(db, "RSODER", "ab123");
           }
      }
 }
