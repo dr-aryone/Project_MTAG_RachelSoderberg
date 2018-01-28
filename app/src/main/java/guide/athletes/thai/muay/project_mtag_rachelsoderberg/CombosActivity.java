@@ -11,7 +11,7 @@ public class CombosActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_combos);
-        Intent intent = getIntent();
+        //Intent intent = getIntent(); // TODO: Remove
     }
 
     public void onBoxingActivity(View view) {

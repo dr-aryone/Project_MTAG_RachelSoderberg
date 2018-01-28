@@ -11,10 +11,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class UserActivity extends Activity {
-    private SQLiteDatabase db;
-    private Cursor cursor;
+    SQLiteOpenHelper dbhelper;
+    SQLiteDatabase db;
+    Cursor cursor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +37,6 @@ public class UserActivity extends Activity {
             toast.show();
         }
 */
-        Intent intent = getIntent();
     }
 
     @Override

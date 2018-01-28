@@ -3,4 +3,5 @@
     <string name="login">Log In</string>
     <string name="user">Log In or Create Account:</string>
     <string name="createAccount">Create Account</string>
+    <string name="registerAccount">Register</string>
 </resources>

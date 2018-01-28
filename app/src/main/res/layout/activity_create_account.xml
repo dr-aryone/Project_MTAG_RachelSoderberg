@@ -9,5 +9,4 @@
     android:background="@color/colorBackground"
     tools:context="guide.athletes.thai.muay.project_mtag_rachelsoderberg.UserActivity">
 
-
 </LinearLayout>

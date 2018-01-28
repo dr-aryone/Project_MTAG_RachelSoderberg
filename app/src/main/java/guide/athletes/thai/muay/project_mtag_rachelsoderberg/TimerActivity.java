@@ -17,7 +17,6 @@ public class TimerActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
-        Intent intent = getIntent();
 
         // Restore activity's state by getting values from Bundle
         if (savedInstanceState != null) {
