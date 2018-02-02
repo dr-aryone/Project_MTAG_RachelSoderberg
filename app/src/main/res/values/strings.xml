@@ -3,6 +3,9 @@
     <string name="skills">Skills</string>
     <string name="workouts">Workouts</string>
     <string name="title_activity_login">Log in</string>
+    <string name="logo">Muay Thai Athletes Guide Logo</string>
+    <string name="backToLogin">Back to Login</string>
+    <string name="register">Register</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -16,4 +19,5 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="title_activity_register">RegisterActivity</string>
 </resources>

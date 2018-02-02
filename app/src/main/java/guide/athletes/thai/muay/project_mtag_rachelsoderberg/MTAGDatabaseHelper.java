@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 
 // Resources: https://www.loopwiki.com/beginner/android-login-register-sqlite-database-tutorial/
-// http://yasirameen.com/2016/02/android-sqlite-database-login-system/
 
 class MTAGDatabaseHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "mtag"; // Database name
@@ -16,14 +15,14 @@ class MTAGDatabaseHelper extends SQLiteOpenHelper {
     public static final String ACCOUNT_TABLE_NAME = "account";
     public static final String COLUMN_ID = "_id";
     public static final String COLUMN_USERNAME = "username";
+    public static final String COLUMN_EMAIL = "email";
     public static final String COLUMN_PASSWORD = "password";
 
     // Create Account table
     private static final String SQL_ACCOUNT_TABLE =
            "CREATE TABLE " + ACCOUNT_TABLE_NAME + " (" +
                    COLUMN_ID + " INTEGER PRIMARY KEY AUTO INCREMENT, " +
-                   COLUMN_USERNAME + "TEXT" + COLUMN_PASSWORD + " TEXT " + ")";
-
+                   COLUMN_USERNAME + "TEXT" + COLUMN_EMAIL + " TEXT, " + COLUMN_PASSWORD + " TEXT " + ")";
 
     MTAGDatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -32,14 +31,12 @@ class MTAGDatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // When database is first called
-        //TODO: updateDatabase(db, 0, DB_VERSION);
         db.execSQL(ACCOUNT_TABLE_NAME);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Update database when version number increases
-        //TODO: updateDatabase(db, oldVersion, newVersion);
         db.execSQL("DROP TABLE IF EXISTS " + ACCOUNT_TABLE_NAME);
     }
 /*
@@ -67,10 +64,11 @@ class MTAGDatabaseHelper extends SQLiteOpenHelper {
     }
 */
     // Add accounts to the Account Table
-    public void insertAccount(Account account) {
+    public void addAccount(Account account) {
         SQLiteDatabase db = this.getWritableDatabase(); // Get writable database
         ContentValues values = new ContentValues(); // Create content values to insert
         values.put(COLUMN_USERNAME, account.userName); // Put username in @values
+        values.put(COLUMN_EMAIL, account.email); // Put email in @values
         values.put(COLUMN_PASSWORD, account.password); // Put password in @values
         long todo_id = db.insert(ACCOUNT_TABLE_NAME, null, values); // Insert row
     }
@@ -78,14 +76,14 @@ class MTAGDatabaseHelper extends SQLiteOpenHelper {
     public Account Authenticate(Account account) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(ACCOUNT_TABLE_NAME, // Select table
-                new String[]{COLUMN_ID, COLUMN_USERNAME, COLUMN_PASSWORD}, // Select columns I want to query
-                COLUMN_USERNAME + "=?",
-                new String[]{account.userName}, // Where clause
+                new String[]{COLUMN_ID, COLUMN_USERNAME, COLUMN_EMAIL, COLUMN_PASSWORD}, // Select columns I want to query
+                COLUMN_EMAIL + "=?",
+                new String[]{account.email}, // Where clause
                 null, null, null);
 
         if (cursor != null && cursor.moveToFirst() && cursor.getCount() > 0) {
             // If cursor has value, then there is an account associated with this username in db
-            Account account1 = new Account(cursor.getString(0), cursor.getString(1), cursor.getString(2));
+            Account account1 = new Account(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
 
             if (account.userName.equalsIgnoreCase(account1.userName)) {
                 return account1;
@@ -95,12 +93,12 @@ class MTAGDatabaseHelper extends SQLiteOpenHelper {
         return null;
     }
 
-    public boolean isUsernameExists(String userName) {
+    public boolean isEmailExists(String email) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(ACCOUNT_TABLE_NAME, // Select table
-                new String[]{COLUMN_ID, COLUMN_USERNAME, COLUMN_PASSWORD},
-                COLUMN_USERNAME + "=?",
-                new String[]{userName}, // Where clause
+                new String[]{COLUMN_ID, COLUMN_USERNAME, COLUMN_EMAIL, COLUMN_PASSWORD},
+                COLUMN_EMAIL + "=?",
+                new String[]{email}, // Where clause
                 null, null, null);
         if (cursor != null && cursor.moveToFirst() && cursor.getCount() > 0) {
             // If cursor has value, then there is an account associated with this username

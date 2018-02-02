@@ -6,7 +6,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.View;
@@ -14,16 +13,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 /**
  * Created by Rachel on 1/27/2018.
  */
 
 public class LoginActivity extends Activity{
-    EditText editTextUsername;
+    EditText editTextEmail;
     EditText editTextPassword;
-    TextInputLayout textInputLayoutUsername;
+    TextInputLayout textInputLayoutEmail;
     TextInputLayout textInputLayoutPassword;
     Button buttonLogin;
     MTAGDatabaseHelper mtagDatabaseHelper;
@@ -43,11 +40,11 @@ public class LoginActivity extends Activity{
                 // Validate user input
                 if (validate()) {
                     // Get values from EditText fields
-                    String Username = editTextUsername.getText().toString();
+                    String Email = editTextEmail.getText().toString();
                     String Password = editTextPassword.getText().toString();
 
                     // Authenticate account
-                    Account currentAccount = mtagDatabaseHelper.Authenticate(new Account(null, null, Username, Password));
+                    Account currentAccount = mtagDatabaseHelper.Authenticate(new Account(null, null, Email, Password));
 
                     // Was authentication successful?
                     if (currentAccount != null) {
@@ -80,9 +77,9 @@ public class LoginActivity extends Activity{
 
     // Connect XML views to its objects
     private void initViews() {
-        editTextUsername = (EditText) findViewById(R.id.editTextUsername);
+        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        textInputLayoutUsername = (TextInputLayout) findViewById(R.id.textInputLayoutUsername);
+        textInputLayoutEmail = (TextInputLayout) findViewById(R.id.textInputLayoutEmail);
         textInputLayoutPassword = (TextInputLayout) findViewById(R.id.textInputLayoutPassword);
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
     }
@@ -103,20 +100,34 @@ public class LoginActivity extends Activity{
     public boolean validate() {
         boolean valid = false;
 
-        String Username = editTextUsername.getText().toString();
+        String Username = editTextEmail.getText().toString();
         String Password = editTextPassword.getText().toString();
 
         // Handle Username field validation
         if (Username.isEmpty()) {
             valid = false;
-            textInputLayoutUsername.setError("Please enter a valid username");
+            textInputLayoutEmail.setError("Please enter a valid username");
         } else {
-            if (Username.length() > 4 && Username.length() < 12) {
+            if (Username.length() > 4 && Username.length() <= 15) {
                 valid = true;
-                textInputLayoutUsername.setError(null);
+                textInputLayoutEmail.setError(null);
             } else {
                 valid = false;
-                textInputLayoutUsername.setError("Username must be greater than 4 characters and less than 12.");
+                textInputLayoutEmail.setError("Username must be greater than 4 characters and less than or equal to 15.");
+            }
+        }
+
+        // Handle Password field validation
+        if (Password.isEmpty()) {
+            valid = false;
+            textInputLayoutPassword.setError("Please enter a valid password");
+        } else {
+            if (Password.length() > 5 && Password.length() <= 20) {
+                valid = true;
+                textInputLayoutPassword.setError(null);
+            } else {
+                valid = false;
+                textInputLayoutPassword.setError("Password must be greater than 5 characters and less than or equal to 20");
             }
         }
         return valid;

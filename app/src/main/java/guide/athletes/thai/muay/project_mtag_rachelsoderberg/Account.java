@@ -7,11 +7,13 @@ package guide.athletes.thai.muay.project_mtag_rachelsoderberg;
 public class Account {
     public String _id;
     public String userName;
+    public String email;
     public String password;
 
-    public Account(String _id, String userName, String password) {
+    public Account(String _id, String userName, String email, String password) {
         this._id = _id;
         this.userName = userName;
+        this.email = email;
         this.password = password;
     }
 }
