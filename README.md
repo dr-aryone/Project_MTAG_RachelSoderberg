@@ -14,9 +14,9 @@
 "As a parent of a child who trains, I want an app that will provide instruction and information in a manner that is safe and accessible to all ages."  
   
 ##### Testing  
-###### APIs Used:  
-- 
-  
+###### Android Emulator APIs Used:  
+- Nexus 5X API 26  
+- Galaxy Nexus API 27  
   
 ##### Error Handling  
 ###### Login and Registration:  

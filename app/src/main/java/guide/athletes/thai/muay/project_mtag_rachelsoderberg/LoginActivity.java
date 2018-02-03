@@ -8,10 +8,12 @@ import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.text.Html;
 import android.text.Spanned;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.support.v7.app.AppCompatActivity;
 
 /**
  * Created by Rachel on 1/27/2018.
@@ -88,7 +90,7 @@ public class LoginActivity extends Activity{
     @SuppressWarnings("deprecation")
     public static Spanned fromHtml(String html) {
         Spanned result;
-        if (Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
             result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
         } else {
             result = Html.fromHtml(html);
@@ -100,21 +102,16 @@ public class LoginActivity extends Activity{
     public boolean validate() {
         boolean valid = false;
 
-        String Username = editTextEmail.getText().toString();
+        String Email = editTextEmail.getText().toString();
         String Password = editTextPassword.getText().toString();
 
-        // Handle Username field validation
-        if (Username.isEmpty()) {
+        // Handle Email field validation
+        if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
             valid = false;
-            textInputLayoutEmail.setError("Please enter a valid username");
+            textInputLayoutEmail.setError("Please enter a valid email");
         } else {
-            if (Username.length() > 4 && Username.length() <= 15) {
-                valid = true;
-                textInputLayoutEmail.setError(null);
-            } else {
-                valid = false;
-                textInputLayoutEmail.setError("Username must be greater than 4 characters and less than or equal to 15.");
-            }
+            valid = true;
+            textInputLayoutEmail.setError(null);
         }
 
         // Handle Password field validation

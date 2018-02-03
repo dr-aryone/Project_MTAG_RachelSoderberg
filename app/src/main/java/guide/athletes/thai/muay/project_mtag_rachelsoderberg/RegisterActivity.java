@@ -24,7 +24,7 @@ public class RegisterActivity extends Activity {
     MTAGDatabaseHelper mtagDatabaseHelper;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         mtagDatabaseHelper = new MTAGDatabaseHelper(this);
@@ -107,6 +107,7 @@ public class RegisterActivity extends Activity {
             valid = true;
             textInputLayoutEmail.setError(null);
         }
+
         // Handle Password field validation
         if (Password.isEmpty()) {
             valid = false;

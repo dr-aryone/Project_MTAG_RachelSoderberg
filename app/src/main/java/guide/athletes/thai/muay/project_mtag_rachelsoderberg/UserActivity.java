@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class UserActivity extends Activity {
-    SQLiteOpenHelper dbhelper;
+    /*SQLiteOpenHelper dbhelper;
     SQLiteDatabase db;
     Cursor cursor;
 
@@ -23,7 +23,7 @@ public class UserActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
-/*
+*//*
         ListView listUsers = (ListView) findViewById(R.id.list_users);
         SQLiteOpenHelper mtagDatabaseHelper = new MTAGDatabaseHelper(this);
         try {
@@ -36,7 +36,7 @@ public class UserActivity extends Activity {
             Toast toast = Toast.makeText(this, "Database unavailable", Toast.LENGTH_SHORT);
             toast.show();
         }
-*/
+*//*
     }
 
     @Override
@@ -54,5 +54,5 @@ public class UserActivity extends Activity {
     public void onLoginActivity(View view) {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
-    }
+    }*/
 }

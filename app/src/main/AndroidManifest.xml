@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="guide.athletes.thai.muay.project_mtag_rachelsoderberg"> <!-- uses-permission android:name="android.permission.READ_CONTACTS" / -->
-    <uses-sdk
+    <!--<uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="27" />
 
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    &lt;!&ndash; To auto-complete the email text field in the login form with the user's emails &ndash;&gt;
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
+-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,12 +20,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<!--
         <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+-->
+        <activity android:name=".HomeActivity" />
         <activity android:name=".SkillsActivity" />
         <activity android:name=".CombosActivity" />
         <activity android:name=".BoxingActivity" />
@@ -40,14 +44,13 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name">
-            <!--<intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
         </activity>
         <activity
             android:name=".RegisterActivity"
-            android:label="@string/title_activity_register">
-        </activity>
+            android:label="@string/title_activity_register" />
     </application>
 </manifest>

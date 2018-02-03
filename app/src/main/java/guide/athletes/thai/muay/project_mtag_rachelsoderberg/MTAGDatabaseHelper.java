@@ -9,8 +9,8 @@ import android.database.sqlite.SQLiteDatabase;
 // Resources: https://www.loopwiki.com/beginner/android-login-register-sqlite-database-tutorial/
 
 class MTAGDatabaseHelper extends SQLiteOpenHelper {
-    private static final String DB_NAME = "mtag"; // Database name
-    private static final int DB_VERSION = 1; // Database version
+    public static final String DB_NAME = "mtag"; // Database name
+    public static final int DB_VERSION = 1; // Database version
 
     public static final String ACCOUNT_TABLE_NAME = "account";
     public static final String COLUMN_ID = "_id";
@@ -19,19 +19,20 @@ class MTAGDatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_PASSWORD = "password";
 
     // Create Account table
-    private static final String SQL_ACCOUNT_TABLE =
-           "CREATE TABLE " + ACCOUNT_TABLE_NAME + " (" +
-                   COLUMN_ID + " INTEGER PRIMARY KEY AUTO INCREMENT, " +
-                   COLUMN_USERNAME + "TEXT" + COLUMN_EMAIL + " TEXT, " + COLUMN_PASSWORD + " TEXT " + ")";
+    public static final String SQL_ACCOUNT_TABLE = "CREATE TABLE " + ACCOUNT_TABLE_NAME
+            + " (" + COLUMN_ID + " INTEGER PRIMARY KEY, "
+            + COLUMN_USERNAME + "TEXT"
+            + COLUMN_EMAIL + " TEXT, "
+            + COLUMN_PASSWORD + " TEXT " + ")";
 
-    MTAGDatabaseHelper(Context context) {
+    public MTAGDatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         // When database is first called
-        db.execSQL(ACCOUNT_TABLE_NAME);
+        db.execSQL(SQL_ACCOUNT_TABLE);
     }
 
     @Override
@@ -70,6 +71,7 @@ class MTAGDatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_USERNAME, account.userName); // Put username in @values
         values.put(COLUMN_EMAIL, account.email); // Put email in @values
         values.put(COLUMN_PASSWORD, account.password); // Put password in @values
+
         long todo_id = db.insert(ACCOUNT_TABLE_NAME, null, values); // Insert row
     }
 
@@ -81,11 +83,11 @@ class MTAGDatabaseHelper extends SQLiteOpenHelper {
                 new String[]{account.email}, // Where clause
                 null, null, null);
 
-        if (cursor != null && cursor.moveToFirst() && cursor.getCount() > 0) {
+        if (cursor != null && cursor.moveToFirst()) { // && cursor.getCount() > 0) {
             // If cursor has value, then there is an account associated with this username in db
             Account account1 = new Account(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
 
-            if (account.userName.equalsIgnoreCase(account1.userName)) {
+            if (account.password.equalsIgnoreCase(account1.password)) {
                 return account1;
             }
         }
@@ -100,7 +102,7 @@ class MTAGDatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_EMAIL + "=?",
                 new String[]{email}, // Where clause
                 null, null, null);
-        if (cursor != null && cursor.moveToFirst() && cursor.getCount() > 0) {
+        if (cursor != null && cursor.moveToFirst()) { // && cursor.getCount() > 0) {
             // If cursor has value, then there is an account associated with this username
             return true;
         }
