@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-40:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d4a72478542c44453e93d0b6ffc29a7c\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\64d3d8da502b683a52d88487b4e6f2e5\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1734c6157f4d07009d6ca74f7a83a17c\AndroidManifest.xml:2:1-11:12
@@ -18,25 +18,25 @@ MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Rachel\.gra
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\58df3fa09b0821ccc815305c79d9fa1e\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8b7adba19c063f4fd28b8472eba948d9\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\629d64911c6f9bd076a2263565389723\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:3:5-49
 		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-40:12
 		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-40:12
 		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:5:5-37:19
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:5:5-38:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d4a72478542c44453e93d0b6ffc29a7c\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d4a72478542c44453e93d0b6ffc29a7c\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\64d3d8da502b683a52d88487b4e6f2e5\AndroidManifest.xml:25:5-29:19
@@ -147,6 +147,10 @@ activity#com.mtag.app.muaythaiathletesguide.TechniquesActivity
 ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:36:9-56
 	android:name
 		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:36:19-53
+activity#com.mtag.app.muaythaiathletesguide.UserPortalActivity
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:37:9-56
+	android:name
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:37:19-53
 uses-sdk
 INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml

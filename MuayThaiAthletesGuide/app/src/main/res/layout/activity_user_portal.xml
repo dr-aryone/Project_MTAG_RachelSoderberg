@@ -7,13 +7,11 @@
     android:padding="16dp"
     android:orientation="vertical"
     android:background="@color/colorPrimary"
-    android:fitsSystemWindows="true"
-    tools:context="com.mtag.app.muaythaiathletesguide.VideosActivity">
+    tools:context="com.mtag.app.muaythaiathletesguide.UserPortalActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
-        android:text="Video thumbnails?"/>
-
+        android:text="User activity, saved content such as combos and workouts."/>
 </LinearLayout>

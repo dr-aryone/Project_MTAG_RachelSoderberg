@@ -23,6 +23,11 @@ public class HomeActivity extends Activity {
         startActivity(intent);
     }
 
+    public void onUserPortalActivity(View view) {
+        Intent intent = new Intent(this, UserPortalActivity.class);
+        startActivity(intent);
+    }
+
     public void onTimerActivity(View view) {
         Intent intent = new Intent(this, TimerActivity.class);
         startActivity(intent);
