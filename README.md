@@ -20,4 +20,8 @@
   
 ##### Error Handling  
 ###### Login and Registration:  
-- 
+- Empty email address, password  
+- Email address, password too short/long  
+- Email address invalid (requires @ and .com)  
+- Email address associated with account, require registration if not
+- Password associated with login email is correct to log in
