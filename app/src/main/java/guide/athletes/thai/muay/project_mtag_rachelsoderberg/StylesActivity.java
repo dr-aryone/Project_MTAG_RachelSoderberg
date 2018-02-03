@@ -10,6 +10,5 @@ public class StylesActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_styles);
-        Intent intent = getIntent();
     }
 }

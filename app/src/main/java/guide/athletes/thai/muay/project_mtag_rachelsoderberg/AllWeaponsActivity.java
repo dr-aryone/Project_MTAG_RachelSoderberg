@@ -10,6 +10,5 @@ public class AllWeaponsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_weapons);
-        Intent intent = getIntent();
     }
 }

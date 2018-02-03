@@ -11,7 +11,6 @@ public class WorkoutsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workouts);
-        Intent intent = getIntent();
     }
 
     public void onWodsActivity(View view) {

@@ -27,4 +27,13 @@
         android:onClick="onWorkoutsActivity"
         android:text="@string/workouts" />
 
+    <Button
+        android:id="@+id/userPortalButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/colorButtons"
+        android:onClick="onUserPortalActivity"
+        android:text="@string/userPortal" />
+
 </LinearLayout>

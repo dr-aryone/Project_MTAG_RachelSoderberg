@@ -10,6 +10,6 @@ public class BoxingActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boxing);
-        Intent intent = getIntent();
+        //Intent intent = getIntent(); // TODO: Remove
     }
 }

@@ -10,6 +10,6 @@ public class KickingActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kicking);
-        Intent intent = getIntent();
+        //Intent intent = getIntent(); // TODO: Remove
     }
 }

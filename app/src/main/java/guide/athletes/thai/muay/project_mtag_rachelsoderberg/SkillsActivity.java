@@ -11,7 +11,6 @@ public class SkillsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_skills);
-        Intent intent = getIntent();
     }
 
     public void onCombosActivity(View view) {
@@ -26,11 +25,6 @@ public class SkillsActivity extends Activity {
 
     public void onSelfDefenseActivity(View view) {
         Intent intent = new Intent(this, SelfDefenseActivity.class);
-        startActivity(intent);
-    }
-
-    public void onUserPortalActivity(View view) {
-        Intent intent = new Intent(this, UserActivity.class);
         startActivity(intent);
     }
 }
