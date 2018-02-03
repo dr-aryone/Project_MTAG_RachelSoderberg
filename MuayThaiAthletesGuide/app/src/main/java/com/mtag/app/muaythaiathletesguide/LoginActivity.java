@@ -13,19 +13,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class LoginActivity extends Activity {
-
-    //Declaration EditTexts
     EditText editTextEmail;
     EditText editTextPassword;
-
-    //Declaration TextInputLayout
     TextInputLayout textInputLayoutEmail;
     TextInputLayout textInputLayoutPassword;
-
-    //Declaration Button
     Button buttonLogin;
-
-    //Declaration SqliteHelper
     SqliteHelper sqliteHelper;
 
     @Override
@@ -36,44 +28,36 @@ public class LoginActivity extends Activity {
         initCreateAccountTextView();
         initViews();
 
-        //set click event of login button
+        // Login button click event
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                //Check user input is correct or not
+                // Validate user input
                 if (validate()) {
-
-                    //Get values from EditText fields
+                    // Get values
                     String Email = editTextEmail.getText().toString();
                     String Password = editTextPassword.getText().toString();
 
-                    //Authenticate user
+                    // Authenticate user
                     User currentUser = sqliteHelper.Authenticate(new User(null, null, Email, Password));
 
-                    //Check Authentication is successful or not
+                    // Authentication successful?
                     if (currentUser != null) {
                         Snackbar.make(buttonLogin, "Successfully Logged in!", Snackbar.LENGTH_LONG).show();
-
-                        //User Logged in Successfully Launch You home screen activity
-                       /* Intent intent=new Intent(LoginActivity.this,HomeScreenActivity.class);
+                        // Login successful, launch HomeActivity
+                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                         startActivity(intent);
-                        finish();*/
+                        finish();
                     } else {
-
-                        //User Logged in Failed
+                        // Login failed
                         Snackbar.make(buttonLogin, "Failed to log in , please try again", Snackbar.LENGTH_LONG).show();
-
                     }
                 }
             }
         });
-
-
     }
 
-    //this method used to set Create account TextView text and click event( maltipal colors
-    // for TextView yet not supported in Xml so i have done it programmatically)
+    // Set TextView text and click event for account creation
     private void initCreateAccountTextView() {
         TextView textViewCreateAccount = (TextView) findViewById(R.id.textViewCreateAccount);
         textViewCreateAccount.setText(fromHtml("<font color='#ffffff'>I don't have account yet. </font><font color='#0c0099'>create one</font>"));
@@ -86,17 +70,16 @@ public class LoginActivity extends Activity {
         });
     }
 
-    //this method is used to connect XML views to its Objects
+    // Connect XML views to their objects
     private void initViews() {
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         textInputLayoutEmail = (TextInputLayout) findViewById(R.id.textInputLayoutEmail);
         textInputLayoutPassword = (TextInputLayout) findViewById(R.id.textInputLayoutPassword);
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
-
     }
 
-    //This method is for handling fromHtml method deprecation
+    // Handling fromHtml method deprecation
     @SuppressWarnings("deprecation")
     public static Spanned fromHtml(String html) {
         Spanned result;
@@ -108,39 +91,34 @@ public class LoginActivity extends Activity {
         return result;
     }
 
-    //This method is used to validate input given by user
+    // Validate user input
     public boolean validate() {
         boolean valid = false;
-
-        //Get values from EditText fields
         String Email = editTextEmail.getText().toString();
         String Password = editTextPassword.getText().toString();
 
-        //Handling validation for Email field
+        // Validate Email field
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
             valid = false;
-            textInputLayoutEmail.setError("Please enter valid email!");
+            textInputLayoutEmail.setError("Invalid email address");
         } else {
             valid = true;
             textInputLayoutEmail.setError(null);
         }
 
-        //Handling validation for Password field
+        // Validate Password field
         if (Password.isEmpty()) {
             valid = false;
-            textInputLayoutPassword.setError("Please enter valid password!");
+            textInputLayoutPassword.setError("Invalid password");
         } else {
             if (Password.length() > 5) {
                 valid = true;
                 textInputLayoutPassword.setError(null);
             } else {
                 valid = false;
-                textInputLayoutPassword.setError("Password is to short!");
+                textInputLayoutPassword.setError("Password is too short!");
             }
         }
-
         return valid;
     }
-
-
 }

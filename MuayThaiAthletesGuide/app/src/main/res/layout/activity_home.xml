@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    tools:context="com.mtag.app.muaythaiathletesguide.HomeActivity">
+
+    <Button
+        android:id="@+id/workoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/colorButtons"
+        android:onClick="onWorkoutsActivity"
+        android:text="@string/workouts" />
+
+    <Button
+        android:id="@+id/trainingButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/colorButtons"
+        android:onClick="onTrainingActivity"
+        android:text="@string/training" />
+
+    <Button
+        android:id="@+id/timerButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/colorButtons"
+        android:onClick="onTimerActivity"
+        android:text="@string/timer" />
+
+    <Button
+        android:id="@+id/nagaButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/colorButtons"
+        android:onClick="onNagaActivity"
+        android:text="@string/naga" />
+
+</LinearLayout>

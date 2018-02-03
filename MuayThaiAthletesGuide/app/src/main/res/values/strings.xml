@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">MuayThaiAthletesGuide</string>
+
+    <!--About/Information Strings-->
+    <string name="naga">Naga Muay Thai - Portland, Oregon, USA</string>
+
+    <!--Register/Login Strings-->
     <string name="create_account"><font color="#00ff00">text</font></string>
     <string name="email">Email</string>
     <string name="password">Password</string>
@@ -7,4 +12,21 @@
     <string name="username">Username</string>
     <string name="register">Register</string>
     <string name="back_to_login">Back to Login</string>
+
+    <!--Timer Strings-->
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="reset">Reset</string>
+
+    <!--Navigation Strings-->
+    <string name="timer">Timer</string>
+    <string name="workouts">Workouts</string>
+    <string name="wods">WODs with Minimal Equipment</string>
+    <string name="martial">Martial Arts-Inspired Workouts</string>
+    <string name="training"><![CDATA[Training & Instruction]]></string>
+    <string name="combos">Combinations</string>
+    <string name="videos">Videos</string>
+    <string name="lifting"><![CDATA[Weightlifting & Strength Training]]></string>
+    <string name="techniques">Techniques</string>
+
 </resources>

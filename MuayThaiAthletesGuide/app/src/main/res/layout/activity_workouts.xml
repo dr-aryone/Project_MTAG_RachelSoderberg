@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context="com.mtag.app.muaythaiathletesguide.WorkoutsActivity">
+
+    <Button
+        android:id="@+id/wodsButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/colorButtons"
+        android:onClick="onWodsActivity"
+        android:text="@string/wods" />
+
+    <Button
+        android:id="@+id/martialButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/colorButtons"
+        android:onClick="onMartialActivity"
+        android:text="@string/martial" />
+
+    <Button
+        android:id="@+id/liftingButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/colorButtons"
+        android:onClick="onLiftingActivity"
+        android:text="@string/lifting" />
+
+</LinearLayout>

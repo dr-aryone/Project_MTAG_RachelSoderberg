@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-29:12
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d4a72478542c44453e93d0b6ffc29a7c\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\64d3d8da502b683a52d88487b4e6f2e5\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\1734c6157f4d07009d6ca74f7a83a17c\AndroidManifest.xml:2:1-11:12
@@ -18,25 +18,25 @@ MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Rachel\.gra
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\58df3fa09b0821ccc815305c79d9fa1e\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8b7adba19c063f4fd28b8472eba948d9\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\629d64911c6f9bd076a2263565389723\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
 	package
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:3:5-49
-		INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:3:5-49
+		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-29:12
-		INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
+		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-29:12
-		INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:1-39:12
+		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:5:5-27:19
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:5:5-37:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d4a72478542c44453e93d0b6ffc29a7c\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d4a72478542c44453e93d0b6ffc29a7c\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\64d3d8da502b683a52d88487b4e6f2e5\AndroidManifest.xml:25:5-29:19
@@ -66,47 +66,91 @@ MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Rachel\.gradle\
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\629d64911c6f9bd076a2263565389723\AndroidManifest.xml:24:5-28:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\629d64911c6f9bd076a2263565389723\AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:11:9-40
 activity#com.mtag.app.muaythaiathletesguide.LoginActivity
-ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:12:9-21:20
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:12:9-21:20
 	android:label
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:14:13-45
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:14:13-45
 	android:theme
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:15:13-56
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:15:13-56
 	android:name
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:13:13-42
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:13:13-42
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:16:13-20:29
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:17:17-69
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:17:25-66
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:19:17-77
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:19:27-74
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:19:27-74
 activity#com.mtag.app.muaythaiathletesguide.RegisterActivity
-ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:22:9-25:59
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:22:9-25:59
 	android:label
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:24:13-45
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:24:13-45
 	android:theme
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:25:13-56
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:25:13-56
 	android:name
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:23:13-45
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:23:13-45
+activity#com.mtag.app.muaythaiathletesguide.HomeActivity
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:26:9-50
+	android:name
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:26:19-47
+activity#com.mtag.app.muaythaiathletesguide.TimerActivity
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:27:9-51
+	android:name
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:27:19-48
+activity#com.mtag.app.muaythaiathletesguide.WorkoutsActivity
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:28:9-54
+	android:name
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:28:19-51
+activity#com.mtag.app.muaythaiathletesguide.WodsActivity
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:29:9-50
+	android:name
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:29:19-47
+activity#com.mtag.app.muaythaiathletesguide.TrainingActivity
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:30:9-54
+	android:name
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:30:19-51
+activity#com.mtag.app.muaythaiathletesguide.NagaActivity
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:31:9-50
+	android:name
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:31:19-47
+activity#com.mtag.app.muaythaiathletesguide.MartialActivity
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:32:9-53
+	android:name
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:32:19-50
+activity#com.mtag.app.muaythaiathletesguide.VideosActivity
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:33:9-52
+	android:name
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:33:19-49
+activity#com.mtag.app.muaythaiathletesguide.CombosActivity
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:34:9-52
+	android:name
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:34:19-49
+activity#com.mtag.app.muaythaiathletesguide.LiftingActivity
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:35:9-53
+	android:name
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:35:19-50
+activity#com.mtag.app.muaythaiathletesguide.TechniquesActivity
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:36:9-56
+	android:name
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:36:19-53
 uses-sdk
-INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
 MERGED from [com.android.support:design:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d4a72478542c44453e93d0b6ffc29a7c\AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:design:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d4a72478542c44453e93d0b6ffc29a7c\AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\64d3d8da502b683a52d88487b4e6f2e5\AndroidManifest.xml:21:5-23:78
@@ -135,18 +179,18 @@ MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Rachel\.gradle\
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8b7adba19c063f4fd28b8472eba948d9\AndroidManifest.xml:21:5-23:58
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\629d64911c6f9bd076a2263565389723\AndroidManifest.xml:20:5-22:41
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\629d64911c6f9bd076a2263565389723\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d4a72478542c44453e93d0b6ffc29a7c\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Rachel\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d4a72478542c44453e93d0b6ffc29a7c\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Rachel\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\64d3d8da502b683a52d88487b4e6f2e5\AndroidManifest.xml:26:9-28:38

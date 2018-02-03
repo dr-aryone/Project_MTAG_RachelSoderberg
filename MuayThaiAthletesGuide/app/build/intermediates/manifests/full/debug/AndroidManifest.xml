@@ -15,7 +15,6 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.mtag.app.muaythaiathletesguide.LoginActivity"
@@ -31,6 +30,17 @@
             android:name="com.mtag.app.muaythaiathletesguide.RegisterActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.HomeActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.TimerActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.WorkoutsActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.WodsActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.TrainingActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.NagaActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.MartialActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.VideosActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.CombosActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.LiftingActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.TechniquesActivity" />
 
         <meta-data
             android:name="android.support.VERSION"

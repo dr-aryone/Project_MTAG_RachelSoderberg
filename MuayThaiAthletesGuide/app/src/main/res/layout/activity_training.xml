@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    tools:context="com.mtag.app.muaythaiathletesguide.TrainingActivity">
+
+    <Button
+        android:id="@+id/techniquesButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/colorButtons"
+        android:onClick="onTechniquesActivity"
+        android:text="@string/techniques" />
+
+    <Button
+        android:id="@+id/combosButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/colorButtons"
+        android:onClick="onCombosActivity"
+        android:text="@string/combos" />
+
+    <Button
+        android:id="@+id/videosButton"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/colorButtons"
+        android:onClick="onVideosActivity"
+        android:text="@string/videos" />
+
+</LinearLayout>

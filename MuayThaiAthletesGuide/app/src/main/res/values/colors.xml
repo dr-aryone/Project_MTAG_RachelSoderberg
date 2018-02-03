@@ -3,4 +3,33 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorSilver">#C0C0C0</color>
+    <color name="colorGrey">#A9A9A9</color>
+    <color name="colorDarkGrey">#444141</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorLightGold">#FFE764</color>
+    <color name="colorYellowGold">#FFE039</color>
+    <color name="colorGold">#FFD700</color>
+    <color name="colorMedGold">#C6A700</color>
+    <color name="colorDarkGold">#9B8300</color>
+
+    <color name="colorLightBlue">#5973C1</color>
+    <color name="colorSlateBlue">#3756B1</color>
+    <color name="colorBlue">#133AAC</color>
+    <color name="colorMedBlue">#0E2C85</color>
+    <color name="colorDarkBlue">#092169</color>
+
+    <color name="colorLightPurple">#9E50BF</color>
+    <color name="colorPurple">#7908AA</color>
+    <color name="colorDarkPurple">#490367</color>
+
+    <!--Object colors-->
+    <color name="colorBackground">#444141</color> <!--DarkGrey-->
+    <color name="colorText">#FFFFFF</color> <!--White-->
+    <color name="colorButtons">#C6A700</color> <!--MedGold-->
+    <color name="colorTimerGreen">#24A72F</color>
+    <color name="colorTimerRed">#c72014</color>
 </resources>
