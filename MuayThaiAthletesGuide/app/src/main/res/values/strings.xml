@@ -3,6 +3,10 @@
 
     <!--About/Information Strings-->
     <string name="naga">Naga Muay Thai - Portland, Oregon, USA</string>
+    <string name="naga_title">Naga Muay Thai\n- World Class Athletics -</string>
+    <string name="address">6332 SE 82nd Ave, Portland, OR 97266</string>
+    <string name="phone">(503)771-3451</string>
+    <string name="url">Visit our website: <a href="http://www.worldclasspdx.com">Naga Muay Thai</a></string>
 
     <!--Register/Login Strings-->
     <string name="create_account"><font color="#00ff00">text</font></string>
