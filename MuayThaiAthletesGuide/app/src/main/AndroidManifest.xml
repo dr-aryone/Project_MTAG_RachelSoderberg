@@ -35,6 +35,9 @@
         <activity android:name=".LiftingActivity" />
         <activity android:name=".TechniquesActivity" />
         <activity android:name=".UserPortalActivity" />
+        <activity android:name=".CoachesActivity" />
+        <activity android:name=".ScheduleActivity" />
+        <activity android:name=".TimerSpinnerActivity"></activity>
     </application>
 
 </manifest>

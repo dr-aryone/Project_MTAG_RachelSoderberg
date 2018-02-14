@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Let page scroll for content longer than screen-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        tools:context="com.mtag.app.muaythaiathletesguide.CoachesActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="35sp"
+            android:text="@string/coaches"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="25dp"
+            android:textSize="16sp"
+            android:text="@string/alex" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="25dp"
+            android:textSize="16sp"
+            android:text="@string/robin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="25dp"
+            android:textSize="16sp"
+            android:text="@string/rachel" />
+    </LinearLayout>
+</ScrollView>

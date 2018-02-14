@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="http://schemas.android.com/tools">
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="timer_spinner">
+        <item>Basic Stopwatch</item>
+        <item>Countdown</item>
+        <item>Tabata</item>
+        <item>Fight Gone Bad</item>
+        <item>\"3 On 1 Off\"</item>
+    </string-array>
     <attr format="reference" name="constraintSet"/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -116,11 +123,11 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FFFFFF</color>
     <color name="colorBackground">#444141</color>
     <color name="colorBlack">#000000</color>
     <color name="colorBlue">#133AAC</color>
-    <color name="colorButtons">#C6A700</color>
+    <color name="colorButtons">#FFCE19</color>
     <color name="colorDarkBlue">#092169</color>
     <color name="colorDarkGold">#9B8300</color>
     <color name="colorDarkGrey">#444141</color>
@@ -129,10 +136,11 @@
     <color name="colorGrey">#A9A9A9</color>
     <color name="colorLightBlue">#5973C1</color>
     <color name="colorLightGold">#FFE764</color>
+    <color name="colorLightGrey">#6de6e6e6</color>
     <color name="colorLightPurple">#9E50BF</color>
     <color name="colorMedBlue">#0E2C85</color>
     <color name="colorMedGold">#C6A700</color>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#3a1a3a</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorPurple">#7908AA</color>
     <color name="colorSilver">#C0C0C0</color>
@@ -142,6 +150,14 @@
     <color name="colorTimerRed">#c72014</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorYellowGold">#FFE039</color>
+    <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
+    <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
+    <color name="common_google_signin_btn_text_dark_focused">@android:color/black</color>
+    <color name="common_google_signin_btn_text_dark_pressed">@android:color/white</color>
+    <color name="common_google_signin_btn_text_light_default">#90000000</color>
+    <color name="common_google_signin_btn_text_light_disabled">#1F000000</color>
+    <color name="common_google_signin_btn_text_light_focused">#90000000</color>
+    <color name="common_google_signin_btn_text_light_pressed">#DE000000</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_fab_shadow_end_color">@android:color/transparent</color>
     <color name="design_fab_shadow_mid_color">#14000000</color>
@@ -440,6 +456,26 @@
         </attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat_Layout"><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_weight"/><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ListPopupWindow"><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/></declare-styleable>
+    <declare-styleable name="LoadingImageView"><attr name="imageAspectRatioAdjust">
+<enum name="none" value="0"/>
+
+<enum name="adjust_width" value="1"/>
+
+<enum name="adjust_height" value="2"/>
+
+</attr><attr format="float" name="imageAspectRatio"/><attr format="boolean" name="circleCrop"/></declare-styleable>
+    <declare-styleable name="MapAttrs"><attr name="mapType">
+<enum name="none" value="0"/>
+
+<enum name="normal" value="1"/>
+
+<enum name="satellite" value="2"/>
+
+<enum name="terrain" value="3"/>
+
+<enum name="hybrid" value="4"/>
+
+</attr><attr format="float" name="cameraBearing"/><attr format="float" name="cameraTargetLat"/><attr format="float" name="cameraTargetLng"/><attr format="float" name="cameraTilt"/><attr format="float" name="cameraZoom"/><attr format="boolean" name="liteMode"/><attr format="boolean" name="uiCompass"/><attr format="boolean" name="uiRotateGestures"/><attr format="boolean" name="uiScrollGestures"/><attr format="boolean" name="uiTiltGestures"/><attr format="boolean" name="uiZoomControls"/><attr format="boolean" name="uiZoomGestures"/><attr format="boolean" name="useViewLifecycle"/><attr format="boolean" name="zOrderOnTop"/><attr format="boolean" name="uiMapToolbar"/><attr format="boolean" name="ambientEnabled"/><attr format="float" name="cameraMinZoomPreference"/><attr format="float" name="cameraMaxZoomPreference"/><attr format="float" name="latLngBoundsSouthWestLatitude"/><attr format="float" name="latLngBoundsSouthWestLongitude"/><attr format="float" name="latLngBoundsNorthEastLatitude"/><attr format="float" name="latLngBoundsNorthEastLongitude"/></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="alphabeticModifiers">
             <flag name="META" value="0x10000"/>
@@ -489,6 +525,21 @@
     <declare-styleable name="ScrimInsetsFrameLayout"><attr format="color|reference" name="insetForeground"/></declare-styleable>
     <declare-styleable name="ScrollingViewBehavior_Layout"><attr format="dimension" name="behavior_overlapTop"/></declare-styleable>
     <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr format="string" name="defaultQueryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="searchHintIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/></declare-styleable>
+    <declare-styleable name="SignInButton"><attr format="reference" name="buttonSize">
+<enum name="standard" value="0"/>
+
+<enum name="wide" value="1"/>
+
+<enum name="icon_only" value="2"/>
+
+</attr><attr format="reference" name="colorScheme">
+<enum name="dark" value="0"/>
+
+<enum name="light" value="1"/>
+
+<enum name="auto" value="2"/>
+
+</attr><attr format="reference|string" name="scopeUris"/></declare-styleable>
     <declare-styleable name="SnackbarLayout"><attr name="android:maxWidth"/><attr name="elevation"/><attr format="dimension" name="maxActionInlineWidth"/></declare-styleable>
     <declare-styleable name="Spinner"><attr name="android:prompt"/><attr name="popupTheme"/><attr name="android:popupBackground"/><attr name="android:dropDownWidth"/><attr name="android:entries"/></declare-styleable>
     <declare-styleable name="SwitchCompat"><attr name="android:thumb"/><attr format="color" name="thumbTint"/><attr name="thumbTintMode">
@@ -751,6 +802,7 @@
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="config_tooltipAnimTime">150</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
+    <integer name="google_play_services_version">11910000</integer>
     <integer name="hide_password_duration">320</integer>
     <integer name="show_password_duration">200</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
@@ -785,20 +837,56 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="about">We founded our gym upon a philosophy based on promoting
+        both the performance and longevity of our athletes. We know that, all too often, we are
+        encouraged to choose results over the well-being of our bodies. Jiu jitsu, boxing, kickboxing,
+        wrestling, and strength/conditioning are all high-impact sports. Because of this, it is vital
+        to have a coach that is knowledgeable about recovery and the importance of avoiding
+        over-training.  We are proud to offer some of the best martial arts instruction in the
+        Pacific Northwest.</string>
     <string name="address">6332 SE 82nd Ave, Portland, OR 97266</string>
+    <string name="alex">ALEX BRANOM\n
+        HEAD MUAY THAI INSTRUCTOR\n
+        Alex Branom started with the original Team Quest in 2003 and received his purple belt under
+        Eddie Bravo in 2011. He also spent some time in Thailand, where he traveled and trained
+        throughout the country. He is a Rajanderm Stadium veteran and has trained with legendary Jean
+        Wayne Parr, Saenchai sor Koingstar, Pornsehnee Sitmonchai, and Hongthonglex, the best of the
+        best in Muay Thai. He graduated from Team Quest’s instructors’ course in 2007 and has been
+        coaching since 2008. In the past four years, he has competed in 14 Muay Thai matches. Now
+        that he is back in the US, he has been focusing on his MMA career and developing his Muay
+        Thai for MMA.</string>
     <string name="app_name">MuayThaiAthletesGuide</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="back_to_login">Back to Login</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="coaches">Our Coaches</string>
     <string name="combos">Combinations</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Install</string>
+    <string name="common_google_play_services_install_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are missing from your device.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
+    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
+    <string name="common_google_play_services_unknown_issue"><ns1:g id="app_name">%1$s</ns1:g> is having trouble with Google Play services. Please try again.</string>
+    <string name="common_google_play_services_unsupported_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are not supported by your device.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Update</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run unless you update Google Play services.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Update Google Play services</string>
+    <string name="common_google_play_services_updating_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are currently updating.</string>
+    <string name="common_google_play_services_wear_update_text">New version of Google Play services needed. It will update itself shortly.</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="create_account"><font color="#00ff00">text</font></string>
     <string name="email">Email</string>
     <string name="lifting"><![CDATA[Weightlifting & Strength Training]]></string>
     <string name="login">Login</string>
     <string name="martial">Martial Arts-Inspired Workouts</string>
     <string name="naga">Naga Muay Thai - Portland, Oregon, USA</string>
-    <string name="naga_title">Naga Muay Thai\n- World Class Athletics -</string>
+    <string name="naga_title">Naga Muay Thai</string>
     <string name="password">Password</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
@@ -806,19 +894,48 @@
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="phone">(503)771-3451</string>
+    <string name="rachel">RACHEL SODERBERG\n
+        STRENGTH AND CONDITIONING COACH\n
+        In February 2013, Rachel began training under Lyman Hiter with CrossFit Immense in Clackamas,
+        Oregon and has since expanded her fitness career to include over two dozen obstacle racing
+        events including a half-marathon trail tire carry challenge, long-distance obstacle course
+        races, and 12+ hour endurance events such as Spartan Race and Tough Mudder. As of February
+        2017 she has logged over 200 miles of street and obstacle course races. Through Clackamas
+        Community College and Oregon Institute of Technology, Rachel has taken several Nutrition and
+        wellness courses as well as Kung-Fu and Tai Chi. She began the second level of her training
+        under Robin Woods at World Class Athletics in April 2015 and was brought on as one of the
+        Strength and Conditioning coaches in 2016, providing her clients with the skills necessary
+        to meet their own nutrition and fitness-related goals. Recently Rachel has added Muay Thai,
+        under Alex Branom, to her list of athletic endeavors and strives to improve herself every
+        single day.</string>
     <string name="register">Register</string>
     <string name="reset">Reset</string>
+    <string name="robin">ROBIN WOODS\n
+        OPERATIONS MANAGER AND COACH\n
+        Robin is a mixed martial arts (MMA) fighter in Portland, OR and the owner of World Class
+        Athletics. Robin first got exposed to MMA through kickboxing and fitness classes in 2006.
+        In 2011 she took her first fight and has since distinguished herself as one of the top 125lb
+        female fighters in the region. She was the FCFF Female Fighter of the Year in 2011 and also
+        received the FCFF Most Unique Finish 2013 for her powerbomb slam knockout of Katie Howard.
+        She began competing in Muay Thai in 2016 and is looking to begin a professional boxing career
+        in the near future.  Robin is also a member of the Oregon Rugby Sports Union Women’s Premier
+        League team, a player on the Portland Hunters touch rugby team, and a coach for the Reed
+        Men’s and Women's Rugby teams.</string>
+    <string name="schedule">Schedule</string>
     <string name="search_menu_title">Search</string>
     <string name="start">Start</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="stop">Stop</string>
     <string name="techniques">Techniques</string>
     <string name="timer">Timer</string>
+    <string name="timer_style">Select Timer Style:</string>
+    <string name="title_activity_maps">Map</string>
     <string name="training"><![CDATA[Training & Instruction]]></string>
     <string name="url">Visit our website: <a href="http://www.worldclasspdx.com">Naga Muay Thai</a></string>
     <string name="username">Username</string>
     <string name="userportal">User Portal</string>
     <string name="videos">Videos</string>
+    <string name="wca_title">- World Class Athletics -</string>
     <string name="wods">WODs with Minimal Equipment</string>
     <string name="workouts">Workouts</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
@@ -2320,7 +2437,7 @@
     </style>
     <style name="Widget.Design.BottomSheet.Modal" parent="android:Widget">
         <item name="android:background">?android:attr/colorBackground</item>
-        <item name="android:elevation" ns1:ignore="NewApi">@dimen/design_bottom_sheet_modal_elevation</item>
+        <item name="android:elevation" ns2:ignore="NewApi">@dimen/design_bottom_sheet_modal_elevation</item>
         <item name="behavior_peekHeight">auto</item>
         <item name="behavior_hideable">true</item>
         <item name="behavior_skipCollapsed">false</item>

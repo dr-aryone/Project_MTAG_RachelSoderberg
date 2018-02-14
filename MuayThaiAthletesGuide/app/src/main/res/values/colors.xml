@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <color name="colorPrimary">#3a1a3a</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FFFFFF</color>
 
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorLightGrey">#6de6e6e6</color>
     <color name="colorSilver">#C0C0C0</color>
     <color name="colorGrey">#A9A9A9</color>
     <color name="colorDarkGrey">#444141</color>
@@ -29,7 +31,8 @@
     <!--Object colors-->
     <color name="colorBackground">#444141</color> <!--DarkGrey-->
     <color name="colorText">#FFFFFF</color> <!--White-->
-    <color name="colorButtons">#C6A700</color> <!--MedGold-->
+    <!--<color name="colorButtons">#C6A700</color> &lt;!&ndash;MedGold&ndash;&gt;-->
+    <color name="colorButtons">#FFCE19</color>
     <color name="colorTimerGreen">#24A72F</color>
     <color name="colorTimerRed">#c72014</color>
 </resources>

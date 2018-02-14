@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Timer Spinner-->
+    <string name="timer_style">Select Timer Style:</string>
+    <string-array name="timer_spinner">
+        <item>Basic Stopwatch</item>
+        <item>Countdown</item>
+        <item>Tabata</item>
+        <item>Fight Gone Bad</item>
+        <item>\"3 On 1 Off\"</item>
+    </string-array>
+</resources>
