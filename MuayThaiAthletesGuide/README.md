@@ -1,4 +1,5 @@
 # The Muay Thai Athlete's Guide (Project MTAG) - Rachel Soderberg
+##### Fall 2017 - Spring 2018  
 ###### Project MTAG is an Android application created to enhance the under-developed app store niche for Muay Thai athletes and practitioners. The Muay Thai Athlete's Guide provides the user with a comprehensive list of Muay Thai combos and techniques in an easy to read reference format.  
 ###### The user is met with an extensive list of new options such as creation and saving of user-submitted combos, tutorial videos for instructional lessons, workouts to be done in a typical Muay Thai or general boxing gym, and timers to allow for a seamless workout session.  
 ---  
@@ -13,15 +14,22 @@
 "As a busy athlete, I only have so much time in the gym. I want an app where I can look up what I want quickly and without a lot of fuss."  
 "As a parent of a child who trains, I want an app that will provide instruction and information in a manner that is safe and accessible to all ages."  
   
-##### Testing  
+##### Testing & Devices  
 ###### Android Emulator APIs Used:  
 - Nexus 5X API 26  
 - Galaxy Nexus API 27  
+
+###### Handheld Devices Used:
+- Samsung Galaxy S5
   
 ##### Error Handling  
 ###### Login and Registration:  
 - Empty email address, password  
 - Email address, password too short/long  
 - Email address invalid (requires @ and .com)  
-- Email address associated with account, require registration if not
-- Password associated with login email is correct to log in
+- Email address associated with account, require registration if not  
+- Password associated with login email is correct to log in  
+  
+###### Timer:  
+- Unexpected results for Timer Selection spinner  
+- Catch timer before value exceeds 99:59:59 or 00:00:00 and throw error via toast  

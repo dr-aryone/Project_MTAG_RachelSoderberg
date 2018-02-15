@@ -5,7 +5,8 @@
         <item>Countdown</item>
         <item>Tabata</item>
         <item>Fight Gone Bad</item>
-        <item>\"3 On 1 Off\"</item>
+        <item>Sparring: \"3 On 1 Off\"</item>
+        <item>Pro: \"5 On 1 Off\"</item>
     </string-array>
     <attr format="reference" name="constraintSet"/>
     <attr format="reference" name="drawerArrowStyle"/>
