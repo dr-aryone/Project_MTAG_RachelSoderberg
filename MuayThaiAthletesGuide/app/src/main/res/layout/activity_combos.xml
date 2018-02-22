@@ -1,55 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     android:orientation="vertical"
     android:background="@color/colorPrimary"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    tools:context="com.mtag.app.muaythaiathletesguide.CombosActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:orientation="vertical">
+        android:textColor="@android:color/white"
+        android:text="Combos: Striking and standup, kicks, 'all weapons'."/>
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/textInputLayoutComboName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextComboName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/combo_name"
-                android:background="@color/colorAccent" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/textInputLayoutCombo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/editTextCombo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/combo"
-                android:background="@color/colorAccent" />
-        </android.support.design.widget.TextInputLayout>
-
-        <Button
-            android:id="@+id/buttonStoreCombo"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:background="@color/colorButtons"
-            android:text="@string/button_store_combo" />
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>

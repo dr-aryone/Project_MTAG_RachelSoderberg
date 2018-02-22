@@ -26,17 +26,16 @@ public class RegisterActivity extends Activity {
     //Declaration Button
     Button buttonRegister;
 
-    //Declaration UserSqliteHelper
-    UserSqliteHelper userSqliteHelper;
+    //Declaration SqliteHelper
+    SqliteHelper sqliteHelper;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        userSqliteHelper = new UserSqliteHelper(this);
+        sqliteHelper = new SqliteHelper(this);
         initTextViewLogin();
         initViews();
-
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,10 +45,10 @@ public class RegisterActivity extends Activity {
                     String Password = editTextPassword.getText().toString();
 
                     //Check in the database is there any user associated with  this email
-                    if (!userSqliteHelper.isEmailExists(Email)) {
+                    if (!sqliteHelper.isEmailExists(Email)) {
 
                         //Email does not exist now add new user to database
-                        userSqliteHelper.addUser(new User(null, UserName, Email, Password));
+                        sqliteHelper.addUser(new User(null, UserName, Email, Password));
                         Snackbar.make(buttonRegister, "User created successfully! Please Login ", Snackbar.LENGTH_LONG).show();
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -62,6 +61,8 @@ public class RegisterActivity extends Activity {
                         //Email exists with email input provided so show error user already exist
                         Snackbar.make(buttonRegister, "User already exists with same email ", Snackbar.LENGTH_LONG).show();
                     }
+
+
                 }
             }
         });
@@ -135,6 +136,7 @@ public class RegisterActivity extends Activity {
                 textInputLayoutPassword.setError("Password is to short!");
             }
         }
+
 
         return valid;
     }
