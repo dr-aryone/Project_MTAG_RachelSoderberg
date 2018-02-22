@@ -860,8 +860,11 @@
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="back_to_login">Back to Login</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="button_store_combo">Save Combo</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="coaches">Our Coaches</string>
+    <string name="combo">Combo</string>
+    <string name="combo_name">Combo Name</string>
     <string name="combos">Combinations</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
@@ -930,7 +933,6 @@
     <string name="techniques">Techniques</string>
     <string name="timer">Timer</string>
     <string name="timer_style">Select Timer Style:</string>
-    <string name="title_activity_maps">Map</string>
     <string name="training"><![CDATA[Training & Instruction]]></string>
     <string name="url">Visit our website: <a href="http://www.worldclasspdx.com">Naga Muay Thai</a></string>
     <string name="username">Username</string>
