@@ -18,11 +18,13 @@ import java.util.Locale;
 // Gradient Buttons: https://github.com/sapandiwakar/PSGradientButtons
 
 public class TimerActivity extends Activity implements AdapterView.OnItemSelectedListener {
+    Runnable activeTimer; // Hold reference to runnable
+
     private int seconds = 0; // Number of seconds passed
     private boolean running; // Check whether timer is running
     private boolean wasRunning;
 
-    private int timeCap = 0; // Time cap, when applicable
+    private int timeCap = 0; // Custom max time, stop timer when reached and reset here for countdown
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,6 @@ public class TimerActivity extends Activity implements AdapterView.OnItemSelecte
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.timer_spinner, android.R.layout.simple_spinner_item);
-        // Specify which layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
@@ -42,7 +43,7 @@ public class TimerActivity extends Activity implements AdapterView.OnItemSelecte
         spinner.setOnItemSelectedListener(this);
 
         // Restore activity's state by getting values from Bundle
-        if (savedInstanceState != null) {
+        if (savedInstanceState != null && running) {
             seconds = savedInstanceState.getInt("seconds");
             running = savedInstanceState.getBoolean("running");
             wasRunning = savedInstanceState.getBoolean("wasRunning");
@@ -56,14 +57,18 @@ public class TimerActivity extends Activity implements AdapterView.OnItemSelecte
         // Call Timer types when corresponding position is chosen
         switch(pos) {
             case 0: // Basic Stopwatch: Count from 0:00:00 to 99:59:59 (or cap)
+                onDestroy();
                 running = false; // Stop clock
                 seconds = 0; // Reset seconds to zero
+                timeCap = seconds; // Set time cap to match seconds on the clock, for reset point
                 runBasicTimer();
                 break;
             case 1: // Countdown: Count from 99:59:59 (or cap) to 0:00:00
                 Toast.makeText(parent.getContext(), "Selected: " + selection, Toast.LENGTH_LONG).show();
+                onDestroy();
                 running = false;
                 seconds = 1200; // Default cap 20:00:00
+                timeCap = seconds;
                 runCountdownTimer();
                 break;
             case 2: // Tabata: Beep every 20th and 30th second. Reset to 0:00:00 on each 30th second
@@ -135,10 +140,71 @@ public class TimerActivity extends Activity implements AdapterView.OnItemSelecte
     }
 
     public void onClickReset(View view) {
-        seconds = 0; // Reset seconds to zero
+        seconds = timeCap; // Reset seconds to zero
     }
 
     private void runBasicTimer() {
+        final TextView timeView = (TextView)findViewById(R.id.time_view);
+        final Handler handler = new Handler();
+
+        handler.removeCallbacks(activeTimer); // Remove activeTimer from handler
+        activeTimer = new Runnable() {
+            @Override
+            public void run() {
+                int hours = seconds / 3600;
+                int minutes = (seconds % 3600) / 60;
+                int secs = seconds % 60;
+
+                // Format time to hours, minutes, and seconds
+                String time = String.format(Locale.getDefault(), "%d:%02d:%02d", hours, minutes, secs);
+                timeView.setText(time);
+
+                if (running) {
+                    seconds++;
+                }
+                // Don't allow timer to go over 99:59:59
+                if (seconds >= 359999) {
+                    running = false;
+                    Toast.makeText(getApplicationContext(), "Maximum time reached", Toast.LENGTH_LONG).show();
+                }
+                // Post code again with delay of one second
+                handler.postDelayed(this, 1000);
+            }
+        };
+    }
+
+    private void runCountdownTimer() {
+        final TextView timeView = (TextView) findViewById(R.id.time_view);
+        final Handler handler = new Handler();
+
+        handler.removeCallbacks(activeTimer);
+        activeTimer = new Runnable() {
+            @Override
+            public void run() {
+                int hours = seconds / 3600;
+                int minutes = (seconds % 3600) / 60;
+                int secs = seconds % 60;
+
+                // Format time to hours, minutes, and seconds
+                String time = String.format(Locale.getDefault(), "%d:%02d:%02d", hours, minutes, secs);
+                timeView.setText(time);
+
+                if (running) {
+                    seconds--;
+                }
+                // Don't allow timer to go under 0:00:00
+                if (seconds <= 1) {
+                    running = false;
+                    Toast.makeText(getApplicationContext(), "Maximum time reached", Toast.LENGTH_LONG).show();
+                }
+                // Post code again with delay of one second
+                handler.postDelayed(this, 1000);
+            }
+        };
+        handler.post(activeTimer);
+    }
+
+    /*private void runBasicTimer() {
         final TextView timeView = (TextView)findViewById(R.id.time_view);
         final Handler handler = new Handler();
         handler.post(new Runnable() {
@@ -192,7 +258,7 @@ public class TimerActivity extends Activity implements AdapterView.OnItemSelecte
                 handler.postDelayed(this, 1000);
             }
         });
-    }
+    }*/
 
     private void runTabataTimer() {
 

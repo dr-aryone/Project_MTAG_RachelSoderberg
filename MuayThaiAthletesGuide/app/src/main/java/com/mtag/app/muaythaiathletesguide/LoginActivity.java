@@ -18,13 +18,13 @@ public class LoginActivity extends Activity {
     TextInputLayout textInputLayoutEmail;
     TextInputLayout textInputLayoutPassword;
     Button buttonLogin;
-    SqliteHelper sqliteHelper;
+    UserSqliteHelper userSqliteHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        sqliteHelper = new SqliteHelper(this);
+        userSqliteHelper = new UserSqliteHelper(this);
         initCreateAccountTextView();
         initViews();
 
@@ -39,7 +39,7 @@ public class LoginActivity extends Activity {
                     String Password = editTextPassword.getText().toString();
 
                     // Authenticate user
-                    User currentUser = sqliteHelper.Authenticate(new User(null, null, Email, Password));
+                    User currentUser = userSqliteHelper.Authenticate(new User(null, null, Email, Password));
 
                     // Authentication successful?
                     if (currentUser != null) {

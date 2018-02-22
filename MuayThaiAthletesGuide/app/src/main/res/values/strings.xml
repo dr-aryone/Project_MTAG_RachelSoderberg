@@ -13,6 +13,8 @@
     <string name="techniques">Techniques</string>
     <string name="userportal">User Portal</string>
     <string name="schedule">Schedule</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="button_store_combo">Save Combo</string>
+    <string name="combo">Combo</string>
+    <string name="combo_name">Combo Name</string>
 
 </resources>
