@@ -1,13 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/colorPrimary"
-    android:fitsSystemWindows="true">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/flavorText"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/myFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/combosHint">
+        <requestFocus />
+    </EditText>
+
+    <ListView
+        android:id="@+id/listViewCombos"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>
+
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
@@ -50,6 +74,6 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
             android:background="@color/colorButtons"
+            android:onClick="onCombosActivity"
             android:text="@string/button_store_combo" />
-    </LinearLayout>
-</ScrollView>
+    </LinearLayout>-->

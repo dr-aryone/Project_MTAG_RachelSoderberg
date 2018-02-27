@@ -5,13 +5,44 @@ package com.mtag.app.muaythaiathletesguide;
  */
 
 public class Combo {
-    public String id;
+    public int id;
     public String comboName;
     public String combo;
 
-    public Combo(String id, String comboName, String combo) {
-        this.id = id;
+    // Constructor
+    public Combo(){}
+
+    public Combo(String comboName, String combo) {
         this.comboName = comboName;
         this.combo = combo;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getComboName() {
+        return comboName;
+    }
+
+    public void setComboName(String comboName) {
+        this.comboName = comboName;
+    }
+
+    public String getCombo() {
+        return combo;
+    }
+
+    public void setCombo(String combo) {
+        this.combo = combo;
+    }
+
+    @Override
+    public String toString() {
+        return "Combo [id=" + id + ", comboName=" + comboName + ", combo=" + combo + "]";
     }
 }

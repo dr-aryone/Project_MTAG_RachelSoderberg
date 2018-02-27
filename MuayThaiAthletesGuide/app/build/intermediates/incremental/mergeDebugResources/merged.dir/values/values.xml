@@ -863,9 +863,10 @@
     <string name="button_store_combo">Save Combo</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="coaches">Our Coaches</string>
-    <string name="combo">Combo</string>
-    <string name="combo_name">Combo Name</string>
+    <string name="combo">Combo:</string>
+    <string name="comboName">Name:</string>
     <string name="combos">Combinations</string>
+    <string name="combosHint">Type here to filter</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
@@ -886,6 +887,7 @@
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="create_account"><font color="#00ff00">text</font></string>
     <string name="email">Email</string>
+    <string name="flavorText">Muay Thai Combos</string>
     <string name="lifting"><![CDATA[Weightlifting & Strength Training]]></string>
     <string name="login">Login</string>
     <string name="martial">Martial Arts-Inspired Workouts</string>

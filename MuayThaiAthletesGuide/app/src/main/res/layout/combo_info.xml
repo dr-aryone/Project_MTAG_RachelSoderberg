@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Display for combos from database-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dp"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/textViewComboName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/comboName"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/textViewCombo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textViewComboName"
+        android:layout_below="@+id/textViewComboName"
+        android:text="@string/combo"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>

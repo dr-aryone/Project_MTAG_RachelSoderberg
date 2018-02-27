@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--combo_info.xml-->
+    <string name="comboName">Name:</string>
+    <string name="combo">Combo:</string>
+
+    <!--activity_combos.xml-->
+    <string name="flavorText">Muay Thai Combos</string>
+    <string name="combosHint">Type here to filter</string>
+</resources>

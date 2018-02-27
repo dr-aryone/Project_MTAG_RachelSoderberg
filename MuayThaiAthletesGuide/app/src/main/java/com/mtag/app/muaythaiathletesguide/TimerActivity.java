@@ -17,6 +17,8 @@ import java.util.Locale;
 
 // Gradient Buttons: https://github.com/sapandiwakar/PSGradientButtons
 
+// Stackoverflow Question: https://stackoverflow.com/questions/48875368/android-studio-stopping-killing-timer-with-switch-statement/48891908?noredirect=1#comment84834219_48891908
+
 public class TimerActivity extends Activity implements AdapterView.OnItemSelectedListener {
     Runnable activeTimer; // Hold reference to runnable
 
