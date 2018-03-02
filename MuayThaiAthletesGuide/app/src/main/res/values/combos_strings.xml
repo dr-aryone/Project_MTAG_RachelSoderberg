@@ -7,4 +7,5 @@
     <!--activity_combos.xml-->
     <string name="flavorText">Muay Thai Combos</string>
     <string name="combosHint">Type here to filter</string>
+    <string name="combo_name">Combo Name</string>
 </resources>

@@ -865,6 +865,7 @@
     <string name="coaches">Our Coaches</string>
     <string name="combo">Combo:</string>
     <string name="comboName">Name:</string>
+    <string name="combo_name">Combo Name</string>
     <string name="combos">Combinations</string>
     <string name="combosHint">Type here to filter</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
@@ -889,6 +890,7 @@
     <string name="email">Email</string>
     <string name="flavorText">Muay Thai Combos</string>
     <string name="lifting"><![CDATA[Weightlifting & Strength Training]]></string>
+    <string name="listview_stub">Here\'s some text demonstrating the location of the listview using id \'listViewCombos\'</string>
     <string name="login">Login</string>
     <string name="martial">Martial Arts-Inspired Workouts</string>
     <string name="naga">Naga Muay Thai - Portland, Oregon, USA</string>
