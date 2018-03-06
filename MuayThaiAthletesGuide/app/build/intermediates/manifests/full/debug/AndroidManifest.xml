@@ -52,6 +52,7 @@
         <activity android:name="com.mtag.app.muaythaiathletesguide.UserPortalActivity" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.CoachesActivity" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.ScheduleActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.LiftsActivity" />
 
         <meta-data
             android:name="android.support.VERSION"

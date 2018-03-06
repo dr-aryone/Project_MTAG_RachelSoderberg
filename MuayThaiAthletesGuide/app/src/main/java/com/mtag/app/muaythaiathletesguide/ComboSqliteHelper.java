@@ -2,13 +2,9 @@ package com.mtag.app.muaythaiathletesguide;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Created by Rachel on 2/20/2018.
@@ -22,6 +18,8 @@ public class ComboSqliteHelper extends SQLiteOpenHelper {
     public static final String KEY_ID = "id";
     public static final String KEY_COMBO_NAME = "comboName";
     public static final String KEY_COMBO = "combo";
+
+    //public int combosCount = 0;
 
     public static final String[] COLUMNS = {KEY_ID, KEY_COMBO_NAME, KEY_COMBO};
 
@@ -66,6 +64,7 @@ public class ComboSqliteHelper extends SQLiteOpenHelper {
                 null, // nullColumnHack
                 values); // Key/value -> keys = column names/ values = column values)
 
+        //++combosCount;
         // Close
         db.close();
     }
@@ -96,7 +95,7 @@ public class ComboSqliteHelper extends SQLiteOpenHelper {
         Log.d("getCombo("+id+")", combo.toString());
 
         return combo;
-    }*/
+    }
 
     public List<Combo> getAllCombos() {
         List<Combo> combos = new LinkedList<Combo>();
@@ -124,7 +123,7 @@ public class ComboSqliteHelper extends SQLiteOpenHelper {
         Log.d("getAllCombos()", combos.toString());
 
         return combos;
-    }
+    }*/
 
     // Update combo
     // TODO: Don't need, delete
@@ -150,7 +149,7 @@ public class ComboSqliteHelper extends SQLiteOpenHelper {
     }*/
 
     // Delete combo
-    public void deleteCombo(Combo combo) {
+    /*public void deleteCombo(Combo combo) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         // Delete
@@ -161,5 +160,5 @@ public class ComboSqliteHelper extends SQLiteOpenHelper {
         db.close();
 
         Log.d("deleteCombo", combo.toString());
-    }
+    }*/
 }

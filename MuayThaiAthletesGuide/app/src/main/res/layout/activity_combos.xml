@@ -4,22 +4,25 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_gravity="center_vertical"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
+    android:padding="16dp"
     android:orientation="vertical">
+    <!--android:background="@color/colorPrimary">-->
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="@string/flavorText"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:text="@string/combosText" />
+        <!--android:textColor="@color/colorText" />-->
 
     <EditText
         android:id="@+id/myFilter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="10dp"
         android:ems="10"
+        android:background="@color/colorAccent"
         android:hint="@string/combosHint">
         <requestFocus />
     </EditText>
@@ -28,11 +31,6 @@
         android:id="@+id/listViewCombos"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/listview_stub"/>
 
 <!-- Textbox and button for user to add their own combos
     <android.support.design.widget.TextInputLayout

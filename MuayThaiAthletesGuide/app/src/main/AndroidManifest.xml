@@ -37,6 +37,7 @@
         <activity android:name=".UserPortalActivity" />
         <activity android:name=".CoachesActivity" />
         <activity android:name=".ScheduleActivity" />
+        <activity android:name=".LiftsActivity"></activity>
     </application>
 
 </manifest>

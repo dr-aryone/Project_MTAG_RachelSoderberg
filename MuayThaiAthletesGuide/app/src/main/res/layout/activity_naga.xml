@@ -19,21 +19,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorText"
                 android:textSize="35sp"
                 android:text="@string/naga_title"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorText"
                 android:textSize="35sp"
                 android:text="@string/wca_title"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorText"
                 android:layout_marginTop="25dp"
                 android:textSize="16sp"
                 android:text="@string/about" />
@@ -41,21 +41,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorText"
                 android:layout_marginTop="25dp"
                 android:textSize="20sp"
                 android:text="@string/address" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorText"
                 android:textSize="20sp"
                 android:text="@string/phone" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorText"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
                 android:text="@string/url" />

@@ -20,14 +20,14 @@ import java.util.List;
 
 public class CombosActivity extends Activity {
     private ComboSqliteHelper db;
-    private SimpleCursorAdapter dataAdapter;
-    /*EditText editTextComboName;
+    private SimpleCursorAdapter comboAdapter;
+    /* TODO: Remove, unused
+    EditText editTextComboName;
     EditText editTextCombo;
     TextInputLayout textInputLayoutComboName;
     TextInputLayout textInputLayoutCombo;
     Button buttonStoreCombo;
     */
-    private ListView combosListView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,6 +36,7 @@ public class CombosActivity extends Activity {
 
         db = new ComboSqliteHelper(this);
 
+        // Add combos to database
         db.addCombo(new Combo("Combo #1", "R Kick - Cross - R Kick, L Kick - Cross - R Kick,\n " +
                 "Jab - Cross - Hook - Cross, L Elbow - R Elbow - R Knee - L Knee"));
         db.addCombo(new Combo("Combo #3", "Hook - R Knee - R Kick, Cross - Hook - R Kick"));
@@ -52,7 +53,7 @@ public class CombosActivity extends Activity {
         db.addCombo(new Combo("Simple Builder", "(0:00) 2x Jab\n" + "(1:00) 2x Cross\n" + "(2:00) L Hook - Cross"));
 
         // 3/2/18 Tutorial https://www.javacodegeeks.com/2013/10/android-json-tutorial-create-and-parse-json-data.html ////////////////////
-        // Reading from string array for presentation, need to hook up to database later
+        // TODO: Reading from string array for presentation, need to hook up to database later
         // Need to use a for loop (using i < db.count()) to fill array. May need a count function..
         final ListView listViewCombos = (ListView) findViewById(R.id.listViewCombos);
         String[] values = new String[]{ "Combo #1:\nR Kick - Cross - R Kick, L Kick - Cross - R Kick,\n" + "Jab - Cross - Hook - Cross, L Elbow - R Elbow - R Knee - L Knee",
@@ -77,6 +78,20 @@ public class CombosActivity extends Activity {
                 android.R.layout.simple_list_item_1, list);
         listViewCombos.setAdapter(adapter);
 
+/////////////////////////////////
+        // TODO: Reading to ListView from Database
+        /*final ListView listViewCombos = (ListView) findViewById(R.id.listViewCombos);
+        final ArrayList<String> list = new ArrayList<>();
+
+        for (int i = 0; i < db.combosCount; i++) {
+            list.add(ComboSqliteHelper.KEY_COMBO_NAME + "\n" + ComboSqliteHelper.KEY_COMBO); // TODO: Current output = comboName combo. Need a way to get specific rows
+        }
+
+        final StableArrayAdapter adapter = new StableArrayAdapter(this,
+                android.R.layout.simple_list_item_1, list);
+        listViewCombos.setAdapter(adapter);*/
+
+/////////////////////////////////
         /* Remove item on click
         listViewCombos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -94,6 +109,14 @@ public class CombosActivity extends Activity {
             }
         });*/
     }
+    ///////////////////////////////
+    // TODO: May need this when getting all combos for ListView
+    // Get all combos
+    //List<Combo> list = db.getAllCombos();
+    //
+    // Delete one combo
+    // db.deleteCombo(list.get(0);
+    ///////////////////////////////
 
     private class StableArrayAdapter extends ArrayAdapter<String> {
         HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
@@ -117,10 +140,4 @@ public class CombosActivity extends Activity {
             return true;
         }
     }
-///////////////////////////////
-        // Get all combos
-        //List<Combo> list = db.getAllCombos();
-
-        // Delete one combo
-        // db.deleteCombo(list.get(0);
 }
