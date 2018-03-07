@@ -71,13 +71,13 @@ public class TimerActivity extends Activity implements AdapterView.OnItemSelecte
                 running = false;
                 seconds = 1200; // Default cap 20:00:00
                 timeCap = seconds;
-                runCountdownTimer();
+                //runCountdownTimer();
                 break;
             case 2: // Tabata: Beep every 20th and 30th second. Reset to 0:00:00 on each 30th second
                 Toast.makeText(parent.getContext(), "Selected: " + selection, Toast.LENGTH_LONG).show();
                 running = false;
                 seconds = 0;
-                runTabataTimer();
+                //runTabataTimer();
                 break;
             case 3: // Fight Gone Bad: 17min cap, beep on each minute
                 Toast.makeText(parent.getContext(), "Selected: " + selection, Toast.LENGTH_LONG).show();
@@ -89,13 +89,13 @@ public class TimerActivity extends Activity implements AdapterView.OnItemSelecte
                 Toast.makeText(parent.getContext(), "Selected: " + selection, Toast.LENGTH_LONG).show();
                 running = false;
                 seconds = 0;
-                runThreeOneTimer();
+                //runThreeOneTimer();
                 break;
             case 5: // "5 On 1 Off": Beep every 5th and 6th minute
                 Toast.makeText(parent.getContext(), "Selected: " + selection, Toast.LENGTH_LONG).show();
                 running = false;
                 seconds = 0;
-                runFiveOneTimer();
+                //runFiveOneTimer();
                 break;
             default:
                 running = false;
@@ -148,67 +148,6 @@ public class TimerActivity extends Activity implements AdapterView.OnItemSelecte
     private void runBasicTimer() {
         final TextView timeView = (TextView)findViewById(R.id.time_view);
         final Handler handler = new Handler();
-
-        handler.removeCallbacks(activeTimer); // Remove activeTimer from handler
-        activeTimer = new Runnable() {
-            @Override
-            public void run() {
-                int hours = seconds / 3600;
-                int minutes = (seconds % 3600) / 60;
-                int secs = seconds % 60;
-
-                // Format time to hours, minutes, and seconds
-                String time = String.format(Locale.getDefault(), "%d:%02d:%02d", hours, minutes, secs);
-                timeView.setText(time);
-
-                if (running) {
-                    seconds++;
-                }
-                // Don't allow timer to go over 99:59:59
-                if (seconds >= 359999) {
-                    running = false;
-                    Toast.makeText(getApplicationContext(), "Maximum time reached", Toast.LENGTH_LONG).show();
-                }
-                // Post code again with delay of one second
-                handler.postDelayed(this, 1000);
-            }
-        };
-    }
-
-    private void runCountdownTimer() {
-        final TextView timeView = (TextView) findViewById(R.id.time_view);
-        final Handler handler = new Handler();
-
-        handler.removeCallbacks(activeTimer);
-        activeTimer = new Runnable() {
-            @Override
-            public void run() {
-                int hours = seconds / 3600;
-                int minutes = (seconds % 3600) / 60;
-                int secs = seconds % 60;
-
-                // Format time to hours, minutes, and seconds
-                String time = String.format(Locale.getDefault(), "%d:%02d:%02d", hours, minutes, secs);
-                timeView.setText(time);
-
-                if (running) {
-                    seconds--;
-                }
-                // Don't allow timer to go under 0:00:00
-                if (seconds <= 1) {
-                    running = false;
-                    Toast.makeText(getApplicationContext(), "Maximum time reached", Toast.LENGTH_LONG).show();
-                }
-                // Post code again with delay of one second
-                handler.postDelayed(this, 1000);
-            }
-        };
-        handler.post(activeTimer);
-    }
-
-    /*private void runBasicTimer() {
-        final TextView timeView = (TextView)findViewById(R.id.time_view);
-        final Handler handler = new Handler();
         handler.post(new Runnable() {
             @Override
             public void run() {
@@ -231,6 +170,7 @@ public class TimerActivity extends Activity implements AdapterView.OnItemSelecte
             }
         });
     }
+
     private void runCountdownTimer() {
         final TextView timeView = (TextView)findViewById(R.id.time_view);
         final Handler handler = new Handler();
@@ -255,7 +195,7 @@ public class TimerActivity extends Activity implements AdapterView.OnItemSelecte
                 handler.postDelayed(this, 1000);
             }
         });
-    }*/
+    }
 
     private void runTabataTimer() {
 
