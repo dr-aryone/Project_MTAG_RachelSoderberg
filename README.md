@@ -1,4 +1,5 @@
-# The Muay Thai Athlete's Guide (Project MTAG) - Rachel Soderberg
+# The Muay Thai Athlete's Guide (Project MTAG)
+## Rachel Soderberg
 Android Application for Oregon Tech Senior Project 2017-2018
   
 ###### Project MTAG is an Android application created to enhance the under-developed app store niche for Muay Thai athletes and practitioners. The Muay Thai Athlete's Guide provides the user with a comprehensive list of Muay Thai combos and techniques in an easy to read reference format.  
