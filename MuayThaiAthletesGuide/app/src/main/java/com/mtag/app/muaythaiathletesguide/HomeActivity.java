@@ -29,7 +29,7 @@ public class HomeActivity extends Activity {
     }
 
     public void onTimerActivity(View view) {
-        Intent intent = new Intent(this, TimerActivity.class);
+        Intent intent = new Intent(this, BasicTimerActivity.class); // TimerActivity.class
         startActivity(intent);
     }
 

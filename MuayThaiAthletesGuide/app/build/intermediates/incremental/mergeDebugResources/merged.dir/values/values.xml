@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="timecap_spinner">
+        <item>100:00</item>
+        <item>60:00</item>
+        <item>50:00</item>
+        <item>45:00</item>
+        <item>40:00</item>
+        <item>35:00</item>
+        <item>30:00</item>
+        <item>29:00</item>
+        <item>28:00</item>
+        <item>27:00</item>
+        <item>26:00</item>
+        <item>25:00</item>
+        <item>24:00</item>
+        <item>23:00</item>
+        <item>22:00</item>
+        <item>21:00</item>
+        <item>20:00</item>
+        <item>19:00</item>
+        <item>18:00</item>
+        <item>17:00</item>
+        <item>16:00</item>
+        <item>15:00</item>
+        <item>14:00</item>
+        <item>13:00</item>
+        <item>12:00</item>
+        <item>11:00</item>
+        <item>10:00</item>
+    </string-array>
     <string-array name="timer_spinner">
         <item>Basic Stopwatch</item>
         <item>Countdown</item>
@@ -938,6 +967,7 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="stop">Stop</string>
     <string name="techniques">Techniques</string>
+    <string name="timecap_style">Time Cap:</string>
     <string name="timer">Timer</string>
     <string name="timer_style">Select Timer Style:</string>
     <string name="training"><![CDATA[Training & Instruction]]></string>

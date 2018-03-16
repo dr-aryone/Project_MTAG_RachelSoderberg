@@ -10,4 +10,35 @@
         <item>Sparring: \"3 On 1 Off\"</item>
         <item>Pro: \"5 On 1 Off\"</item>
     </string-array>
+
+    <string name="timecap_style">Time Cap:</string>
+    <string-array name="timecap_spinner">
+        <item>100:00</item>
+        <item>60:00</item>
+        <item>50:00</item>
+        <item>45:00</item>
+        <item>40:00</item>
+        <item>35:00</item>
+        <item>30:00</item>
+        <item>29:00</item>
+        <item>28:00</item>
+        <item>27:00</item>
+        <item>26:00</item>
+        <item>25:00</item>
+        <item>24:00</item>
+        <item>23:00</item>
+        <item>22:00</item>
+        <item>21:00</item>
+        <item>20:00</item>
+        <item>19:00</item>
+        <item>18:00</item>
+        <item>17:00</item>
+        <item>16:00</item>
+        <item>15:00</item>
+        <item>14:00</item>
+        <item>13:00</item>
+        <item>12:00</item>
+        <item>11:00</item>
+        <item>10:00</item>
+    </string-array>
 </resources>
