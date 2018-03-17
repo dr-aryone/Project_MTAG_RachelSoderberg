@@ -20,14 +20,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorText"
             android:textSize="35sp"
             android:text="@string/coaches"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorText"
             android:layout_marginTop="25dp"
             android:textSize="16sp"
             android:text="@string/alex" />
@@ -35,7 +35,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorText"
             android:layout_marginTop="25dp"
             android:textSize="16sp"
             android:text="@string/robin" />
@@ -43,7 +43,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorText"
             android:layout_marginTop="25dp"
             android:textSize="16sp"
             android:text="@string/rachel" />

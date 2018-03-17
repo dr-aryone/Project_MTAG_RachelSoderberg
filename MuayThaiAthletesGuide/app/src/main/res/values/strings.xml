@@ -14,5 +14,7 @@
     <string name="userportal">User Portal</string>
     <string name="schedule">Schedule</string>
     <string name="button_store_combo">Save Combo</string>
+    <string name="listview_stub">Here\'s some text demonstrating the location of the listview using id \'listViewCombos\'</string>
+    <string name="defaultHint">Type here to filter</string>
 
 </resources>

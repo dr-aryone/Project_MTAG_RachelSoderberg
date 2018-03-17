@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical"
     android:padding="16dp"
-    android:orientation="vertical"
-    android:background="@color/colorPrimary"
-    tools:context="com.mtag.app.muaythaiathletesguide.MartialActivity">
+    android:orientation="vertical">
+    <!--android:background="@color/colorPrimary">-->
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:text="Workout ideas incorporating martial arts movements."/>
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:text="@string/martialText" />
+        <!--android:textColor="@color/colorText" />-->
+
+    <EditText
+        android:id="@+id/myFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:ems="10"
+        android:background="@color/colorAccent"
+        android:hint="@string/defaultHint">
+        <requestFocus />
+    </EditText>
+
+    <ListView
+        android:id="@+id/listViewMartial"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
 </LinearLayout>

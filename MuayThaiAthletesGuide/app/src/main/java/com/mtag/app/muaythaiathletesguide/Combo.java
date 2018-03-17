@@ -17,26 +17,16 @@ public class Combo {
         this.combo = combo;
     }
 
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
+    public String getComboName() { return comboName; }
+    public String getCombo() { return combo; }
 
     public void setId(int id) {
         this.id = id;
     }
-
-    public String getComboName() {
-        return comboName;
-    }
-
     public void setComboName(String comboName) {
         this.comboName = comboName;
     }
-
-    public String getCombo() {
-        return combo;
-    }
-
     public void setCombo(String combo) {
         this.combo = combo;
     }

@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--activity_lifts.xml-->
+    <string name="liftsText">Strength Training Workouts</string>
 
+    <!--activity_wods.xml-->
+    <string name="wodsText">Wod-Style Workouts</string>
+
+    <!--activity_martial.xml-->
+    <string name="martialText">Martial Arts Inspired Workouts</string>
 </resources>

@@ -23,6 +23,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.mtag.app.muaythaiathletesguide.LoginActivity"
@@ -39,7 +40,6 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.HomeActivity" />
-        <activity android:name="com.mtag.app.muaythaiathletesguide.TimerActivity" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.WorkoutsActivity" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.WodsActivity" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.TrainingActivity" />
@@ -52,6 +52,13 @@
         <activity android:name="com.mtag.app.muaythaiathletesguide.UserPortalActivity" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.CoachesActivity" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.ScheduleActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.LiftsActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.BasicTimerActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.CountdownTimerActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.TabataTimerActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.FGBTimerActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.ThreeOnTimerActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.FiveOnTimerActivity" />
 
         <meta-data
             android:name="android.support.VERSION"
