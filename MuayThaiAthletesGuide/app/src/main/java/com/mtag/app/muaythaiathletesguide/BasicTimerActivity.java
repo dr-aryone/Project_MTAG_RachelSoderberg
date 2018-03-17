@@ -18,10 +18,10 @@ import java.util.Locale;
 
 // Gradient Buttons: https://github.com/sapandiwakar/PSGradientButtons
 
-public class BasicTimerActivity extends Activity implements AdapterView.OnItemSelectedListener {
+public class BasicTimerActivity extends Activity {// implements AdapterView.OnItemSelectedListener {
     private int seconds = 0; // Number of seconds passed
     private boolean running; // Check whether timer is running
-    private boolean wasRunning;
+    private boolean wasRunning; // Store timer previously running state
 
     private int timeCap = 6000; // Custom max time, stop timer when reached and reset here for countdown
 
@@ -36,35 +36,15 @@ public class BasicTimerActivity extends Activity implements AdapterView.OnItemSe
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.timer_spinner, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
+        // Apply the adapter to the spinner and set position
         timerSpinner.setAdapter(adapter);
         timerSpinner.setSelection(adapter.getPosition("Basic Stopwatch"));
         // Spinner click listener
-        timerSpinner.setOnItemSelectedListener(this);
-
-        // Time Cap Selection Spinner
-        Spinner timecapSpinner = (Spinner) findViewById(R.id.timecap_spinner);
-        ArrayAdapter<CharSequence> capadapter = ArrayAdapter.createFromResource(this,
-                R.array.timecap_spinner, android.R.layout.simple_spinner_item);
-        capadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        timecapSpinner.setAdapter(capadapter);
-        //timecapSpinner.setSelection(capadapter.getPosition("100:00"));
-        timecapSpinner.setOnItemSelectedListener(this);
-
-        // Restore activity's state by getting values from Bundle
-        if (savedInstanceState != null && running) {
-            seconds = savedInstanceState.getInt("seconds");
-            running = savedInstanceState.getBoolean("running");
-            wasRunning = savedInstanceState.getBoolean("wasRunning");
-        }
-    }
-
-    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id){
-        switch(parent.getId()) {
-            case R.id.timer_spinner:
-                String selection = parent.getItemAtPosition(pos).toString(); // TODO: Variable to use spinner position, if needed
+        timerSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int timerPos, long id) {
                 // Call Timer types when corresponding position is chosen
-                switch (pos) {
+                switch (timerPos) {
                     case 0: // Basic Stopwatch: Count from 0:00:00 to 99:59:59 (or cap)
                         onDestroy();
                         running = false; // Stop clock
@@ -73,37 +53,27 @@ public class BasicTimerActivity extends Activity implements AdapterView.OnItemSe
                     case 1: // Countdown: Count from 99:59:59 (or cap) to 0:00:00
                         onDestroy();
                         running = false;
-                        // Switch to Countdown Timer Activity
-                        Intent intent = new Intent(this, CountdownTimerActivity.class);
-                        startActivity(intent);
+                        startActivity( new Intent(BasicTimerActivity.this, CountdownTimerActivity.class));
                         break;
                     case 2: // Tabata: Beep every 20th and 30th second. Reset to 0:00:00 on each 30th second
                         onDestroy();
                         running = false;
-                        // Switch to Tabata Timer Activity
-                        intent = new Intent(this, TabataTimerActivity.class);
-                        startActivity(intent);
+                        startActivity(new Intent(BasicTimerActivity.this, TabataTimerActivity.class));
                         break;
                     case 3: // Fight Gone Bad: 17min cap, beep on each minute
                         onDestroy();
                         running = false;
-                        // Switch to Fight Gone Bad Timer Activity
-                        intent = new Intent(this, FGBTimerActivity.class);
-                        startActivity(intent);
+                        startActivity(new Intent(BasicTimerActivity.this, FGBTimerActivity.class));
                         break;
                     case 4: // "3 On 1 Off": Beep every 3rd and 4th minute
                         onDestroy();
                         running = false;
-                        // Switch to Three On One Off Timer Activity
-                        intent = new Intent(this, ThreeOnTimerActivity.class);
-                        startActivity(intent);
+                        startActivity(new Intent(BasicTimerActivity.this, ThreeOnTimerActivity.class));
                         break;
                     case 5: // "5 On 1 Off": Beep every 5th and 6th minute
                         onDestroy();
                         running = false;
-                        // Switch to Five On One Off Timer Activity
-                        intent = new Intent(this, FiveOnTimerActivity.class);
-                        startActivity(intent);
+                        startActivity(new Intent(BasicTimerActivity.this, FiveOnTimerActivity.class));
                         break;
                     default:
                         running = false;
@@ -111,10 +81,25 @@ public class BasicTimerActivity extends Activity implements AdapterView.OnItemSe
                         Toast.makeText(parent.getContext(), "Error", Toast.LENGTH_LONG).show();
                         break;
                 }
-                break;
-            case R.id.timecap_spinner :
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        // Time Cap Selection Spinner
+        Spinner timecapSpinner = (Spinner) findViewById(R.id.timecap_spinner);
+        ArrayAdapter<CharSequence> capadapter = ArrayAdapter.createFromResource(this,
+                R.array.timecap_spinner, android.R.layout.simple_spinner_item);
+        capadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        timecapSpinner.setAdapter(capadapter);
+        timecapSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int timeCapPos, long id) {
                 // Set time cap to user's selection
-                switch(pos) {
+                switch(timeCapPos) {
                     case 1 : // 100:00
                         timeCap = 6000;
                         break;
@@ -197,12 +182,20 @@ public class BasicTimerActivity extends Activity implements AdapterView.OnItemSe
                         timeCap = 600;
                         break;
                 }
-                break;
-        }
-    }
+            }
 
-    public void onNothingSelected(AdapterView<?> parent){
-        // Another interface callback
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        // Restore activity's state by getting values from Bundle
+        if (savedInstanceState != null && running) {
+            seconds = savedInstanceState.getInt("seconds");
+            running = savedInstanceState.getBoolean("running");
+            wasRunning = savedInstanceState.getBoolean("wasRunning");
+        }
     }
 
     @Override

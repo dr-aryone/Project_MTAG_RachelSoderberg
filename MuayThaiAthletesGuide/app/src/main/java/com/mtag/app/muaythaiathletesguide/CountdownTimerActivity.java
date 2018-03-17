@@ -39,8 +39,6 @@ public class CountdownTimerActivity extends Activity implements AdapterView.OnIt
         // Apply the adapter to the spinner
         timerSpinner.setAdapter(adapter);
         timerSpinner.setSelection(adapter.getPosition("Countdown"));
-        //yourSpinner.setSelection(arrayAdapter.getPosition(value));
-        //mSpinner.setSelection(yourList.indexOf("value"));
         // Spinner click listener
         timerSpinner.setOnItemSelectedListener(this);
 
