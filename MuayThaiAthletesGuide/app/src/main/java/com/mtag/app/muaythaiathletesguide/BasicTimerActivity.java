@@ -18,7 +18,7 @@ import java.util.Locale;
 
 // Gradient Buttons: https://github.com/sapandiwakar/PSGradientButtons
 
-public class BasicTimerActivity extends Activity {// implements AdapterView.OnItemSelectedListener {
+public class BasicTimerActivity extends Activity { // implements AdapterView.OnItemSelectedListener {
     private int seconds = 0; // Number of seconds passed
     private boolean running; // Check whether timer is running
     private boolean wasRunning; // Store timer previously running state
@@ -53,26 +53,31 @@ public class BasicTimerActivity extends Activity {// implements AdapterView.OnIt
                     case 1: // Countdown: Count from 99:59:59 (or cap) to 0:00:00
                         onDestroy();
                         running = false;
+                        timeCap = 6000;
                         startActivity( new Intent(BasicTimerActivity.this, CountdownTimerActivity.class));
                         break;
                     case 2: // Tabata: Beep every 20th and 30th second. Reset to 0:00:00 on each 30th second
                         onDestroy();
                         running = false;
+                        timeCap = 6000;
                         startActivity(new Intent(BasicTimerActivity.this, TabataTimerActivity.class));
                         break;
                     case 3: // Fight Gone Bad: 17min cap, beep on each minute
                         onDestroy();
                         running = false;
+                        timeCap = 6000;
                         startActivity(new Intent(BasicTimerActivity.this, FGBTimerActivity.class));
                         break;
                     case 4: // "3 On 1 Off": Beep every 3rd and 4th minute
                         onDestroy();
                         running = false;
+                        timeCap = 6000;
                         startActivity(new Intent(BasicTimerActivity.this, ThreeOnTimerActivity.class));
                         break;
                     case 5: // "5 On 1 Off": Beep every 5th and 6th minute
                         onDestroy();
                         running = false;
+                        timeCap = 6000;
                         startActivity(new Intent(BasicTimerActivity.this, FiveOnTimerActivity.class));
                         break;
                     default:
@@ -100,85 +105,82 @@ public class BasicTimerActivity extends Activity {// implements AdapterView.OnIt
             public void onItemSelected(AdapterView<?> parent, View view, int timeCapPos, long id) {
                 // Set time cap to user's selection
                 switch(timeCapPos) {
-                    case 1 : // 100:00
-                        timeCap = 6000;
-                        break;
-                    case 2 : // 60:00
+                    case 0: // 60:00
                         timeCap = 3600;
                         break;
-                    case 3 : // 50:00
+                    case 1: // 50:00
                         timeCap = 3000;
                         break;
-                    case 4 : // 45:00
+                    case 2: // 45:00
                         timeCap = 2700;
                         break;
-                    case 5 : // 40:00
+                    case 3: // 40:00
                         timeCap = 2400;
                         break;
-                    case 6 : // 35:00
+                    case 4: // 35:00
                         timeCap = 2100;
                         break;
-                    case 7 : // 30:00
+                    case 5: // 30:00
                         timeCap = 1800;
                         break;
-                    case 8 : // 29:00
+                    case 6: // 29:00
                         timeCap = 1740;
                         break;
-                    case 9 : // 28:00
+                    case 7: // 28:00
                         timeCap = 1680;
                         break;
-                    case 10 : // 27:00
+                    case 8: // 27:00
                         timeCap = 1620;
                         break;
-                    case 11 : // 26:00
+                    case 9: // 26:00
                         timeCap = 1560;
                         break;
-                    case 12 : // 25:00
+                    case 10: // 25:00
                         timeCap = 1500;
                         break;
-                    case 13 : // 24:00
+                    case 11: // 24:00
                         timeCap = 1440;
                         break;
-                    case 14 : // 23:00
+                    case 12: // 23:00
                         timeCap = 1380;
                         break;
-                    case 15 : // 22:00
+                    case 13: // 22:00
                         timeCap = 1320;
                         break;
-                    case 16 : // 21:00
+                    case 14: // 21:00
                         timeCap = 1260;
                         break;
-                    case 17 : // 20:00
+                    case 15: // 20:00
                         timeCap = 1200;
                         break;
-                    case 18 : // 19:00
+                    case 16: // 19:00
                         timeCap = 1140;
                         break;
-                    case 19 : // 18:00
+                    case 17: // 18:00
                         timeCap = 1080;
                         break;
-                    case 20 : // 17:00
+                    case 18: // 17:00
                         timeCap = 1020;
                         break;
-                    case 21 : // 16:00
+                    case 19: // 16:00
                         timeCap = 960;
                         break;
-                    case 22 : // 15:00
+                    case 20: // 15:00
                         timeCap = 900;
                         break;
-                    case 23 : // 14:00
+                    case 21: // 14:00
                         timeCap = 840;
                         break;
-                    case 24 : // 13:00
+                    case 22: // 13:00
                         timeCap = 780;
                         break;
-                    case 25 : // 12:00
+                    case 23: // 12:00
                         timeCap = 720;
                         break;
-                    case 26 : // 11:00
+                    case 24: // 11:00
                         timeCap = 660;
                         break;
-                    case 27 : // 10:00
+                    case 25: // 10:00
                         timeCap = 600;
                         break;
                 }
@@ -249,13 +251,12 @@ public class BasicTimerActivity extends Activity {// implements AdapterView.OnIt
                 timeView.setText(time);
                 if (running) {
                     seconds++;
-                }
-                // TODO: Test output, delete
-                Toast.makeText(getApplicationContext(), "Time Cap: " + timeCap, Toast.LENGTH_SHORT).show();
-                // Stop timer when time cap is reached
-                if (seconds >= timeCap) {
-                    Toast.makeText(getApplicationContext(), "Cap Beep!", Toast.LENGTH_SHORT).show();
-                    onPause();
+                    //}
+                    // Stop timer when time cap is reached
+                    if (seconds >= timeCap) {
+                        Toast.makeText(getApplicationContext(), "Cap Beep!", Toast.LENGTH_SHORT).show(); // TODO: Replace with sound
+                        onPause();
+                    }
                 }
                 // Don't allow timer to go over 99:59:59
                 if (seconds >= 359999) {

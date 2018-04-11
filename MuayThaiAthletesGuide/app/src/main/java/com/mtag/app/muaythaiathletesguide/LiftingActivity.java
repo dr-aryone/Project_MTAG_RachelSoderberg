@@ -25,11 +25,29 @@ public class LiftingActivity extends Activity {
 
         db.addLift(new Lift("Deadlift", "5 sets of 5 reps, increase weight each set"));
         db.addLift(new Lift("Front Squat", "7 sets of 3 reps, increase weight each set"));
+        db.addLift(new Lift("Shoulder Press", "3 sets of 5 reps, then 3 sets of 3 reps heavier"));
+        db.addLift(new Lift("Bench Press", "4 sets of 12 reps, work up to one heavy weight"));
+        db.addLift(new Lift("Back Squat", "5 sets of 6 reps, increase weight each set"));
+        db.addLift(new Lift("Overhead Squat", "5 sets of 3 reps, work up to one heavy weight"));
+        db.addLift(new Lift("Power Clean", "4 sets of 4 reps, increase weight each set"));
+        db.addLift(new Lift("Dumbbell Bench Press", "4 sets of 12 reps, work up to one heavy weight"));
+        db.addLift(new Lift("Dumbbell Shrug", "4 sets of 12 reps, increase weight each set"));
+        db.addLift(new Lift("Dumbbell or Barbell Row", "3 sets of 12 reps, work up to one heavy weight"));
+        db.addLift(new Lift("Kettlebell Clean and Jerk", "3 sets of 10 reps, work up to one heavy weight"));
 
         // TODO: Presentation string array output to ListView
         final ListView listViewLifts = (ListView) findViewById(R.id.listViewLifts);
-        String[] values = new String[]{ "Deadlift:\n5 sets of 5 reps, increase weight each set",
-                "Front Squat\n7 sets of 3 reps, increase weight each set"};
+        String[] values = new String[]{ "Deadlift\n5 sets of 5 reps, increase weight each set",
+                "Front Squat\n7 sets of 3 reps, increase weight each set",
+                "Shoulder Press\n3 sets of 5 reps, then 3 sets of 3 reps heavier",
+                "Bench Press\n4 sets of 12 reps, work up to one heavy weight",
+                "Back Squat\n5 sets of 6 reps, increase weight each set",
+                "Overhead Squat\n5 sets of 3 reps, work up to one heavy weight",
+                "Power Clean\n4 sets of 4 reps, increase weight each set",
+                "Dumbbell Bench Press\n4 sets of 12 reps, work up to one heavy weight",
+                "Dumbbell Shrug\n4 sets of 12 reps, increase weight each set",
+                "Dumbbell or Barbell Row\n3 sets of 12 reps, work up to one heavy weight",
+                "Kettlebell Clean and Jerk\n3 sets of 10 reps, work up to one heavy weight"};
 
         final ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < values.length; i++)

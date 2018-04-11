@@ -13,7 +13,6 @@
 
     <string name="timecap_style">Time Cap:</string>
     <string-array name="timecap_spinner">
-        <item>100:00</item>
         <item>60:00</item>
         <item>50:00</item>
         <item>45:00</item>

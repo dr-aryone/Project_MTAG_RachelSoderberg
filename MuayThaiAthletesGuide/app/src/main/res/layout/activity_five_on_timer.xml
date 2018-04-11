@@ -25,6 +25,21 @@
         android:minHeight="40dp" />
 
     <TextView
+        android:id="@+id/timeCap_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/timecap_style"/>
+    <Spinner
+        android:id="@+id/timecap_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorLightGrey"
+        android:minHeight="40dp" />
+
+    <TextView
         android:id="@+id/time_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

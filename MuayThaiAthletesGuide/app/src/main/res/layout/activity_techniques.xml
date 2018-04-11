@@ -1,19 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<!--Let page scroll for content longer than screen-->
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    android:orientation="vertical"
-    android:background="@color/colorPrimary"
-    android:fitsSystemWindows="true"
-    tools:context="com.mtag.app.muaythaiathletesguide.TechniquesActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:text="Muay Thai application: Styles, self defense, techniques, tips and tricks."/>
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        tools:context="com.mtag.app.muaythaiathletesguide.TechniquesActivity">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:layout_marginTop="25dp"
+            android:textSize="16sp"
+            android:text="@string/styles"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:layout_marginTop="25dp"
+            android:textSize="16sp"
+            android:text="@string/weapons"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:layout_marginTop="25dp"
+            android:textSize="16sp"
+            android:text="@string/defense"/>
+    </LinearLayout>
+</ScrollView>

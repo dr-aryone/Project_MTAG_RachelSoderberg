@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Rachel\\Project_MTAG_RachelSoderberg\\MuayThaiAthletesGuide\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Rachel\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\d4a72478542c44453e93d0b6ffc29a7c\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\Rachel\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\f38f227f60b4d60d39f6b24ec9687cee\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Rachel\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\64d3d8da502b683a52d88487b4e6f2e5\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\Rachel\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\b7935fb4ba648fa221dc59804dbe6a8a\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
