@@ -15,10 +15,9 @@ import java.util.Locale;
 
 public class CountdownTimerActivity extends Activity { //implements AdapterView.OnItemSelectedListener {
     private int seconds = 0; // Number of seconds passed
+    private int timeCap = 0; // Custom max time, stop timer when reached and reset here for countdown
     private boolean running; // Check whether timer is running
     private boolean wasRunning;
-
-    private int timeCap = 0; // Custom max time, stop timer when reached and reset here for countdown
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,11 +81,8 @@ public class CountdownTimerActivity extends Activity { //implements AdapterView.
                         break;
                 }
             }
-
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
 
         // Time Cap Selection Spinner
@@ -101,90 +97,139 @@ public class CountdownTimerActivity extends Activity { //implements AdapterView.
                 // Set time cap to user's selection
                 switch(timeCapPos) {
                     case 0: // 60:00
+                        running = false;
                         timeCap = 3600;
+                        seconds = timeCap;
                         break;
                     case 1: // 50:00
+                        running = false;
                         timeCap = 3000;
+                        seconds = timeCap;
                         break;
                     case 2: // 45:00
+                        running = false;
                         timeCap = 2700;
+                        seconds = timeCap;
                         break;
                     case 3: // 40:00
+                        running = false;
                         timeCap = 2400;
+                        seconds = timeCap;
                         break;
                     case 4: // 35:00
+                        running = false;
                         timeCap = 2100;
+                        seconds = timeCap;
                         break;
                     case 5: // 30:00
+                        running = false;
                         timeCap = 1800;
+                        seconds = timeCap;
                         break;
                     case 6: // 29:00
+                        running = false;
                         timeCap = 1740;
+                        seconds = timeCap;
                         break;
                     case 7: // 28:00
+                        running = false;
                         timeCap = 1680;
+                        seconds = timeCap;
                         break;
                     case 8: // 27:00
+                        running = false;
                         timeCap = 1620;
+                        seconds = timeCap;
                         break;
                     case 9: // 26:00
+                        running = false;
                         timeCap = 1560;
+                        seconds = timeCap;
                         break;
                     case 10: // 25:00
+                        running = false;
                         timeCap = 1500;
+                        seconds = timeCap;
                         break;
                     case 11: // 24:00
+                        running = false;
                         timeCap = 1440;
+                        seconds = timeCap;
                         break;
                     case 12: // 23:00
+                        running = false;
                         timeCap = 1380;
+                        seconds = timeCap;
                         break;
                     case 13: // 22:00
+                        running = false;
                         timeCap = 1320;
+                        seconds = timeCap;
                         break;
                     case 14: // 21:00
+                        running = false;
                         timeCap = 1260;
+                        seconds = timeCap;
                         break;
                     case 15: // 20:00
+                        running = false;
                         timeCap = 1200;
+                        seconds = timeCap;
                         break;
                     case 16: // 19:00
+                        running = false;
                         timeCap = 1140;
+                        seconds = timeCap;
                         break;
                     case 17: // 18:00
+                        running = false;
                         timeCap = 1080;
+                        seconds = timeCap;
                         break;
                     case 18: // 17:00
+                        running = false;
                         timeCap = 1020;
+                        seconds = timeCap;
                         break;
                     case 19: // 16:00
+                        running = false;
                         timeCap = 960;
+                        seconds = timeCap;
                         break;
                     case 20: // 15:00
+                        running = false;
                         timeCap = 900;
+                        seconds = timeCap;
                         break;
                     case 21: // 14:00
+                        running = false;
                         timeCap = 840;
+                        seconds = timeCap;
                         break;
                     case 22: // 13:00
+                        running = false;
                         timeCap = 780;
+                        seconds = timeCap;
                         break;
                     case 23: // 12:00
+                        running = false;
                         timeCap = 720;
+                        seconds = timeCap;
                         break;
                     case 24: // 11:00
+                        running = false;
                         timeCap = 660;
+                        seconds = timeCap;
                         break;
                     case 25: // 10:00
+                        running = false;
                         timeCap = 600;
+                        seconds = timeCap;
                         break;
                 }
             }
-
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
 
         // Restore activity's state by getting values from Bundle
@@ -244,7 +289,7 @@ public class CountdownTimerActivity extends Activity { //implements AdapterView.
                 // Format time to hours, minutes, and seconds
                 String time = String.format(Locale.getDefault(), "%d:%02d:%02d", hours, minutes, secs);
                 timeView.setText(time);
-                seconds = timeCap; // TODO: Not allowing timer to decrement properly
+
                 if (running) {
                     seconds--;
                 }

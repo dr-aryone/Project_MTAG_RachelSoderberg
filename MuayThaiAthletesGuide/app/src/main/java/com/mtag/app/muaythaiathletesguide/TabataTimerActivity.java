@@ -15,10 +15,9 @@ import java.util.Locale;
 
 public class TabataTimerActivity extends Activity { // implements AdapterView.OnItemSelectedListener {
     private int seconds = 0; // Number of seconds passed
+    private int timeCap = 0; // Custom max time, stop timer when reached and reset here for countdown
     private boolean running; // Check whether timer is running
     private boolean wasRunning;
-
-    private int timeCap = 0; // Custom max time, stop timer when reached and reset here for countdown
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,9 +83,7 @@ public class TabataTimerActivity extends Activity { // implements AdapterView.On
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
     }
 
