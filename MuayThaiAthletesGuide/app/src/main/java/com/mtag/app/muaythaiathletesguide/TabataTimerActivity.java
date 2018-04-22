@@ -2,6 +2,7 @@ package com.mtag.app.muaythaiathletesguide;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -13,7 +14,14 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
-public class TabataTimerActivity extends Activity { // implements AdapterView.OnItemSelectedListener {
+public class TabataTimerActivity extends Activity {
+    // Add sounds to the media player
+    MediaPlayer airhornPlayer;
+    MediaPlayer beeppingPlayer; // Unused
+    MediaPlayer boxingarenaPlayer; // Unused
+    MediaPlayer shipbellPlayer;
+    MediaPlayer tingPlayer;
+
     private int seconds = 0; // Number of seconds passed
     private int timeCap = 0; // Custom max time, stop timer when reached and reset here for countdown
     private boolean running; // Check whether timer is running
@@ -23,6 +31,13 @@ public class TabataTimerActivity extends Activity { // implements AdapterView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabata_timer);
+
+        // Start sound operations
+        airhornPlayer = MediaPlayer.create(TabataTimerActivity.this, R.raw.airhorn);
+        beeppingPlayer = MediaPlayer.create(TabataTimerActivity.this, R.raw.beepping); // Unused
+        boxingarenaPlayer = MediaPlayer.create(TabataTimerActivity.this, R.raw.boxingarena); // Unused
+        shipbellPlayer = MediaPlayer.create(TabataTimerActivity.this, R.raw.shipbell);
+        tingPlayer = MediaPlayer.create(TabataTimerActivity.this, R.raw.ting);
 
         // Timer Selection Spinner
         Spinner timerSpinner = (Spinner) findViewById(R.id.timer_spinner);
@@ -112,6 +127,8 @@ public class TabataTimerActivity extends Activity { // implements AdapterView.On
     }
 
     public void onClickStart(View view) {
+        if (seconds == 0)
+            airhornPlayer.start();
         running = true; // Start stopwatch
     }
 
@@ -138,17 +155,14 @@ public class TabataTimerActivity extends Activity { // implements AdapterView.On
                 timeView.setText(time);
                 if (running) {
                     seconds++;
-                    //}
-                    // Don't allow timer to go under 0:00:00
                     if (seconds == 20) {
-                        Toast.makeText(getApplicationContext(), "Beep!", Toast.LENGTH_SHORT).show(); // TODO: Replace with sound
+                        shipbellPlayer.start();
                     }
                     else if (seconds == 30) {
-                        Toast.makeText(getApplicationContext(), "Beep Beep!", Toast.LENGTH_SHORT).show(); // TODO: Replace with sound
+                        boxingarenaPlayer.start();
                         seconds = 0;
                     }
                 }
-                // TODO: if (seconds >= timeCap)...
                 // Post code again with delay of one second
                 handler.postDelayed(this, 1000);
             }

@@ -2,6 +2,7 @@ package com.mtag.app.muaythaiathletesguide;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -13,7 +14,14 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
-public class FGBTimerActivity extends Activity { // implements AdapterView.OnItemSelectedListener {
+public class FGBTimerActivity extends Activity {
+    // Add sounds to the media player
+    MediaPlayer airhornPlayer;
+    MediaPlayer beeppingPlayer;
+    MediaPlayer boxingarenaPlayer;
+    MediaPlayer shipbellPlayer; // Unused
+    MediaPlayer tingPlayer;
+
     private int seconds = 0; // Number of seconds passed
     private int timeCap = 0; // Custom max time, stop timer when reached and reset here for countdown
     private boolean running; // Check whether timer is running
@@ -23,6 +31,13 @@ public class FGBTimerActivity extends Activity { // implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fgb_timer);
+
+        // Start sound operations
+        airhornPlayer = MediaPlayer.create(FGBTimerActivity.this, R.raw.airhorn);
+        beeppingPlayer = MediaPlayer.create(FGBTimerActivity.this, R.raw.beepping);
+        boxingarenaPlayer = MediaPlayer.create(FGBTimerActivity.this, R.raw.boxingarena);
+        shipbellPlayer = MediaPlayer.create(FGBTimerActivity.this, R.raw.shipbell); // Unused
+        tingPlayer = MediaPlayer.create(FGBTimerActivity.this, R.raw.ting);
 
         // Timer Selection Spinner
         Spinner timerSpinner = (Spinner) findViewById(R.id.timer_spinner);
@@ -95,111 +110,136 @@ public class FGBTimerActivity extends Activity { // implements AdapterView.OnIte
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int timeCapPos, long id) {
                 // Set time cap to user's selection
-                // TODO: Reset seconds when timeCap is changed
                 switch(timeCapPos) {
                     case 0: // 60:00
                         running = false;
                         timeCap = 3600;
+                        seconds = 0;
                         break;
                     case 1: // 50:00
                         running = false;
                         timeCap = 3000;
+                        seconds = 0;
                         break;
                     case 2: // 45:00
                         running = false;
                         timeCap = 2700;
+                        seconds = 0;
                         break;
                     case 3: // 40:00
                         running = false;
                         timeCap = 2400;
+                        seconds = 0;
                         break;
                     case 4: // 35:00
                         running = false;
                         timeCap = 2100;
+                        seconds = 0;
                         break;
                     case 5: // 30:00
                         running = false;
                         timeCap = 1800;
+                        seconds = 0;
                         break;
                     case 6: // 29:00
                         running = false;
                         timeCap = 1740;
+                        seconds = 0;
                         break;
                     case 7: // 28:00
                         running = false;
                         timeCap = 1680;
+                        seconds = 0;
                         break;
                     case 8: // 27:00
                         running = false;
                         timeCap = 1620;
+                        seconds = 0;
                         break;
                     case 9: // 26:00
                         running = false;
                         timeCap = 1560;
+                        seconds = 0;
                         break;
                     case 10: // 25:00
                         running = false;
                         timeCap = 1500;
+                        seconds = 0;
                         break;
                     case 11: // 24:00
                         running = false;
                         timeCap = 1440;
+                        seconds = 0;
                         break;
                     case 12: // 23:00
                         running = false;
                         timeCap = 1380;
+                        seconds = 0;
                         break;
                     case 13: // 22:00
                         running = false;
                         timeCap = 1320;
+                        seconds = 0;
                         break;
                     case 14: // 21:00
                         running = false;
                         timeCap = 1260;
+                        seconds = 0;
                         break;
                     case 15: // 20:00
                         running = false;
                         timeCap = 1200;
+                        seconds = 0;
                         break;
                     case 16: // 19:00
                         running = false;
                         timeCap = 1140;
+                        seconds = 0;
                         break;
                     case 17: // 18:00
                         running = false;
                         timeCap = 1080;
+                        seconds = 0;
                         break;
                     case 18: // 17:00
                         running = false;
                         timeCap = 1020;
+                        seconds = 0;
                         break;
                     case 19: // 16:00
                         running = false;
                         timeCap = 960;
+                        seconds = 0;
                         break;
                     case 20: // 15:00
                         running = false;
                         timeCap = 900;
+                        seconds = 0;
                         break;
                     case 21: // 14:00
                         running = false;
                         timeCap = 840;
+                        seconds = 0;
                         break;
                     case 22: // 13:00
                         running = false;
                         timeCap = 780;
+                        seconds = 0;
                         break;
                     case 23: // 12:00
                         running = false;
                         timeCap = 720;
+                        seconds = 0;
                         break;
                     case 24: // 11:00
                         running = false;
                         timeCap = 660;
+                        seconds = 0;
                         break;
                     case 25: // 10:00
                         running = false;
                         timeCap = 600;
+                        seconds = 0;
                         break;
                 }
             }
@@ -240,6 +280,8 @@ public class FGBTimerActivity extends Activity { // implements AdapterView.OnIte
     }
 
     public void onClickStart(View view) {
+        if (seconds == 0)
+            airhornPlayer.start();
         running = true; // Start stopwatch
     }
 
@@ -269,15 +311,16 @@ public class FGBTimerActivity extends Activity { // implements AdapterView.OnIte
                     //}
                     // Beep every 1 minute
                     if (seconds > 0 && seconds % 60 == 0) {
-                        Toast.makeText(getApplicationContext(), "Beep!", Toast.LENGTH_SHORT).show(); // TODO: Replace with sound
+                        shipbellPlayer.start();
                     }
                     else if (seconds >= timeCap) {
-                        Toast.makeText(getApplicationContext(), "Cap Beep!", Toast.LENGTH_SHORT).show(); // TODO: Replace with sound
+                        boxingarenaPlayer.start();
                         onPause();
                     }
                 }
                 // Don't allow timer to go over 99:59:59
                 if (seconds >= 359999) {
+                    tingPlayer.start();
                     running = false;
                     Toast.makeText(getApplicationContext(), "Maximum time reached", Toast.LENGTH_LONG).show();
                 }

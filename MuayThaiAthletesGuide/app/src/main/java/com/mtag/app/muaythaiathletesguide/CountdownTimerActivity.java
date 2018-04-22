@@ -2,6 +2,7 @@ package com.mtag.app.muaythaiathletesguide;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -13,7 +14,14 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
-public class CountdownTimerActivity extends Activity { //implements AdapterView.OnItemSelectedListener {
+public class CountdownTimerActivity extends Activity {
+    // Add sounds to the media player
+    MediaPlayer airhornPlayer;
+    MediaPlayer beeppingPlayer;
+    MediaPlayer boxingarenaPlayer;
+    MediaPlayer shipbellPlayer; // Unused
+    MediaPlayer tingPlayer;
+
     private int seconds = 0; // Number of seconds passed
     private int timeCap = 0; // Custom max time, stop timer when reached and reset here for countdown
     private boolean running; // Check whether timer is running
@@ -23,6 +31,13 @@ public class CountdownTimerActivity extends Activity { //implements AdapterView.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_countdown_timer);
+
+        // Start sound operations
+        airhornPlayer = MediaPlayer.create(CountdownTimerActivity.this, R.raw.airhorn);
+        beeppingPlayer = MediaPlayer.create(CountdownTimerActivity.this, R.raw.beepping);
+        boxingarenaPlayer = MediaPlayer.create(CountdownTimerActivity.this, R.raw.boxingarena);
+        shipbellPlayer = MediaPlayer.create(CountdownTimerActivity.this, R.raw.shipbell); // Unused
+        tingPlayer = MediaPlayer.create(CountdownTimerActivity.this, R.raw.ting);
 
         // Timer Selection Spinner
         Spinner timerSpinner = (Spinner) findViewById(R.id.timer_spinner);
@@ -265,6 +280,8 @@ public class CountdownTimerActivity extends Activity { //implements AdapterView.
     }
 
     public void onClickStart(View view) {
+        if (seconds == timeCap)
+            airhornPlayer.start();
         running = true; // Start stopwatch
     }
 
@@ -292,11 +309,13 @@ public class CountdownTimerActivity extends Activity { //implements AdapterView.
 
                 if (running) {
                     seconds--;
+                    if (seconds == 3 || seconds == 2 || seconds == 1)
+                        beeppingPlayer.start();
                 }
                 // Don't allow timer to go under 0:00:00
                 if (seconds <= 1) {
+                    boxingarenaPlayer.start();
                     running = false;
-                    Toast.makeText(getApplicationContext(), "Maximum time reached", Toast.LENGTH_LONG).show();
                 }
                 // Post code again with delay of one second
                 handler.postDelayed(this, 1000);
