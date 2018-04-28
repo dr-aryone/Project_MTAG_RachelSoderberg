@@ -35,8 +35,8 @@ public class WodsActivity extends Activity {
         db.addWod(new Wod("The Longest Mile", "4 Rounds:\n10 Burpees\n100m Run\n10 Air Squats\n100m Run\n10 Push Ups\n100m Run\n10 Sit Ups\n100m Run", "For Time"));
         db.addWod(new Wod("12 Down to 1", "Push Ups\nPull Ups", "For Time"));
 
-        // TODO: Presentation string array output to ListView
-        final ListView listViewWods = (ListView) findViewById(R.id.listViewWods);
+        // Presentation string array output to ListView
+        final ListView listViewWods = findViewById(R.id.listViewWods);
         String[] values = new String[]{ "Annie\n50-40-30-20-10\nSit Ups\nDouble Unders\nFor Time",
                 "Barbara\n5 Rounds for Time:\n20 Pull Ups\n30 Push Ups\n40 Sit Ups\n50 Air Squats\n3min Rest",
                 "Blackjack\n20 Push Ups, 1 Sit Up\n19 Push Ups, 2 Sit Ups\n18 Push Ups, 3 Sit Ups\n...\n2 Push Ups, 19 Sit Ups\n1 Push Up, 20 Sit Ups",

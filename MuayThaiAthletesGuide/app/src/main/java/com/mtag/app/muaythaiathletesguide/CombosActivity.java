@@ -12,22 +12,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-// https://stackoverflow.com/questions/18614250/how-to-display-database-content-on-android-listview
-// Tutorial on Listview & SQLite: http://www.mysamplecode.com/2012/07/android-listview-cursoradapter-sqlite.html
-
-// Great tutorial: http://hmkcode.com/android-simple-sqlite-database-tutorial/
-//         GitHub: https://github.com/hmkcode/Android/tree/master/android-sqlite
-
 public class CombosActivity extends Activity {
     private ComboSqliteHelper db;
     private SimpleCursorAdapter comboAdapter;
-    /* TODO: Remove, unused
-    EditText editTextComboName;
-    EditText editTextCombo;
-    TextInputLayout textInputLayoutComboName;
-    TextInputLayout textInputLayoutCombo;
-    Button buttonStoreCombo;
-    */
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -69,8 +56,8 @@ public class CombosActivity extends Activity {
         db.addCombo(new Combo("Boxing Combo 8", "L Uppercut - Overhand Right"));
         db.addCombo(new Combo("Boxing Combo 9", "R Uppercut - L Hook"));
 
-        // TODO: Reading from below string array for presentation, need to hook up to database later
-        final ListView listViewCombos = (ListView) findViewById(R.id.listViewCombos);
+        // Reading from below string array for presentation, need to hook up to database later
+        final ListView listViewCombos = findViewById(R.id.listViewCombos);
         String[] values = new String[]{ "Combo #1:\nR Kick - Cross - R Kick, L Kick - Cross - R Kick,\n" +
                 "Jab - Cross - Hook - Cross, L Elbow - R Elbow - R Knee - L Knee",
                 "Combo #3\nHook - R Knee - R Kick, Cross - Hook - R Kick",
@@ -113,7 +100,8 @@ public class CombosActivity extends Activity {
 
 /////////////////////////////////
         // TODO: Reading to ListView from Database
-        /*final ListView listViewCombos = (ListView) findViewById(R.id.listViewCombos);
+        /*
+        final ListView listViewCombos = (ListView) findViewById(R.id.listViewCombos);
         final ArrayList<String> list = new ArrayList<>();
 
         for (int i = 0; i < db.combosCount; i++) {
@@ -122,25 +110,8 @@ public class CombosActivity extends Activity {
 
         final StableArrayAdapter adapter = new StableArrayAdapter(this,
                 android.R.layout.simple_list_item_1, list);
-        listViewCombos.setAdapter(adapter);*/
-
-/////////////////////////////////
-        /* Remove item on click
-        listViewCombos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
-                final String item = (String) parent.getItemAtPosition(position);
-                view.animate().setDuration(2000).alpha(0)
-                        .withEndAction(new Runnable() {
-                            @Override
-                            public void run() {
-                                list.remove(item);
-                                adapter.notifyDataSetChanged();
-                                view.setAlpha(1);
-                            }
-                        });
-            }
-        });*/
+        listViewCombos.setAdapter(adapter);
+        */
     }
     ///////////////////////////////
     // TODO: May need this when getting all combos for ListView

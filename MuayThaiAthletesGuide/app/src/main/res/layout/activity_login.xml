@@ -63,7 +63,7 @@
             android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:background="@color/colorButtons"
+            android:background="@drawable/gradient_button"
             android:text="@string/login" />
 
         <TextView

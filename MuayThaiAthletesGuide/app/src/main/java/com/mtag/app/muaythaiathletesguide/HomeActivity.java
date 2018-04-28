@@ -5,6 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+// https://stackoverflow.com/questions/18614250/how-to-display-database-content-on-android-listview
+// Tutorial on Listview & SQLite: http://www.mysamplecode.com/2012/07/android-listview-cursoradapter-sqlite.html
+
+// Great tutorial: http://hmkcode.com/android-simple-sqlite-database-tutorial/
+//         GitHub: https://github.com/hmkcode/Android/tree/master/android-sqlite
+
 public class HomeActivity extends Activity {
 
     @Override

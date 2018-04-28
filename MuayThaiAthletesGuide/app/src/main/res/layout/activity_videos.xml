@@ -1,19 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<!--Let page scroll for content longer than screen-->
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    android:orientation="vertical"
-    android:background="@color/colorPrimary"
-    android:fitsSystemWindows="true"
-    tools:context="com.mtag.app.muaythaiathletesguide.VideosActivity">
+    android:layout_height="wrap_content">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        tools:context="com.mtag.app.muaythaiathletesguide.VideosActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:text="Video thumbnails?"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="22sp"
+            android:text="Video Instruction for"/>
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="22sp"
+            android:text="Beginners and Advanced"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:autoLink="web"
+            android:text="@string/wrap_video"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:autoLink="all"
+            android:linksClickable="true"
+            android:text="@string/punch_video"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:autoLink="all"
+            android:linksClickable="true"
+            android:text="@string/kick_video"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:autoLink="all"
+            android:linksClickable="true"
+            android:text="@string/lowkick_video"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:autoLink="all"
+            android:linksClickable="true"
+            android:text="@string/elbow_video"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:autoLink="all"
+            android:linksClickable="true"
+            android:text="@string/knee_video"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:autoLink="all"
+            android:linksClickable="true"
+            android:text="@string/clinch_video"/>
+    </LinearLayout>
+</ScrollView>

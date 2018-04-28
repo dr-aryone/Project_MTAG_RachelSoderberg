@@ -69,7 +69,7 @@ public class RegisterActivity extends Activity {
 
     //this method used to set Login TextView click event
     private void initTextViewLogin() {
-        TextView textViewLogin = (TextView) findViewById(R.id.textViewLogin);
+        TextView textViewLogin = findViewById(R.id.textViewLogin);
         textViewLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,13 +80,13 @@ public class RegisterActivity extends Activity {
 
     //this method is used to connect XML views to its Objects
     private void initViews() {
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        editTextUserName = (EditText) findViewById(R.id.editTextUserName);
-        textInputLayoutEmail = (TextInputLayout) findViewById(R.id.textInputLayoutEmail);
-        textInputLayoutPassword = (TextInputLayout) findViewById(R.id.textInputLayoutPassword);
-        textInputLayoutUserName = (TextInputLayout) findViewById(R.id.textInputLayoutUserName);
-        buttonRegister = (Button) findViewById(R.id.buttonRegister);
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        editTextUserName = findViewById(R.id.editTextUserName);
+        textInputLayoutEmail = findViewById(R.id.textInputLayoutEmail);
+        textInputLayoutPassword = findViewById(R.id.textInputLayoutPassword);
+        textInputLayoutUserName = findViewById(R.id.textInputLayoutUserName);
+        buttonRegister = findViewById(R.id.buttonRegister);
 
     }
 

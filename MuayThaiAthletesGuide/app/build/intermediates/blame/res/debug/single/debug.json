@@ -608,10 +608,6 @@
         "source": "C:\\Users\\Rachel\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\b7935fb4ba648fa221dc59804dbe6a8a\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
-        "merged": "C:\\Users\\Rachel\\Project_MTAG_RachelSoderberg\\MuayThaiAthletesGuide\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_timer.xml.flat",
-        "source": "C:\\Users\\Rachel\\Project_MTAG_RachelSoderberg\\MuayThaiAthletesGuide\\app\\src\\main\\res\\layout\\activity_timer.xml"
-    },
-    {
         "merged": "C:\\Users\\Rachel\\Project_MTAG_RachelSoderberg\\MuayThaiAthletesGuide\\app\\build\\intermediates\\res\\merged\\debug\\drawable_navigation_empty_icon.xml.flat",
         "source": "C:\\Users\\Rachel\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\f38f227f60b4d60d39f6b24ec9687cee\\res\\drawable\\navigation_empty_icon.xml"
     },
@@ -1790,6 +1786,10 @@
     {
         "merged": "C:\\Users\\Rachel\\Project_MTAG_RachelSoderberg\\MuayThaiAthletesGuide\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\Rachel\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\b7935fb4ba648fa221dc59804dbe6a8a\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Rachel\\Project_MTAG_RachelSoderberg\\MuayThaiAthletesGuide\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_button.xml.flat",
+        "source": "C:\\Users\\Rachel\\Project_MTAG_RachelSoderberg\\MuayThaiAthletesGuide\\app\\src\\main\\res\\drawable\\gradient_button.xml"
     },
     {
         "merged": "C:\\Users\\Rachel\\Project_MTAG_RachelSoderberg\\MuayThaiAthletesGuide\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",

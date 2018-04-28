@@ -1,9 +1,5 @@
 package com.mtag.app.muaythaiathletesguide;
 
-/**
- * Created by Rachel on 3/5/2018.
- */
-
 public class Wod {
     public int id;
     public String wodName;

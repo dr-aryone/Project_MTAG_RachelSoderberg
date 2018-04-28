@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="6dp"
-        android:background="@color/colorButtons"
+        android:background="@drawable/gradient_button"
         android:onClick="onTechniquesActivity"
         android:text="@string/techniques" />
 
@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="6dp"
-        android:background="@color/colorButtons"
+        android:background="@drawable/gradient_button"
         android:onClick="onCombosActivity"
         android:text="@string/combos" />
 
@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="6dp"
-        android:background="@color/colorButtons"
+        android:background="@drawable/gradient_button"
         android:onClick="onVideosActivity"
         android:text="@string/videos" />
 

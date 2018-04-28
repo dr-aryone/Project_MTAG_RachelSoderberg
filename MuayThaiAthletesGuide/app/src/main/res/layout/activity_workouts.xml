@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="6dp"
-        android:background="@color/colorButtons"
+        android:background="@drawable/gradient_button"
         android:onClick="onWodsActivity"
         android:text="@string/wods" />
 
@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="6dp"
-        android:background="@color/colorButtons"
+        android:background="@drawable/gradient_button"
         android:onClick="onMartialActivity"
         android:text="@string/martial" />
 
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="6dp"
-        android:background="@color/colorButtons"
+        android:background="@drawable/gradient_button"
         android:onClick="onLiftingActivity"
         android:text="@string/lifting" />
 

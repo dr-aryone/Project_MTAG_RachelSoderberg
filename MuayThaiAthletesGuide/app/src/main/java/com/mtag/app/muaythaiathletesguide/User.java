@@ -1,9 +1,5 @@
 package com.mtag.app.muaythaiathletesguide;
 
-/**
- * Created by Rachel on 2/2/2018.
- */
-
 public class User {
     public String id;
     public String userName;

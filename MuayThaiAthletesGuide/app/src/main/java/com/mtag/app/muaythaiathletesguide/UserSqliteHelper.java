@@ -6,10 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by Rachel on 2/2/2018.
- */
-
 public class UserSqliteHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "mtag_users";
     public static final int DATABASE_VERSION = 1;
@@ -94,12 +90,8 @@ public class UserSqliteHelper extends SQLiteOpenHelper {
                 new String[]{email},//Where clause
                 null, null, null);
 
-        if (cursor != null && cursor.moveToFirst()) {
-            // If cursor has value then in user database there is user associated with this given email so return true
-            return true;
-        }
+        return cursor != null && cursor.moveToFirst();
 
         // If email does not exist return false
-        return false;
     }
 }

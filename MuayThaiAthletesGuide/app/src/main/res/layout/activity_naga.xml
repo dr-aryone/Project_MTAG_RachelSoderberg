@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorText"
-                android:textSize="35sp"
+                android:textSize="25sp"
                 android:text="@string/wca_title"/>
 
             <TextView
@@ -65,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginTop="50dp"
-                android:background="@color/colorButtons"
+                android:background="@drawable/gradient_button"
                 android:onClick="onCoachesActivity"
                 android:text="@string/coaches"/>
 
@@ -74,7 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/colorButtons"
+                android:background="@drawable/gradient_button"
                 android:onClick="onScheduleActivity"
                 android:text="@string/schedule"/>
     </LinearLayout>

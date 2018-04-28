@@ -1,9 +1,5 @@
 package com.mtag.app.muaythaiathletesguide;
 
-/**
- * Created by Rachel on 3/5/2018.
- */
-
 public class Martial {
     public int id;
     public String martialName;

@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="6dp"
-        android:background="@color/colorButtons"
+        android:background="@drawable/gradient_button"
         android:onClick="onWorkoutsActivity"
         android:text="@string/workouts" />
 
@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="6dp"
-        android:background="@color/colorButtons"
+        android:background="@drawable/gradient_button"
         android:onClick="onTrainingActivity"
         android:text="@string/training" />
 
@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="6dp"
-        android:background="@color/colorButtons"
+        android:background="@drawable/gradient_button"
         android:onClick="onUserPortalActivity"
         android:text="@string/userportal" />
 
@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="6dp"
-        android:background="@color/colorButtons"
+        android:background="@drawable/gradient_button"
         android:onClick="onTimerActivity"
         android:text="@string/timer" />
 
@@ -51,7 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="6dp"
-        android:background="@color/colorButtons"
+        android:background="@drawable/gradient_button"
         android:onClick="onNagaActivity"
         android:text="@string/naga" />
 

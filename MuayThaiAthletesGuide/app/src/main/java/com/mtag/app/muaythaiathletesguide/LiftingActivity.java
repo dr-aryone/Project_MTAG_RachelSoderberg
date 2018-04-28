@@ -35,8 +35,8 @@ public class LiftingActivity extends Activity {
         db.addLift(new Lift("Dumbbell or Barbell Row", "3 sets of 12 reps, work up to one heavy weight"));
         db.addLift(new Lift("Kettlebell Clean and Jerk", "3 sets of 10 reps, work up to one heavy weight"));
 
-        // TODO: Presentation string array output to ListView
-        final ListView listViewLifts = (ListView) findViewById(R.id.listViewLifts);
+        // Presentation string array output to ListView
+        final ListView listViewLifts = findViewById(R.id.listViewLifts);
         String[] values = new String[]{ "Deadlift\n5 sets of 5 reps, increase weight each set",
                 "Front Squat\n7 sets of 3 reps, increase weight each set",
                 "Shoulder Press\n3 sets of 5 reps, then 3 sets of 3 reps heavier",

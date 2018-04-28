@@ -14,8 +14,6 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
-// Gradient Buttons: https://github.com/sapandiwakar/PSGradientButtons
-
 public class BasicTimerActivity extends Activity {
     // Add sounds to the media player
     MediaPlayer airhornPlayer;
@@ -42,7 +40,7 @@ public class BasicTimerActivity extends Activity {
         tingPlayer = MediaPlayer.create(BasicTimerActivity.this, R.raw.ting);
 
         // Timer Selection Spinner
-        Spinner timerSpinner = (Spinner) findViewById(R.id.timer_spinner);
+        Spinner timerSpinner = findViewById(R.id.timer_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.timer_spinner, android.R.layout.simple_spinner_item);
@@ -103,7 +101,7 @@ public class BasicTimerActivity extends Activity {
         });
 
         // Time Cap Selection Spinner
-        Spinner timecapSpinner = (Spinner) findViewById(R.id.timecap_spinner);
+        Spinner timecapSpinner = findViewById(R.id.timecap_spinner);
         ArrayAdapter<CharSequence> capadapter = ArrayAdapter.createFromResource(this,
                 R.array.timecap_spinner, android.R.layout.simple_spinner_item);
         capadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -297,7 +295,7 @@ public class BasicTimerActivity extends Activity {
     }
 
     private void runBasicTimer() {
-        final TextView timeView = (TextView)findViewById(R.id.time_view);
+        final TextView timeView = findViewById(R.id.time_view);
         final Handler handler = new Handler();
         handler.post(new Runnable() {
             @Override
