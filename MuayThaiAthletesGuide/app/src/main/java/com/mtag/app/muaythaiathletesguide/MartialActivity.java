@@ -29,6 +29,8 @@ public class MartialActivity extends Activity {
         db.addMartial(new Martial("Muay Thai Workout 1", "(0:00) Rapid Fire L Hook - R Hook\n(1:00) Alternate Teeps\n(2:00) Rapid Fire Jab - Cross", "3:00 on Clock"));
         db.addMartial(new Martial("Muay Thai Workout 2", "(0:00) Jab - Cross - Block (L Kick) - L Kick\n(1:00) 2x R Kick - 2x L Kick\n(2:00) Rapid Fire Alternate Teeps", "3:00 on Clock"));
         db.addMartial(new Martial("Muay Thai Workout 3", "(0:00) R Teep - R Knee - R Elbow\n(1:00) L Teep - L Knee - L Elbow\n(2:00) Rapid Fire Jab - Cross", "3:00 on Clock"));
+        db.addMartial(new Martial("Full Body Workout", "(0:00) Rapid Fire L Hook Body - R Hook Body\n(1:00) Crunches/Sit Ups\n{2:00) Burpees", "3:00 on Clock"));
+        db.addMartial(new Martial("Core Strength Cardio", "(0:00) Sit Ups/Crunches\n(1:00) High Knees\n(2:00) Sit Ups/Crunches", "3:00 on Clock"));
 
         // Presentation string array output to ListView
         final ListView listViewMartial = findViewById(R.id.listViewMartial);
@@ -37,7 +39,9 @@ public class MartialActivity extends Activity {
                 "Boxing Workout 3\n(0:00) Jab - L Hook Body - Cross\n(1:00) Jab - Jab - Heavy Cross\n(2:00) Rapid Fire Jab - Cross\n3:00 on Clock",
                 "Muay Thai Workout 1\n(0:00) Rapid Fire L Hook - R Hook\n(1:00) Alternate Teeps\n(2:00) Rapid Fire Jab - Cross\n3:00 on Clock",
                 "Muay Thai Workout 2\n(0:00) Jab - Cross - Block (L Kick) - L Kick\n(1:00) 2x R Kick - 2x L Kick\n(2:00) Rapid Fire Alternate Teeps\n3:00 on Clock",
-                "Muay Thai Workout 3\n(0:00) R Teep - R Knee - R Elbow\n(1:00) L Teep - L Knee - L Elbow\n(2:00) Rapid Fire Jab - Cross\n3:00 on Clock"};
+                "Muay Thai Workout 3\n(0:00) R Teep - R Knee - R Elbow\n(1:00) L Teep - L Knee - L Elbow\n(2:00) Rapid Fire Jab - Cross\n3:00 on Clock",
+                "Full Body Workout\n(0:00) Rapid Fire L Hook Body - R Hook Body\n(1:00) Crunches/Sit Ups\n{2:00) Burpees",
+                "Core Strength Cardio\n(0:00) Sit Ups/Crunches\n(1:00) High Knees\n(2:00) Sit Ups/Crunches"};
 
         final ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < values.length; i++)

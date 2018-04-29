@@ -48,7 +48,6 @@ public class MartialSqliteHelper extends SQLiteOpenHelper{
         values.put(KEY_MARTIAL_TIME_LIMIT, martial.getMartialTimeLimit());
 
         db.insert(TABLE_MARTIAL, null, values);
-
         db.close();
     }
 }

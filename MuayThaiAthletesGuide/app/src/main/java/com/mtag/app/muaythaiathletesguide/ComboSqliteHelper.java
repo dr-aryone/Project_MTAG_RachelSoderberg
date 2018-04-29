@@ -55,13 +55,8 @@ public class ComboSqliteHelper extends SQLiteOpenHelper {
         values.put(KEY_COMBO_NAME, combo.getComboName());
         values.put(KEY_COMBO, combo.getCombo());
 
-        // Insert
-        db.insert(TABLE_COMBOS, // Table
-                null, // nullColumnHack
-                values); // Key/value -> keys = column names/ values = column values)
-
-        //++combosCount;
-        // Close
+        // Insert(Table, nullColumnHack, Key/value)
+        db.insert(TABLE_COMBOS,null, values); // Key/value -> keys = column names/ values = column values)
         db.close();
     }
 }

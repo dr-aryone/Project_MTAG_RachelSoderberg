@@ -16,7 +16,8 @@
         android:text="@string/combosText" />
         <!--android:textColor="@color/colorText" />-->
 
-    <EditText
+    <!-- Filter Results -->
+    <!-- EditText
         android:id="@+id/myFilter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,50 +26,11 @@
         android:background="@color/colorAccent"
         android:hint="@string/combosHint">
         <requestFocus />
-    </EditText>
+    </EditText -->
 
     <ListView
         android:id="@+id/listViewCombos"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
-
-<!-- Textbox and button for user to add their own combos
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/textInputLayoutComboName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/editTextComboName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/combo_name"
-            android:background="@color/colorAccent" />
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/textInputLayoutCombo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/editTextCombo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/combo"
-            android:background="@color/colorAccent" />
-    </android.support.design.widget.TextInputLayout>
-
-    <Button
-        android:id="@+id/buttonStoreCombo"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:background="@color/colorButtons"
-        android:onClick="onCombosActivity"
-        android:text="@string/button_store_combo" />-->
 
 </LinearLayout>

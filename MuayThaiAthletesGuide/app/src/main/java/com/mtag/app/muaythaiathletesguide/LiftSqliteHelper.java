@@ -46,7 +46,6 @@ public class LiftSqliteHelper extends SQLiteOpenHelper {
         values.put(KEY_LIFT_DESC, lift.getLiftDesc());
 
         db.insert(TABLE_LIFTS, null, values);
-
         db.close();
     }
 }
