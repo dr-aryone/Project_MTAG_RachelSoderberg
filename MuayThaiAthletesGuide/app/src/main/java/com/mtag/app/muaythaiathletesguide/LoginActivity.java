@@ -20,6 +20,8 @@ public class LoginActivity extends Activity {
     Button buttonLogin;
     UserSqliteHelper userSqliteHelper;
 
+    String thisUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +47,7 @@ public class LoginActivity extends Activity {
                     if (currentUser != null) {
                         Snackbar.make(buttonLogin, "Successfully Logged in!", Snackbar.LENGTH_LONG).show();
                         // Login successful, launch HomeActivity
+                        thisUser = currentUser.getEmail();
                         Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                         startActivity(intent);
                         finish();

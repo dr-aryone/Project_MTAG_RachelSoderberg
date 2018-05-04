@@ -47,10 +47,4 @@
         android:background="@color/colorButtons"
         android:onClick="onUserPortalActivity"
         android:text="@string/button_store_combo" />
-
-    <!-- TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:text="User activity, saved content such as combos and workouts."/> -->
 </LinearLayout>

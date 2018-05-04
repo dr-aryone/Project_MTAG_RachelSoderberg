@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class UserSqliteHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "mtag_users";
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 2;
     public static final String TABLE_USERS = "users";
 
     // TABLE USERS COLUMNS
