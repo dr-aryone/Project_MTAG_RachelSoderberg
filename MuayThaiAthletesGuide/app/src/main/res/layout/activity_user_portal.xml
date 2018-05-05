@@ -46,5 +46,5 @@
         android:layout_marginTop="16dp"
         android:background="@color/colorButtons"
         android:onClick="onUserPortalActivity"
-        android:text="@string/button_store_combo" />
+        android:text="@string/store_input_button" />
 </LinearLayout>

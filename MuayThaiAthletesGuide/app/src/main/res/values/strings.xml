@@ -1,20 +1,5 @@
 <resources>
     <string name="app_name">MuayThaiAthletesGuide</string>
-
-    <!--Navigation Strings-->
-    <string name="timer">Timer</string>
-    <string name="workouts">Workouts</string>
-    <string name="wods">WODs with Minimal Equipment</string>
-    <string name="martial">Martial Arts-Inspired Workouts</string>
-    <string name="training"><![CDATA[Training & Instruction]]></string>
-    <string name="combos">Combinations</string>
-    <string name="videos">Videos</string>
-    <string name="lifting"><![CDATA[Weightlifting & Strength Training]]></string>
-    <string name="techniques">Techniques</string>
-    <string name="userportal">User Portal</string>
-    <string name="schedule">Schedule</string>
-    <string name="button_store_combo">Save Combo</string>
-    <string name="listview_stub">Here\'s some text demonstrating the location of the listview using id \'listViewCombos\'</string>
     <string name="defaultHint">Type here to filter</string>
-
+    <string name="rank">Coach/Student</string>
 </resources>

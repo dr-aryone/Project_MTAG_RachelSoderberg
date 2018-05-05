@@ -65,6 +65,21 @@
                 android:inputType="textPassword" />
         </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            app:errorEnabled="true"
+            android:id="@+id/textInputLayoutRank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextRank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/rank"
+                android:background="@color/colorAccent" />
+        </android.support.design.widget.TextInputLayout>
+
         <Button
             android:id="@+id/buttonRegister"
             android:layout_width="match_parent"

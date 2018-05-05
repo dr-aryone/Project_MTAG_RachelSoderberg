@@ -76,6 +76,6 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/gradient_button"
                 android:onClick="onScheduleActivity"
-                android:text="@string/schedule"/>
+                android:text="@string/schedule_button"/>
     </LinearLayout>
 </ScrollView>

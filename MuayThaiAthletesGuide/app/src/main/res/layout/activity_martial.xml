@@ -15,7 +15,7 @@
         android:textSize="20sp"
         android:text="@string/martialText" />
         <!--android:textColor="@color/colorText" />-->
-
+<!--
     <EditText
         android:id="@+id/myFilter"
         android:layout_width="match_parent"
@@ -26,6 +26,7 @@
         android:hint="@string/defaultHint">
         <requestFocus />
     </EditText>
+-->
 
     <ListView
         android:id="@+id/listViewMartial"

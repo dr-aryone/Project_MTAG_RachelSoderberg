@@ -16,8 +16,8 @@
         android:text="@string/combosText" />
         <!--android:textColor="@color/colorText" />-->
 
-    <!-- Filter Results -->
-    <!-- EditText
+<!--
+    <EditText>
         android:id="@+id/myFilter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,7 +26,8 @@
         android:background="@color/colorAccent"
         android:hint="@string/combosHint">
         <requestFocus />
-    </EditText -->
+    </EditText>
+-->
 
     <ListView
         android:id="@+id/listViewCombos"

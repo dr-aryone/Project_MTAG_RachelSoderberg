@@ -42,7 +42,7 @@
         <activity android:name=".TabataTimerActivity" />
         <activity android:name=".FGBTimerActivity" />
         <activity android:name=".ThreeOnTimerActivity" />
-        <activity android:name=".FiveOnTimerActivity"></activity>
+        <activity android:name=".FiveOnTimerActivity" />
     </application>
 
 </manifest>

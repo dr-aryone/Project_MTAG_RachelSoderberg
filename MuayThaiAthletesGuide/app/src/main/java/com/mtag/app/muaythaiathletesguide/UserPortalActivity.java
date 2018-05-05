@@ -18,11 +18,7 @@ public class UserPortalActivity extends Activity {
         db = new UserSqliteHelper(this);
     }
     public void onUserPortalActivity(View view) {
-        //if (LoginActivity.thisUser == "rachel@gmail.com"){}
-        //if (UserSqliteHelper.KEY_EMAIL == "rachel@gmail.com") {
             Intent intent = new Intent(this, UserPortalActivity.class);
             startActivity(intent);
-        //}
-
     }
 }

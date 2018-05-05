@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="naga">Naga Muay Thai - Portland, Oregon, USA</string>
     <string name="naga_title">Naga Muay Thai</string>
     <string name="wca_title">- World Class Athletics -</string>
     <string name="address">6332 SE 82nd Ave, Portland, OR 97266</string>

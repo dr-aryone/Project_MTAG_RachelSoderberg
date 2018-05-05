@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Home Activity -->
+    <string name="naga_button">Naga Muay Thai - Portland, Oregon, USA</string>
+    <string name="timer_button">Timer</string>
+    <string name="training_button"><![CDATA[Training & Instruction]]></string>
+    <string name="userportal_button">User Portal</string>
+    <string name="workouts_button">Workouts</string>
+
+    <!-- Workouts Activity -->
+    <string name="wods_button">WODs with Minimal Equipment</string>
+    <string name="martial_button">Martial Arts-Inspired Workouts</string>
+    <string name="lifting_button"><![CDATA[Weightlifting & Strength Training]]></string>
+
+    <!-- Training Activity -->
+    <string name="techniques_button">Techniques</string>
+    <string name="combos_button">Combinations</string>
+    <string name="videos_button">Videos</string>
+
+    <!-- User Portal Activity -->
+    <string name="store_input_button">Store Input</string>
+
+    <!-- Naga Activity -->
+    <string name="schedule_button">Schedule</string>
+</resources>

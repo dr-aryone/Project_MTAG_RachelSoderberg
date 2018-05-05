@@ -12,21 +12,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class RegisterActivity extends Activity {
-
-    //Declaration EditTexts
     EditText editTextUserName;
     EditText editTextEmail;
     EditText editTextPassword;
-
-    //Declaration TextInputLayout
+    EditText editTextRank;/////
     TextInputLayout textInputLayoutUserName;
     TextInputLayout textInputLayoutEmail;
     TextInputLayout textInputLayoutPassword;
-
-    //Declaration Button
+    TextInputLayout textInputLayoutRank;/////
     Button buttonRegister;
-
-    //Declaration UserSqliteHelper
     UserSqliteHelper userSqliteHelper;
 
     @Override
@@ -44,12 +38,11 @@ public class RegisterActivity extends Activity {
                     String UserName = editTextUserName.getText().toString();
                     String Email = editTextEmail.getText().toString();
                     String Password = editTextPassword.getText().toString();
+                    String Rank = editTextRank.getText().toString();
 
                     //Check in the database is there any user associated with  this email
                     if (!userSqliteHelper.isEmailExists(Email)) {
-
-                        //Email does not exist now add new user to database
-                        userSqliteHelper.addUser(new User(null, UserName, Email, Password));
+                        userSqliteHelper.addUser(new User(null, UserName, Email, Password, Rank));////
                         Snackbar.make(buttonRegister, "User created successfully! Please Login ", Snackbar.LENGTH_LONG).show();
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -58,8 +51,6 @@ public class RegisterActivity extends Activity {
                             }
                         }, Snackbar.LENGTH_LONG);
                     }else {
-
-                        //Email exists with email input provided so show error user already exist
                         Snackbar.make(buttonRegister, "User already exists with same email ", Snackbar.LENGTH_LONG).show();
                     }
                 }
@@ -67,7 +58,6 @@ public class RegisterActivity extends Activity {
         });
     }
 
-    //this method used to set Login TextView click event
     private void initTextViewLogin() {
         TextView textViewLogin = findViewById(R.id.textViewLogin);
         textViewLogin.setOnClickListener(new View.OnClickListener() {
@@ -83,11 +73,12 @@ public class RegisterActivity extends Activity {
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
         editTextUserName = findViewById(R.id.editTextUserName);
+        editTextRank = findViewById(R.id.editTextRank);/////
         textInputLayoutEmail = findViewById(R.id.textInputLayoutEmail);
         textInputLayoutPassword = findViewById(R.id.textInputLayoutPassword);
         textInputLayoutUserName = findViewById(R.id.textInputLayoutUserName);
+        textInputLayoutRank = findViewById(R.id.textInputLayoutRank);/////
         buttonRegister = findViewById(R.id.buttonRegister);
-
     }
 
     //This method is used to validate input given by user
@@ -98,6 +89,7 @@ public class RegisterActivity extends Activity {
         String UserName = editTextUserName.getText().toString();
         String Email = editTextEmail.getText().toString();
         String Password = editTextPassword.getText().toString();
+        String Rank = editTextRank.getText().toString();/////
 
         //Handling validation for UserName field
         if (UserName.isEmpty()) {
@@ -133,6 +125,20 @@ public class RegisterActivity extends Activity {
             } else {
                 valid = false;
                 textInputLayoutPassword.setError("Password is to short!");
+            }
+        }
+
+        //Handling validation for Rank field
+        if (Rank.isEmpty()) {
+            valid = false;
+            textInputLayoutRank.setError("Please enter valid rank!");
+        } else {
+            if (Rank.contentEquals("Coach") || Rank.contentEquals("Student")) {
+                valid = true;
+                textInputLayoutUserName.setError(null);
+            } else {
+                valid = false;
+                textInputLayoutUserName.setError("Invalid Rank, please enter Coach or Student!");
             }
         }
 

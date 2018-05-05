@@ -20,8 +20,6 @@ public class LoginActivity extends Activity {
     Button buttonLogin;
     UserSqliteHelper userSqliteHelper;
 
-    String thisUser;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,26 +28,29 @@ public class LoginActivity extends Activity {
         initCreateAccountTextView();
         initViews();
 
-        // Login button click event
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Validate user input
                 if (validate()) {
                     // Get values
                     String Email = editTextEmail.getText().toString();
                     String Password = editTextPassword.getText().toString();
 
                     // Authenticate user
-                    User currentUser = userSqliteHelper.Authenticate(new User(null, null, Email, Password));
+                    User currentUser = userSqliteHelper.Authenticate(new User(null, null, Email, Password, null));/////
 
                     // Authentication successful?
                     if (currentUser != null) {
                         Snackbar.make(buttonLogin, "Successfully Logged in!", Snackbar.LENGTH_LONG).show();
                         // Login successful, launch HomeActivity
-                        thisUser = currentUser.getEmail();
-                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                        startActivity(intent);
+                        if (currentUser.rank.contentEquals("Student")) {
+                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                            startActivity(intent);
+                        }
+                        else {
+                            Intent intent = new Intent(LoginActivity.this, UserPortalActivity.class);
+                            startActivity(intent);
+                        }
                         finish();
                     } else {
                         // Login failed

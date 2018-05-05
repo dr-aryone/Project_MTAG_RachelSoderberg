@@ -17,7 +17,7 @@
         android:layout_marginTop="6dp"
         android:background="@drawable/gradient_button"
         android:onClick="onTechniquesActivity"
-        android:text="@string/techniques" />
+        android:text="@string/techniques_button" />
 
     <Button
         android:id="@+id/combosButton"
@@ -26,7 +26,7 @@
         android:layout_marginTop="6dp"
         android:background="@drawable/gradient_button"
         android:onClick="onCombosActivity"
-        android:text="@string/combos" />
+        android:text="@string/combos_button" />
 
     <Button
         android:id="@+id/videosButton"
@@ -35,6 +35,6 @@
         android:layout_marginTop="6dp"
         android:background="@drawable/gradient_button"
         android:onClick="onVideosActivity"
-        android:text="@string/videos" />
+        android:text="@string/videos_button" />
 
 </LinearLayout>

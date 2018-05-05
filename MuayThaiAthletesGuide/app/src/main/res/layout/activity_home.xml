@@ -17,7 +17,7 @@
         android:layout_marginTop="6dp"
         android:background="@drawable/gradient_button"
         android:onClick="onWorkoutsActivity"
-        android:text="@string/workouts" />
+        android:text="@string/workouts_button" />
 
     <Button
         android:id="@+id/trainingButton"
@@ -26,7 +26,7 @@
         android:layout_marginTop="6dp"
         android:background="@drawable/gradient_button"
         android:onClick="onTrainingActivity"
-        android:text="@string/training" />
+        android:text="@string/training_button" />
 
     <Button
         android:id="@+id/userPortalButton"
@@ -35,7 +35,7 @@
         android:layout_marginTop="6dp"
         android:background="@drawable/gradient_button"
         android:onClick="onUserPortalActivity"
-        android:text="@string/userportal" />
+        android:text="@string/userportal_button" />
 
     <Button
         android:id="@+id/timerButton"
@@ -44,7 +44,7 @@
         android:layout_marginTop="6dp"
         android:background="@drawable/gradient_button"
         android:onClick="onTimerActivity"
-        android:text="@string/timer" />
+        android:text="@string/timer_button" />
 
     <Button
         android:id="@+id/nagaButton"
@@ -53,6 +53,6 @@
         android:layout_marginTop="6dp"
         android:background="@drawable/gradient_button"
         android:onClick="onNagaActivity"
-        android:text="@string/naga" />
+        android:text="@string/naga_button" />
 
 </LinearLayout>
