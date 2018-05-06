@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:text="@string/comboName"
+        android:text="@string/name"
         android:textColor="@color/colorWhite" />
 
     <TextView
@@ -24,6 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/textViewComboName"
         android:layout_below="@+id/textViewComboName"
-        android:text="@string/combo"
+        android:text="@string/description"
         android:textColor="@color/colorWhite" />
 </RelativeLayout>

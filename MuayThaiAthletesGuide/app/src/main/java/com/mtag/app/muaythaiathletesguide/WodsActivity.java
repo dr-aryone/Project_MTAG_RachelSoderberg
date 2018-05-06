@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,7 +13,6 @@ import java.util.List;
 
 public class WodsActivity extends Activity {
     private WodSqliteHelper db;
-    private SimpleCursorAdapter wodAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

@@ -9,37 +9,37 @@
     android:background="@color/colorPrimary"
     tools:context="com.mtag.app.muaythaiathletesguide.UserPortalActivity">
 
-    <!-- Textbox and button for user to add their own combos -->
+    <!-- Textbox and button for user to input their own data -->
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/textInputLayoutComboName"
+        android:id="@+id/textInputLayoutInName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp">
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/editTextComboName"
+            android:id="@+id/editTextInName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/combo_name"
+            android:hint="@string/name"
             android:background="@color/colorAccent" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/textInputLayoutCombo"
+        android:id="@+id/textInputLayoutInDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp">
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/editTextCombo"
+            android:id="@+id/editTextInDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/combo"
+            android:hint="@string/description"
             android:background="@color/colorAccent" />
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:id="@+id/buttonStoreCombo"
+        android:id="@+id/buttonStorePortal"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
