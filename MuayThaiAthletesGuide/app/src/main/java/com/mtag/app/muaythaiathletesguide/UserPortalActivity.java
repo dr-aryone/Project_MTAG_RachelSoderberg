@@ -1,10 +1,15 @@
 package com.mtag.app.muaythaiathletesguide;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+
+import java.util.HashMap;
+import java.util.List;
 
 public class UserPortalActivity extends Activity {
     private PortalSqliteHelper db;
@@ -17,14 +22,35 @@ public class UserPortalActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_portal);
 
-        db = new PortalSqliteHelper(this);
+        //db = new PortalSqliteHelper(this);
+
+        /////////////////////////////////
+        // TODO: Reading to ListView from Database
+        //final ListView listViewPortal = (ListView) findViewById(R.id.listViewPortal);
+        //final ArrayList<String> list = new ArrayList<String>();
+
+        //for (int i = 0; i < db.portalCount; i++) {
+        //    list.add(PortalSqliteHelper.KEY_IN_NAME + "\n" + PortalSqliteHelper.KEY_IN_DESC);
+        //}
+
+        //for (int i = 0; i < values.length; i++)
+            //list.add(values[i]);
+
+        //final StableArrayAdapter adapter = new StableArrayAdapter(this,
+        //        android.R.layout.simple_list_item_1, list);
+        //listViewPortal.setAdapter(adapter);
+        ///////////////////////////////
 
         //find editText
-        nameEditText = (EditText) findViewById(R.id.editTextInName);
-        descEditText = (EditText) findViewById(R.id.editTextInDesc);
+        //nameEditText = (EditText) findViewById(R.id.editTextInName);
+        //descEditText = (EditText) findViewById(R.id.editTextInDesc);
     }
 
     public void onUserPortalActivity(View view) {
+        //find editText
+        nameEditText = (EditText) findViewById(R.id.editTextInName);
+        descEditText = (EditText) findViewById(R.id.editTextInDesc);
+
         String nameString = nameEditText.getText().toString();
         String descString = descEditText.getText().toString();
 
@@ -33,23 +59,28 @@ public class UserPortalActivity extends Activity {
         intent.putExtra("name", nameString);
         intent.putExtra("desc", descString);
 
-        db.addPortal(new Portal());
+        //db.addPortal(new Portal(nameString, descString));
         startActivity(intent);
+    }
 
-        /////////////////////////////////
-        // TODO: Reading to ListView from Database
-        /*
-        final ListView listViewPortal = (ListView) findViewById(R.id.listViewPortal);
-        final ArrayList<String> list = new ArrayList<>();
+    private class StableArrayAdapter extends ArrayAdapter<String> {
+        HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
 
-        for (int i = 0; i < db.combosCount; i++) {
-            list.add(PortalSqliteHelper.KEY_IN_NAME + "\n" + ComboSqliteHelper.KEY_IN_DESC);
+        public StableArrayAdapter(Context context, int textViewResourceId, List<String> objects) {
+            super(context, textViewResourceId, objects);
+
+            for (int i = 0; i < objects.size(); i++)
+                mIdMap.put(objects.get(i), i);
         }
 
-        final StableArrayAdapter adapter = new StableArrayAdapter(this,
-                android.R.layout.simple_list_item_1, list);
-        listViewPortal.setAdapter(adapter);
-        */
-        ///////////////////////////////
+        @Override
+        public long getItemId(int position) {
+            String item = getItem(position);
+
+            return mIdMap.get(item);
+        }
+
+        @Override
+        public boolean hasStableIds() { return true; }
     }
 }

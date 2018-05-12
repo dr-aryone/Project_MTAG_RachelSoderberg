@@ -47,4 +47,10 @@
         android:background="@color/colorButtons"
         android:onClick="onUserPortalActivity"
         android:text="@string/store_input_button" />
+
+    <ListView
+        android:id="@+id/listViewPortal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
 </LinearLayout>
