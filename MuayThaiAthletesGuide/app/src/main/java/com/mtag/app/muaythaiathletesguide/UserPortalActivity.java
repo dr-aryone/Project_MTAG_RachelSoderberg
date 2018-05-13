@@ -1,86 +1,103 @@
 package com.mtag.app.muaythaiathletesguide;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
-
-import java.util.HashMap;
-import java.util.List;
+import android.widget.TextView;
 
 public class UserPortalActivity extends Activity {
-    private PortalSqliteHelper db;
-
-    private EditText nameEditText;
-    private EditText descEditText;
+    PortalSqliteHelper portalSqliteHelper;
+    EditText editTextName;
+    EditText editTextDesc;
+    TextInputLayout textInputLayoutName;
+    TextInputLayout textInputLayoutDesc;
+    Button buttonPortal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_portal);
 
-        //db = new PortalSqliteHelper(this);
+        portalSqliteHelper = new PortalSqliteHelper(this);
+        initTextViewPortal();
+        initViews();
 
-        /////////////////////////////////
-        // TODO: Reading to ListView from Database
-        //final ListView listViewPortal = (ListView) findViewById(R.id.listViewPortal);
-        //final ArrayList<String> list = new ArrayList<String>();
+        buttonPortal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                if (validate()) {
+                    String Name = editTextName.getText().toString();
+                    String Desc = editTextDesc.getText().toString();
 
-        //for (int i = 0; i < db.portalCount; i++) {
-        //    list.add(PortalSqliteHelper.KEY_IN_NAME + "\n" + PortalSqliteHelper.KEY_IN_DESC);
-        //}
-
-        //for (int i = 0; i < values.length; i++)
-            //list.add(values[i]);
-
-        //final StableArrayAdapter adapter = new StableArrayAdapter(this,
-        //        android.R.layout.simple_list_item_1, list);
-        //listViewPortal.setAdapter(adapter);
-        ///////////////////////////////
-
-        //find editText
-        //nameEditText = (EditText) findViewById(R.id.editTextInName);
-        //descEditText = (EditText) findViewById(R.id.editTextInDesc);
+                    if (!portalSqliteHelper.isNameExists(Name)) {
+                        portalSqliteHelper.addPortal(new Portal(Name, Desc));
+                        Snackbar.make(buttonPortal, "Added successfully! ", Snackbar.LENGTH_LONG).show();
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                onUserPortalActivity(view);
+                            }
+                        }, Snackbar.LENGTH_LONG);
+                    }else {
+                        Snackbar.make(buttonPortal, "That name already exists! ", Snackbar.LENGTH_LONG).show();
+                    }
+                }
+            }
+        });
     }
 
     public void onUserPortalActivity(View view) {
-        //find editText
-        nameEditText = (EditText) findViewById(R.id.editTextInName);
-        descEditText = (EditText) findViewById(R.id.editTextInDesc);
-
-        String nameString = nameEditText.getText().toString();
-        String descString = descEditText.getText().toString();
-
         Intent intent = new Intent(this, UserPortalActivity.class);
-
-        intent.putExtra("name", nameString);
-        intent.putExtra("desc", descString);
-
-        //db.addPortal(new Portal(nameString, descString));
         startActivity(intent);
     }
 
-    private class StableArrayAdapter extends ArrayAdapter<String> {
-        HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
+    private void initTextViewPortal() {
+        TextView textViewPortal = findViewById(R.id.textViewPortal);
+        textViewPortal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+    }
 
-        public StableArrayAdapter(Context context, int textViewResourceId, List<String> objects) {
-            super(context, textViewResourceId, objects);
+    private void initViews() {
+        editTextName = findViewById(R.id.editTextName);
+        editTextDesc = findViewById(R.id.editTextDesc);
+        textInputLayoutName = findViewById(R.id.textInputLayoutName);
+        textInputLayoutDesc = findViewById(R.id.textInputLayoutDesc);
 
-            for (int i = 0; i < objects.size(); i++)
-                mIdMap.put(objects.get(i), i);
+        buttonPortal = findViewById(R.id.buttonPortal);
+    }
+
+    public boolean validate() {
+        boolean valid = false;
+        String Name = editTextName.getText().toString();
+        String Desc = editTextDesc.getText().toString();
+
+        if (Name.isEmpty()) {
+            valid = false;
+            textInputLayoutName.setError("Please enter valid username!");
+        }
+        else {
+            valid = true;
+            textInputLayoutName.setError(null);
         }
 
-        @Override
-        public long getItemId(int position) {
-            String item = getItem(position);
-
-            return mIdMap.get(item);
+        if (Desc.isEmpty()) {
+            valid = false;
+            textInputLayoutDesc.setError("Please enter valid description!");
         }
-
-        @Override
-        public boolean hasStableIds() { return true; }
+        else {
+            valid = true;
+            textInputLayoutDesc.setError(null);
+        }
+        return valid;
     }
 }

@@ -85,16 +85,16 @@ public final class R {
         public static final int italic = 0x7f090061;
         public static final int line1 = 0x7f090067;
         public static final int line3 = 0x7f090068;
-        public static final int media_actions = 0x7f090072;
-        public static final int normal = 0x7f09007b;
-        public static final int notification_background = 0x7f09007c;
-        public static final int notification_main_column = 0x7f09007d;
-        public static final int notification_main_column_container = 0x7f09007e;
-        public static final int right_icon = 0x7f09008a;
-        public static final int right_side = 0x7f09008b;
-        public static final int status_bar_latest_event_content = 0x7f0900b4;
-        public static final int text = 0x7f0900bb;
-        public static final int text2 = 0x7f0900bc;
+        public static final int media_actions = 0x7f090071;
+        public static final int normal = 0x7f09007a;
+        public static final int notification_background = 0x7f09007b;
+        public static final int notification_main_column = 0x7f09007c;
+        public static final int notification_main_column_container = 0x7f09007d;
+        public static final int right_icon = 0x7f090089;
+        public static final int right_side = 0x7f09008a;
+        public static final int status_bar_latest_event_content = 0x7f0900b3;
+        public static final int text = 0x7f0900ba;
+        public static final int text2 = 0x7f0900bb;
         public static final int time = 0x7f0900cc;
         public static final int title = 0x7f0900d3;
     }

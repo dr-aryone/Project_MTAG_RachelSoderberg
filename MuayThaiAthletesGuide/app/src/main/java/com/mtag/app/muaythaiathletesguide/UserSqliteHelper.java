@@ -17,7 +17,7 @@ public class UserSqliteHelper extends SQLiteOpenHelper {
     public static final String KEY_USER_NAME = "username";
     public static final String KEY_EMAIL = "email";
     public static final String KEY_PASSWORD = "password";
-    public static final String KEY_RANK = "rank";/////
+    public static final String KEY_RANK = "rank";
     // SQL for creating users table
     public static final String SQL_TABLE_USERS = " CREATE TABLE " + TABLE_USERS
             + " ( "
@@ -25,7 +25,7 @@ public class UserSqliteHelper extends SQLiteOpenHelper {
             + KEY_USER_NAME + " TEXT, "
             + KEY_EMAIL + " TEXT, "
             + KEY_PASSWORD + " TEXT, "
-            + KEY_RANK + " TEXT"/////
+            + KEY_RANK + " TEXT"
             + " ) ";
 
     public UserSqliteHelper(Context context) {
@@ -46,7 +46,6 @@ public class UserSqliteHelper extends SQLiteOpenHelper {
 
     // Add users to user table
     public void addUser(User user) {
-
         // Get writable database
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -57,7 +56,7 @@ public class UserSqliteHelper extends SQLiteOpenHelper {
         values.put(KEY_USER_NAME, user.userName);
         values.put(KEY_EMAIL, user.email);
         values.put(KEY_PASSWORD, user.password);
-        values.put(KEY_RANK, user.rank);/////
+        values.put(KEY_RANK, user.rank);
 
         // Insert row
         long todo_id = db.insert(TABLE_USERS, null, values);
@@ -66,7 +65,7 @@ public class UserSqliteHelper extends SQLiteOpenHelper {
     public User Authenticate(User user) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_USERS,// Selecting Table
-                new String[]{KEY_ID, KEY_USER_NAME, KEY_EMAIL, KEY_PASSWORD, KEY_RANK},/////
+                new String[]{KEY_ID, KEY_USER_NAME, KEY_EMAIL, KEY_PASSWORD, KEY_RANK},
                 KEY_EMAIL + "=?",
                 new String[]{user.email}, // Where clause
                 null, null, null);
@@ -86,7 +85,7 @@ public class UserSqliteHelper extends SQLiteOpenHelper {
     public boolean isEmailExists(String email) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_USERS,// Selecting Table
-                new String[]{KEY_ID, KEY_USER_NAME, KEY_EMAIL, KEY_PASSWORD, KEY_RANK},////
+                new String[]{KEY_ID, KEY_USER_NAME, KEY_EMAIL, KEY_PASSWORD, KEY_RANK},
                 KEY_EMAIL + "=?",
                 new String[]{email},//Where clause
                 null, null, null);

@@ -15,12 +15,13 @@ public class RegisterActivity extends Activity {
     EditText editTextUserName;
     EditText editTextEmail;
     EditText editTextPassword;
-    EditText editTextRank;/////
+    EditText editTextRank;
     TextInputLayout textInputLayoutUserName;
     TextInputLayout textInputLayoutEmail;
     TextInputLayout textInputLayoutPassword;
-    TextInputLayout textInputLayoutRank;/////
+    TextInputLayout textInputLayoutRank;
     Button buttonRegister;
+
     UserSqliteHelper userSqliteHelper;
 
     @Override
@@ -42,7 +43,7 @@ public class RegisterActivity extends Activity {
 
                     //Check in the database is there any user associated with  this email
                     if (!userSqliteHelper.isEmailExists(Email)) {
-                        userSqliteHelper.addUser(new User(null, UserName, Email, Password, Rank));////
+                        userSqliteHelper.addUser(new User(null, UserName, Email, Password, Rank));
                         Snackbar.make(buttonRegister, "User created successfully! Please Login ", Snackbar.LENGTH_LONG).show();
                         new Handler().postDelayed(new Runnable() {
                             @Override
@@ -73,11 +74,11 @@ public class RegisterActivity extends Activity {
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
         editTextUserName = findViewById(R.id.editTextUserName);
-        editTextRank = findViewById(R.id.editTextRank);/////
+        editTextRank = findViewById(R.id.editTextRank);
         textInputLayoutEmail = findViewById(R.id.textInputLayoutEmail);
         textInputLayoutPassword = findViewById(R.id.textInputLayoutPassword);
         textInputLayoutUserName = findViewById(R.id.textInputLayoutUserName);
-        textInputLayoutRank = findViewById(R.id.textInputLayoutRank);/////
+        textInputLayoutRank = findViewById(R.id.textInputLayoutRank);
         buttonRegister = findViewById(R.id.buttonRegister);
     }
 
@@ -89,7 +90,7 @@ public class RegisterActivity extends Activity {
         String UserName = editTextUserName.getText().toString();
         String Email = editTextEmail.getText().toString();
         String Password = editTextPassword.getText().toString();
-        String Rank = editTextRank.getText().toString();/////
+        String Rank = editTextRank.getText().toString();
 
         //Handling validation for UserName field
         if (UserName.isEmpty()) {
@@ -101,7 +102,7 @@ public class RegisterActivity extends Activity {
                 textInputLayoutUserName.setError(null);
             } else {
                 valid = false;
-                textInputLayoutUserName.setError("Username is to short!");
+                textInputLayoutUserName.setError("Username is too short!");
             }
         }
 
