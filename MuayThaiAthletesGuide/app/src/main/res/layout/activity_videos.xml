@@ -37,6 +37,11 @@
             android:textSize="16sp"
             android:autoLink="web"
             android:text="@string/wrap_video"/>
+        <ImageButton
+            android:id="@+id/wrapImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/wrap" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -46,6 +51,11 @@
             android:autoLink="all"
             android:linksClickable="true"
             android:text="@string/punch_video"/>
+        <ImageButton
+            android:id="@+id/punchImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/punch" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -55,6 +65,11 @@
             android:autoLink="all"
             android:linksClickable="true"
             android:text="@string/kick_video"/>
+        <ImageButton
+            android:id="@+id/kickImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kick" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -64,6 +79,11 @@
             android:autoLink="all"
             android:linksClickable="true"
             android:text="@string/lowkick_video"/>
+        <ImageButton
+            android:id="@+id/lowkickImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lowkick" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -73,6 +93,11 @@
             android:autoLink="all"
             android:linksClickable="true"
             android:text="@string/elbow_video"/>
+        <ImageButton
+            android:id="@+id/elbowImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/elbow" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -82,6 +107,11 @@
             android:autoLink="all"
             android:linksClickable="true"
             android:text="@string/knee_video"/>
+        <ImageButton
+            android:id="@+id/kneeImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/knee" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -91,5 +121,25 @@
             android:autoLink="all"
             android:linksClickable="true"
             android:text="@string/clinch_video"/>
+        <ImageButton
+            android:id="@+id/clinchImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clinch" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:autoLink="all"
+            android:linksClickable="true"
+            android:text="@string/teep_video"/>
+        <ImageButton
+            android:id="@+id/teepImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/teep" />
+
     </LinearLayout>
 </ScrollView>
