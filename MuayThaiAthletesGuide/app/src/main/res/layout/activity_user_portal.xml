@@ -17,7 +17,6 @@
         android:background="@color/colorPrimary"
         tools:context="com.mtag.app.muaythaiathletesguide.UserPortalActivity">
 
-        <!-- Textbox and button for user to input their own data -->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayoutName"
             android:layout_width="match_parent"
@@ -57,7 +56,15 @@
             android:text="@string/store_input_button" />
 
         <TextView
-            android:id="@+id/textViewPortal"
+            android:id="@+id/textViewPortalName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textColor="@color/colorAccent" />
+        <TextView
+            android:id="@+id/textViewPortalDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

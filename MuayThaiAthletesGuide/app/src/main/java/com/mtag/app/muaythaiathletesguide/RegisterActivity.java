@@ -136,10 +136,10 @@ public class RegisterActivity extends Activity {
         } else {
             if (Rank.contentEquals("Coach") || Rank.contentEquals("Student")) {
                 valid = true;
-                textInputLayoutUserName.setError(null);
+                textInputLayoutRank.setError(null);
             } else {
                 valid = false;
-                textInputLayoutUserName.setError("Invalid Rank, please enter Coach or Student!");
+                textInputLayoutRank.setError("Invalid Rank, please enter Coach or Student!");
             }
         }
 

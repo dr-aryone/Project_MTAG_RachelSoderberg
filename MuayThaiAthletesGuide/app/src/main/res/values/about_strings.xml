@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="naga_title">Naga Muay Thai</string>
-    <string name="wca_title">- World Class Athletics -</string>
-    <string name="address">6332 SE 82nd Ave, Portland, OR 97266</string>
     <string name="phone">(503)771-3451</string>
     <string name="about">We founded our gym upon a philosophy based on promoting
         both the performance and longevity of our athletes. We know that, all too often, we are
@@ -11,6 +9,5 @@
         to have a coach that is knowledgeable about recovery and the importance of avoiding
         over-training.  We are proud to offer some of the best martial arts instruction in the
         Pacific Northwest.</string>
-    <string name="url">Visit our website: <a href='http://www.worldclasspdx.com'>Naga Muay Thai</a></string>
     <string name="coaches">Our Coaches</string>
 </resources>

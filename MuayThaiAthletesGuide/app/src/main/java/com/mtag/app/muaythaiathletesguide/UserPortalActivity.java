@@ -3,13 +3,14 @@ package com.mtag.app.muaythaiathletesguide;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+// https://stackoverflow.com/questions/26700897/printing-sqlite-entries-into-a-listview
 
 public class UserPortalActivity extends Activity {
     PortalSqliteHelper portalSqliteHelper;
@@ -18,6 +19,9 @@ public class UserPortalActivity extends Activity {
     TextInputLayout textInputLayoutName;
     TextInputLayout textInputLayoutDesc;
     Button buttonPortal;
+    //ListView listViewPortal;
+    TextView textViewPortalName;
+    TextView textViewPortalDesc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +29,11 @@ public class UserPortalActivity extends Activity {
         setContentView(R.layout.activity_user_portal);
 
         portalSqliteHelper = new PortalSqliteHelper(this);
-        initTextViewPortal();
+        //listViewPortal = (ListView)findViewById(R.id.listViewPortal);
+        textViewPortalName = (TextView)findViewById(R.id.textViewPortalName);
+        textViewPortalDesc = (TextView)findViewById(R.id.textViewPortalDesc);
+
+        //initTextViewPortal();
         initViews();
 
         buttonPortal.setOnClickListener(new View.OnClickListener() {
@@ -38,12 +46,9 @@ public class UserPortalActivity extends Activity {
                     if (!portalSqliteHelper.isNameExists(Name)) {
                         portalSqliteHelper.addPortal(new Portal(Name, Desc));
                         Snackbar.make(buttonPortal, "Added successfully! ", Snackbar.LENGTH_LONG).show();
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                onUserPortalActivity(view);
-                            }
-                        }, Snackbar.LENGTH_LONG);
+
+                        textViewPortalName.setText(Name);
+                        textViewPortalDesc.setText(Desc);
                     }else {
                         Snackbar.make(buttonPortal, "That name already exists! ", Snackbar.LENGTH_LONG).show();
                     }
@@ -51,12 +56,23 @@ public class UserPortalActivity extends Activity {
             }
         });
     }
+/*
+    private class StableArrayAdapter extends ArrayAdapter<String> {
+        HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
 
+        public StableArrayAdapter(Context context, int textViewResourceId, List<String> objects) {
+            super(context, textViewResourceId, objects);
+
+            for (int i = 0; i < objects.size(); i++)
+                mIdMap.put(objects.get(i), i);
+        }
+    }
+*/
     public void onUserPortalActivity(View view) {
         Intent intent = new Intent(this, UserPortalActivity.class);
         startActivity(intent);
     }
-
+/*
     private void initTextViewPortal() {
         TextView textViewPortal = findViewById(R.id.textViewPortal);
         textViewPortal.setOnClickListener(new View.OnClickListener() {
@@ -66,7 +82,7 @@ public class UserPortalActivity extends Activity {
             }
         });
     }
-
+*/
     private void initViews() {
         editTextName = findViewById(R.id.editTextName);
         editTextDesc = findViewById(R.id.editTextDesc);
@@ -83,7 +99,7 @@ public class UserPortalActivity extends Activity {
 
         if (Name.isEmpty()) {
             valid = false;
-            textInputLayoutName.setError("Please enter valid username!");
+            textInputLayoutName.setError("Please enter valid name!");
         }
         else {
             valid = true;

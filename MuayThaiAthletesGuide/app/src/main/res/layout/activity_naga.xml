@@ -27,24 +27,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorText"
-                android:textSize="25sp"
-                android:text="@string/wca_title"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorText"
-                android:layout_marginTop="25dp"
-                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
                 android:text="@string/about" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorText"
-                android:layout_marginTop="25dp"
-                android:textSize="20sp"
-                android:text="@string/address" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -52,19 +38,11 @@
                 android:textSize="20sp"
                 android:text="@string/phone" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorText"
-                android:layout_marginTop="10dp"
-                android:textSize="20sp"
-                android:text="@string/url" />
-
             <Button
                 android:id="@+id/coachesButton"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/gradient_button"
                 android:onClick="onCoachesActivity"
                 android:text="@string/coaches"/>
@@ -74,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="100dp"
                 android:background="@drawable/gradient_button"
                 android:onClick="onScheduleActivity"
                 android:text="@string/schedule_button"/>
