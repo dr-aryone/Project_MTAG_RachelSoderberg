@@ -8,9 +8,10 @@ import android.support.design.widget.TextInputLayout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.ListView;
 
 // https://stackoverflow.com/questions/26700897/printing-sqlite-entries-into-a-listview
+// http://instinctcoder.com/android-studio-sqlite-database-example/
 
 public class UserPortalActivity extends Activity {
     PortalSqliteHelper portalSqliteHelper;
@@ -19,9 +20,10 @@ public class UserPortalActivity extends Activity {
     TextInputLayout textInputLayoutName;
     TextInputLayout textInputLayoutDesc;
     Button buttonPortal;
-    //ListView listViewPortal;
-    TextView textViewPortalName;
-    TextView textViewPortalDesc;
+    ListView listViewPortalName;
+    ListView listViewPortalDesc;
+    //TextView textViewPortalName;
+    //TextView textViewPortalDesc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +32,16 @@ public class UserPortalActivity extends Activity {
 
         portalSqliteHelper = new PortalSqliteHelper(this);
         //listViewPortal = (ListView)findViewById(R.id.listViewPortal);
-        textViewPortalName = (TextView)findViewById(R.id.textViewPortalName);
-        textViewPortalDesc = (TextView)findViewById(R.id.textViewPortalDesc);
+        //textViewPortalName = (TextView)findViewById(R.id.textViewPortalName);
+        //textViewPortalDesc = (TextView)findViewById(R.id.textViewPortalDesc);
+        listViewPortalName = (ListView)findViewById(R.id.listViewPortalName);
+        listViewPortalDesc = (ListView)findViewById(R.id.listViewPortalDesc);
 
         //initTextViewPortal();
         initViews();
+
+        // For all items in db, add to listview
+        // For all items in listview, print to activity
 
         buttonPortal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,8 +54,9 @@ public class UserPortalActivity extends Activity {
                         portalSqliteHelper.addPortal(new Portal(Name, Desc));
                         Snackbar.make(buttonPortal, "Added successfully! ", Snackbar.LENGTH_LONG).show();
 
-                        textViewPortalName.setText(Name);
-                        textViewPortalDesc.setText(Desc);
+                        //textViewPortalName.setText(Name);
+                        //textViewPortalDesc.setText(Desc);
+
                     }else {
                         Snackbar.make(buttonPortal, "That name already exists! ", Snackbar.LENGTH_LONG).show();
                     }

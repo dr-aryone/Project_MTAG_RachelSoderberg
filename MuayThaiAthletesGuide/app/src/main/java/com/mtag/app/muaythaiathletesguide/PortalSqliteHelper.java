@@ -26,6 +26,7 @@ public class PortalSqliteHelper extends SQLiteOpenHelper {
 
     public PortalSqliteHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+
     }
 
     @Override

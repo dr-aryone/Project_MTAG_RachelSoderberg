@@ -55,16 +55,16 @@
             android:onClick="onUserPortalActivity"
             android:text="@string/store_input_button" />
 
-        <TextView
-            android:id="@+id/textViewPortalName"
+        <ListView
+            android:id="@+id/listViewPortalName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
             android:gravity="center"
             android:textColor="@color/colorAccent" />
-        <TextView
-            android:id="@+id/textViewPortalDesc"
+        <ListView
+            android:id="@+id/listViewPortalDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

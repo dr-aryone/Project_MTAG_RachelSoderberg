@@ -79,14 +79,14 @@ public final class R {
         public static final int italic = 0x7f090063;
         public static final int line1 = 0x7f09006b;
         public static final int line3 = 0x7f09006c;
-        public static final int normal = 0x7f09007f;
-        public static final int notification_background = 0x7f090080;
-        public static final int notification_main_column = 0x7f090081;
-        public static final int notification_main_column_container = 0x7f090082;
-        public static final int right_icon = 0x7f09008f;
-        public static final int right_side = 0x7f090090;
-        public static final int text = 0x7f0900c1;
-        public static final int text2 = 0x7f0900c2;
+        public static final int normal = 0x7f090081;
+        public static final int notification_background = 0x7f090082;
+        public static final int notification_main_column = 0x7f090083;
+        public static final int notification_main_column_container = 0x7f090084;
+        public static final int right_icon = 0x7f090091;
+        public static final int right_side = 0x7f090092;
+        public static final int text = 0x7f0900c3;
+        public static final int text2 = 0x7f0900c4;
         public static final int time = 0x7f0900d4;
         public static final int title = 0x7f0900db;
     }
