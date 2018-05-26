@@ -52,13 +52,13 @@
         <activity android:name="com.mtag.app.muaythaiathletesguide.UserPortalActivity" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.CoachesActivity" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.ScheduleActivity" />
-        <activity android:name="com.mtag.app.muaythaiathletesguide.LiftsActivity" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.BasicTimerActivity" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.CountdownTimerActivity" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.TabataTimerActivity" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.FGBTimerActivity" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.ThreeOnTimerActivity" />
         <activity android:name="com.mtag.app.muaythaiathletesguide.FiveOnTimerActivity" />
+        <activity android:name="com.mtag.app.muaythaiathletesguide.PortalDetail" />
 
         <meta-data
             android:name="android.support.VERSION"

@@ -36,13 +36,13 @@
         <activity android:name=".UserPortalActivity" />
         <activity android:name=".CoachesActivity" />
         <activity android:name=".ScheduleActivity" />
-        <activity android:name=".LiftsActivity" />
         <activity android:name=".BasicTimerActivity" />
         <activity android:name=".CountdownTimerActivity" />
         <activity android:name=".TabataTimerActivity" />
         <activity android:name=".FGBTimerActivity" />
         <activity android:name=".ThreeOnTimerActivity" />
         <activity android:name=".FiveOnTimerActivity" />
+        <activity android:name=".PortalDetail" />
     </application>
 
 </manifest>

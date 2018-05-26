@@ -179,34 +179,34 @@ activity#com.mtag.app.muaythaiathletesguide.ScheduleActivity
 ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:38:9-54
 	android:name
 		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:38:19-51
-activity#com.mtag.app.muaythaiathletesguide.LiftsActivity
-ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:39:9-51
-	android:name
-		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:39:19-48
 activity#com.mtag.app.muaythaiathletesguide.BasicTimerActivity
-ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:40:9-56
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:39:9-56
 	android:name
-		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:40:19-53
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:39:19-53
 activity#com.mtag.app.muaythaiathletesguide.CountdownTimerActivity
-ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:41:9-60
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:40:9-60
 	android:name
-		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:41:19-57
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:40:19-57
 activity#com.mtag.app.muaythaiathletesguide.TabataTimerActivity
-ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:42:9-57
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:41:9-57
 	android:name
-		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:42:19-54
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:41:19-54
 activity#com.mtag.app.muaythaiathletesguide.FGBTimerActivity
-ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:43:9-54
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:42:9-54
 	android:name
-		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:43:19-51
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:42:19-51
 activity#com.mtag.app.muaythaiathletesguide.ThreeOnTimerActivity
-ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:44:9-58
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:43:9-58
 	android:name
-		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:44:19-55
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:43:19-55
 activity#com.mtag.app.muaythaiathletesguide.FiveOnTimerActivity
-ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:45:9-57
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:44:9-57
 	android:name
-		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:45:19-54
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:44:19-54
+activity#com.mtag.app.muaythaiathletesguide.PortalDetail
+ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:45:9-50
+	android:name
+		ADDED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml:45:19-47
 uses-sdk
 INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Rachel\Project_MTAG_RachelSoderberg\MuayThaiAthletesGuide\app\src\main\AndroidManifest.xml
