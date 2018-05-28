@@ -1,7 +1,5 @@
 package com.mtag.app.muaythaiathletesguide;
 
-// http://instinctcoder.com/android-studio-sqlite-database-example/
-
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,7 +30,7 @@ public class UserPortalActivity extends ListActivity  implements android.view.Vi
             PortalRepo repo = new PortalRepo(this);
 
             ArrayList<HashMap<String, String>> portalList =  repo.getPortalList();
-            if(portalList.size()!=0) {
+            if (portalList.size() != 0) {
                 ListView lv = getListView();
                 lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -44,9 +42,12 @@ public class UserPortalActivity extends ListActivity  implements android.view.Vi
                         startActivity(objIndent);
                     }
                 });
-                ListAdapter adapter = new SimpleAdapter( UserPortalActivity.this,portalList, R.layout.view_portal_entry, new String[] { "portal_id","inName"}, new int[] {R.id.portal_id, R.id.in_name});
+                ListAdapter adapter = new SimpleAdapter( UserPortalActivity.this, portalList,
+                        R.layout.view_portal_entry, new String[] { "portal_id","inName"},
+                        new int[] {R.id.portal_id, R.id.in_name});
                 setListAdapter(adapter);
-            }else{
+            }
+            else{
                 Toast.makeText(this,"No content!",Toast.LENGTH_SHORT).show();
             }
         }

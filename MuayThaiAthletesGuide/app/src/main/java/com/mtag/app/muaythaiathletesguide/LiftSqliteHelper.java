@@ -25,16 +25,12 @@ public class LiftSqliteHelper extends SQLiteOpenHelper {
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "liftName TEXT, " + "liftDesc TEXT )";
 
-        // Create lifts table
         db.execSQL(SQL_TABLE_LIFTS);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // Delete old table
         db.execSQL("DROP TABLE IF EXISTS lifts");
-
-        // Create fresh table
         this.onCreate(db);
     }
 

@@ -5,32 +5,21 @@
     android:layout_height="fill_parent"
     android:layout_gravity="center_vertical"
     android:padding="16dp"
-    android:orientation="vertical">
-    <!--android:background="@color/colorPrimary">-->
+    android:orientation="vertical"
+    android:background="@color/colorPrimary" >
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:textSize="20sp"
+        android:textColor="@color/colorText"
         android:text="@string/liftsText" />
-        <!--android:textColor="@color/colorText" />-->
-<!--
-    <EditText
-        android:id="@+id/myFilter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:ems="10"
-        android:background="@color/colorAccent"
-        android:hint="@string/defaultHint">
-        <requestFocus />
-    </EditText>
--->
 
     <ListView
         android:id="@+id/listViewLifts"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+        android:layout_height="fill_parent"
+        android:background="@color/colorText"/>
 
 </LinearLayout>

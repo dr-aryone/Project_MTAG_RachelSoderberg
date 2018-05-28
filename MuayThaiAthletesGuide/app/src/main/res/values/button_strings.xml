@@ -18,7 +18,8 @@
     <string name="videos_button">Videos</string>
 
     <!-- User Portal Activity -->
-    <string name="store_input_button">Store Input</string>
+    <string name="list_all">List All</string>
+    <string name="add">Add</string>
 
     <!-- Naga Activity -->
     <string name="schedule_button">Schedule</string>

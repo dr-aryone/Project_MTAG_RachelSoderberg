@@ -12,25 +12,11 @@ import java.util.HashMap;
 import java.util.List;
 
 public class MartialActivity extends Activity {
-    private MartialSqliteHelper db;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_martial);
 
-        db = new MartialSqliteHelper(this);
-
-        db.addMartial(new Martial("Boxing Workout 1", "(0:00) Jab - Cross - Hook\n(1:00) Rapid Fire Jab - Cross\n(2:00) Heavy L Hook - Heavy R Hook", "3:00 on Clock"));
-        db.addMartial(new Martial("Boxing Workout 2", "(0:00) Jab - Parry - Right - Duck\n(1:00)Rapid Fire L Hook - R Hook\n(2:00)Jab - Heavy Cross", "3:00 on Clock"));
-        db.addMartial(new Martial("Boxing Workout 3", "(0:00) Jab - L Hook Body - Cross\n(1:00) Jab - Jab - Heavy Cross\n(2:00) Rapid Fire Jab - Cross", "3:00 on Clock"));
-        db.addMartial(new Martial("Muay Thai Workout 1", "(0:00) Rapid Fire L Hook - R Hook\n(1:00) Alternate Teeps\n(2:00) Rapid Fire Jab - Cross", "3:00 on Clock"));
-        db.addMartial(new Martial("Muay Thai Workout 2", "(0:00) Jab - Cross - Block (L Kick) - L Kick\n(1:00) 2x R Kick - 2x L Kick\n(2:00) Rapid Fire Alternate Teeps", "3:00 on Clock"));
-        db.addMartial(new Martial("Muay Thai Workout 3", "(0:00) R Teep - R Knee - R Elbow\n(1:00) L Teep - L Knee - L Elbow\n(2:00) Rapid Fire Jab - Cross", "3:00 on Clock"));
-        db.addMartial(new Martial("Full Body Workout", "(0:00) Rapid Fire L Hook Body - R Hook Body\n(1:00) Crunches/Sit Ups\n{2:00) Burpees", "3:00 on Clock"));
-        db.addMartial(new Martial("Core Strength Cardio", "(0:00) Sit Ups/Crunches\n(1:00) High Knees\n(2:00) Sit Ups/Crunches", "3:00 on Clock"));
-
-        // Presentation string array output to ListView
         final ListView listViewMartial = findViewById(R.id.listViewMartial);
         String[] values = new String[]{ "Boxing Workout 1\n(0:00) Jab - Cross - Hook\n(1:00) Rapid Fire Jab - Cross\n(2:00) Heavy L Hook - Heavy R Hook\n3:00 on Clock",
                 "Boxing Workout 2\n(0:00) Jab - Parry - Right - Duck\n(1:00)Rapid Fire L Hook - R Hook\n(2:00)Jab - Heavy Cross\n3:00 on Clock",

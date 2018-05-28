@@ -15,16 +15,15 @@ import android.widget.Toast;
 import java.util.Locale;
 
 public class TabataTimerActivity extends Activity {
-    // Add sounds to the media player
     MediaPlayer airhornPlayer;
-    MediaPlayer beeppingPlayer; // Unused
-    MediaPlayer boxingarenaPlayer; // Unused
+    MediaPlayer beeppingPlayer;
+    MediaPlayer boxingarenaPlayer;
     MediaPlayer shipbellPlayer;
     MediaPlayer tingPlayer;
 
-    private int seconds = 0; // Number of seconds passed
-    private int timeCap = 0; // Custom max time, stop timer when reached and reset here for countdown
-    private boolean running; // Check whether timer is running
+    private int seconds = 0;
+    private int timeCap = 0;
+    private boolean running;
     private boolean wasRunning;
 
     @Override
@@ -32,31 +31,25 @@ public class TabataTimerActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabata_timer);
 
-        // Start sound operations
         airhornPlayer = MediaPlayer.create(TabataTimerActivity.this, R.raw.airhorn);
         beeppingPlayer = MediaPlayer.create(TabataTimerActivity.this, R.raw.beepping); // Unused
         boxingarenaPlayer = MediaPlayer.create(TabataTimerActivity.this, R.raw.boxingarena); // Unused
         shipbellPlayer = MediaPlayer.create(TabataTimerActivity.this, R.raw.shipbell);
         tingPlayer = MediaPlayer.create(TabataTimerActivity.this, R.raw.ting);
 
-        // Timer Selection Spinner
         Spinner timerSpinner = findViewById(R.id.timer_spinner);
-        // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.timer_spinner, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
         timerSpinner.setAdapter(adapter);
         timerSpinner.setSelection(adapter.getPosition("Tabata"));
-        // Spinner click listener
         timerSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int timerPos, long id) {
-                // Call Timer types when corresponding position is chosen
                 switch (timerPos) {
                     case 0: // Basic Stopwatch: Count from 0:00:00 to 99:59:59 (or cap)
                         onDestroy();
-                        running = false; // Stop clock
+                        running = false;
                         timeCap = 6000;
                         startActivity(new Intent(TabataTimerActivity.this, BasicTimerActivity.class));
                         break;
@@ -103,7 +96,6 @@ public class TabataTimerActivity extends Activity {
     }
 
     @Override
-    // Save the state of variables
     public void onSaveInstanceState(Bundle savedInstanceState) {
         savedInstanceState.putInt("seconds", seconds);
         savedInstanceState.putBoolean("running", running);
@@ -113,7 +105,6 @@ public class TabataTimerActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        // If the stopwatch was running at stop, set it running again
         if (wasRunning)
             running = true;
     }
@@ -121,7 +112,6 @@ public class TabataTimerActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-        // Record state of stopwatch, running or not running
         wasRunning = running;
         running = false;
     }
@@ -129,16 +119,16 @@ public class TabataTimerActivity extends Activity {
     public void onClickStart(View view) {
         if (seconds == 0)
             airhornPlayer.start();
-        running = true; // Start stopwatch
+        running = true;
     }
 
     public void onClickStop(View view) {
-        running = false; // Stop stopwatch
+        running = false;
     }
 
     public void onClickReset(View view) {
         onPause();
-        seconds = timeCap; // Reset seconds to zero
+        seconds = timeCap;
     }
 
     private void runTabataTimer() {
@@ -150,7 +140,6 @@ public class TabataTimerActivity extends Activity {
                 int hours = seconds / 3600;
                 int minutes = (seconds % 3600) / 60;
                 int secs = seconds % 60;
-                // Format time to hours, minutes, and seconds
                 String time = String.format(Locale.getDefault(), "%d:%02d:%02d", hours, minutes, secs);
                 timeView.setText(time);
                 if (running) {
@@ -163,7 +152,6 @@ public class TabataTimerActivity extends Activity {
                         seconds = 0;
                     }
                 }
-                // Post code again with delay of one second
                 handler.postDelayed(this, 1000);
             }
         });

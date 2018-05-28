@@ -5,7 +5,6 @@ public class Combo {
     public String comboName;
     public String combo;
 
-    // Constructor
     public Combo(){}
 
     public Combo(String comboName, String combo) {

@@ -2,5 +2,4 @@
 <resources>
     <!--activity_combos.xml-->
     <string name="combosText">Muay Thai Combos</string>
-    <string name="combosHint">Type here to filter</string>
 </resources>

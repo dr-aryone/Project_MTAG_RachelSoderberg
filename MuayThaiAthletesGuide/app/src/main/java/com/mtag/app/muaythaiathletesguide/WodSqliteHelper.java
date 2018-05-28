@@ -26,16 +26,12 @@ public class WodSqliteHelper extends SQLiteOpenHelper{
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "wodName TEXT, " + "wodDesc TEXT, " + "wodTimeLimit )";
 
-        // Create wods table
         db.execSQL(SQL_TABLE_WODS);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // Delete old table
         db.execSQL("DROP TABLE IF EXISTS lifts");
-
-        // Create fresh table
         this.onCreate(db);
     }
 

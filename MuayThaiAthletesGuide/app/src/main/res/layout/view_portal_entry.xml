@@ -3,12 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
     <TextView
         android:id="@+id/portal_id"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:textColor="@color/colorText"/>
 
     <TextView
         android:id="@+id/in_name"
@@ -17,14 +19,15 @@
         android:paddingLeft="6dip"
         android:paddingTop="6dip"
         android:textSize="22sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@color/colorText" />
 
     <TextView
-        android:id="@+id/in_desc"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="6dip"
         android:paddingTop="6dip"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        android:textColor="@color/colorText" />
 
 </LinearLayout>

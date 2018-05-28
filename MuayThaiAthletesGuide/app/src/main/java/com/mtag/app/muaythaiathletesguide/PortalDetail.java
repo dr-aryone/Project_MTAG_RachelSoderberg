@@ -13,7 +13,8 @@ public class PortalDetail extends AppCompatActivity implements android.view.View
     Button backButton;
     EditText editTextName;
     EditText editTextDesc;
-    private int _Portal_Id =0;
+
+    private int _Portal_Id = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +32,9 @@ public class PortalDetail extends AppCompatActivity implements android.view.View
         deleteButton.setOnClickListener(this);
         backButton.setOnClickListener(this);
 
-        _Portal_Id =0;
+        _Portal_Id = 0;
         Intent intent = getIntent();
-        _Portal_Id =intent.getIntExtra("portal_id", 0);
+        _Portal_Id = intent.getIntExtra("portal_id", 0);
         PortalRepo repo = new PortalRepo(this);
         Portal portal = new Portal();
         portal = repo.getPortalById(_Portal_Id);
@@ -52,7 +53,7 @@ public class PortalDetail extends AppCompatActivity implements android.view.View
 
             if (_Portal_Id == 0){
                 _Portal_Id = repo.insert(portal);
-                Toast.makeText(this,"New Item Inserted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"New Record Inserted", Toast.LENGTH_SHORT).show();
             }
             else{
                 repo.update(portal);
@@ -62,9 +63,10 @@ public class PortalDetail extends AppCompatActivity implements android.view.View
         else if (view == findViewById(R.id.deleteButton)){
             PortalRepo repo = new PortalRepo(this);
             repo.delete(_Portal_Id);
-            Toast.makeText(this, "Record Deleted", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Record Deleted", Toast.LENGTH_SHORT).show();
             finish();
-        }else if (view == findViewById(R.id.backButton)){
+        }
+        else if (view == findViewById(R.id.backButton)){
             finish();
         }
     }

@@ -41,7 +41,6 @@ public class RegisterActivity extends Activity {
                     String Password = editTextPassword.getText().toString();
                     String Rank = editTextRank.getText().toString();
 
-                    //Check in the database is there any user associated with  this email
                     if (!userSqliteHelper.isEmailExists(Email)) {
                         userSqliteHelper.addUser(new User(null, UserName, Email, Password, Rank));
                         Snackbar.make(buttonRegister, "User created successfully! Please Login ", Snackbar.LENGTH_LONG).show();
@@ -69,7 +68,6 @@ public class RegisterActivity extends Activity {
         });
     }
 
-    //this method is used to connect XML views to its Objects
     private void initViews() {
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
@@ -82,62 +80,63 @@ public class RegisterActivity extends Activity {
         buttonRegister = findViewById(R.id.buttonRegister);
     }
 
-    //This method is used to validate input given by user
     public boolean validate() {
         boolean valid = false;
 
-        //Get values from EditText fields
         String UserName = editTextUserName.getText().toString();
         String Email = editTextEmail.getText().toString();
         String Password = editTextPassword.getText().toString();
         String Rank = editTextRank.getText().toString();
 
-        //Handling validation for UserName field
         if (UserName.isEmpty()) {
             valid = false;
             textInputLayoutUserName.setError("Please enter valid username!");
-        } else {
+        }
+        else {
             if (UserName.length() > 5) {
                 valid = true;
                 textInputLayoutUserName.setError(null);
-            } else {
+            }
+            else {
                 valid = false;
                 textInputLayoutUserName.setError("Username is too short!");
             }
         }
 
-        //Handling validation for Email field
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
             valid = false;
             textInputLayoutEmail.setError("Please enter valid email!");
-        } else {
+        }
+        else {
             valid = true;
             textInputLayoutEmail.setError(null);
         }
 
-        //Handling validation for Password field
         if (Password.isEmpty()) {
             valid = false;
             textInputLayoutPassword.setError("Please enter valid password!");
-        } else {
+        }
+        else {
             if (Password.length() > 5) {
                 valid = true;
                 textInputLayoutPassword.setError(null);
-            } else {
+            }
+            else {
                 valid = false;
                 textInputLayoutPassword.setError("Password is to short!");
             }
         }
 
-        //Handling validation for Rank field
         if (Rank.isEmpty()) {
             valid = false;
             textInputLayoutRank.setError("Please enter valid rank!");
-        } else {
+        }
+        else {
             if (Rank.contentEquals("Coach") || Rank.contentEquals("Student")) {
                 valid = true;
                 textInputLayoutRank.setError(null);
-            } else {
+            }
+            else {
                 valid = false;
                 textInputLayoutRank.setError("Invalid Rank, please enter Coach or Student!");
             }

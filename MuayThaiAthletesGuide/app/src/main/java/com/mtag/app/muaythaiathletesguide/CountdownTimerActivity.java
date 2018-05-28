@@ -15,16 +15,15 @@ import android.widget.Toast;
 import java.util.Locale;
 
 public class CountdownTimerActivity extends Activity {
-    // Add sounds to the media player
     MediaPlayer airhornPlayer;
     MediaPlayer beeppingPlayer;
     MediaPlayer boxingarenaPlayer;
     MediaPlayer shipbellPlayer; // Unused
     MediaPlayer tingPlayer;
 
-    private int seconds = 0; // Number of seconds passed
-    private int timeCap = 0; // Custom max time, stop timer when reached and reset here for countdown
-    private boolean running; // Check whether timer is running
+    private int seconds = 0;
+    private int timeCap = 0;
+    private boolean running;
     private boolean wasRunning;
 
     @Override
@@ -32,31 +31,25 @@ public class CountdownTimerActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_countdown_timer);
 
-        // Start sound operations
         airhornPlayer = MediaPlayer.create(CountdownTimerActivity.this, R.raw.airhorn);
         beeppingPlayer = MediaPlayer.create(CountdownTimerActivity.this, R.raw.beepping);
         boxingarenaPlayer = MediaPlayer.create(CountdownTimerActivity.this, R.raw.boxingarena);
         shipbellPlayer = MediaPlayer.create(CountdownTimerActivity.this, R.raw.shipbell); // Unused
         tingPlayer = MediaPlayer.create(CountdownTimerActivity.this, R.raw.ting);
 
-        // Timer Selection Spinner
         Spinner timerSpinner = findViewById(R.id.timer_spinner);
-        // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.timer_spinner, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
         timerSpinner.setAdapter(adapter);
         timerSpinner.setSelection(adapter.getPosition("Countdown"));
-        // Spinner click listener
         timerSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int timerPos, long id) {
-                // Call Timer types when corresponding position is chosen
                 switch (timerPos) {
                     case 0: // Basic Stopwatch: Count from 0:00:00 to 99:59:59 (or cap)
                         onDestroy();
-                        running = false; // Stop clock
+                        running = false;
                         timeCap = 6000;
                         startActivity(new Intent(CountdownTimerActivity.this, BasicTimerActivity.class));
                         break;
@@ -100,7 +93,6 @@ public class CountdownTimerActivity extends Activity {
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        // Time Cap Selection Spinner
         Spinner timecapSpinner = findViewById(R.id.timecap_spinner);
         ArrayAdapter<CharSequence> capadapter = ArrayAdapter.createFromResource(this,
                 R.array.timecap_spinner, android.R.layout.simple_spinner_item);
@@ -109,7 +101,6 @@ public class CountdownTimerActivity extends Activity {
         timecapSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int timeCapPos, long id) {
-                // Set time cap to user's selection
                 switch(timeCapPos) {
                     case 0: // 60:00
                         running = false;
@@ -247,7 +238,6 @@ public class CountdownTimerActivity extends Activity {
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        // Restore activity's state by getting values from Bundle
         if (savedInstanceState != null && running) {
             seconds = savedInstanceState.getInt("seconds");
             running = savedInstanceState.getBoolean("running");
@@ -256,7 +246,6 @@ public class CountdownTimerActivity extends Activity {
     }
 
     @Override
-    // Save the state of variables
     public void onSaveInstanceState(Bundle savedInstanceState) {
         savedInstanceState.putInt("seconds", seconds);
         savedInstanceState.putBoolean("running", running);
@@ -266,7 +255,6 @@ public class CountdownTimerActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        // If the stopwatch was running at stop, set it running again
         if (wasRunning)
             running = true;
     }
@@ -274,7 +262,6 @@ public class CountdownTimerActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-        // Record state of stopwatch, running or not running
         wasRunning = running;
         running = false;
     }
@@ -282,16 +269,16 @@ public class CountdownTimerActivity extends Activity {
     public void onClickStart(View view) {
         if (seconds == timeCap)
             airhornPlayer.start();
-        running = true; // Start stopwatch
+        running = true;
     }
 
     public void onClickStop(View view) {
-        running = false; // Stop stopwatch
+        running = false;
     }
 
     public void onClickReset(View view) {
         onPause();
-        seconds = timeCap; // Reset seconds to zero
+        seconds = timeCap;
     }
 
     private void runCountdownTimer() {
@@ -303,7 +290,6 @@ public class CountdownTimerActivity extends Activity {
                 int hours = seconds / 3600;
                 int minutes = (seconds % 3600) / 60;
                 int secs = seconds % 60;
-                // Format time to hours, minutes, and seconds
                 String time = String.format(Locale.getDefault(), "%d:%02d:%02d", hours, minutes, secs);
                 timeView.setText(time);
 
@@ -312,12 +298,10 @@ public class CountdownTimerActivity extends Activity {
                     if (seconds == 3 || seconds == 2 || seconds == 1)
                         beeppingPlayer.start();
                 }
-                // Don't allow timer to go under 0:00:00
                 if (seconds <= 1) {
                     boxingarenaPlayer.start();
                     running = false;
                 }
-                // Post code again with delay of one second
                 handler.postDelayed(this, 1000);
             }
         });

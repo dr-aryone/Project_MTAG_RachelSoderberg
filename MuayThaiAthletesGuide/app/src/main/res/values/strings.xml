@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">MuayThaiAthletesGuide</string>
-    <string name="defaultHint">Type here to filter</string>
     <string name="rank">Coach/Student</string>
 
     <!--User Portal Activity-->

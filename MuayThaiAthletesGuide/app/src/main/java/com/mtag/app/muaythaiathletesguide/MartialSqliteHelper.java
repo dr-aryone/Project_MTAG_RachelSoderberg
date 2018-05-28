@@ -26,16 +26,12 @@ public class MartialSqliteHelper extends SQLiteOpenHelper{
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "martialName TEXT, " + "martialDesc TEXT, " + "martialTimeLimit )";
 
-        // Create lifts table
         db.execSQL(SQL_TABLE_MARTIAL);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // Delete old table
         db.execSQL("DROP TABLE IF EXISTS martial");
-
-        // Create fresh table
         this.onCreate(db);
     }
 

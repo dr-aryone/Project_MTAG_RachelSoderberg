@@ -32,17 +32,13 @@ public class LoginActivity extends Activity {
             @Override
             public void onClick(View view) {
                 if (validate()) {
-                    // Get values
                     String Email = editTextEmail.getText().toString();
                     String Password = editTextPassword.getText().toString();
 
-                    // Authenticate user
                     User currentUser = userSqliteHelper.Authenticate(new User(null, null, Email, Password, null));
 
-                    // Authentication successful?
                     if (currentUser != null) {
                         Snackbar.make(buttonLogin, "Successfully Logged in!", Snackbar.LENGTH_LONG).show();
-                        // Login successful, launch HomeActivity
                         if (currentUser.rank.contentEquals("Student")) {
                             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                             startActivity(intent);
@@ -53,7 +49,6 @@ public class LoginActivity extends Activity {
                         }
                         finish();
                     } else {
-                        // Login failed
                         Snackbar.make(buttonLogin, "Failed to log in , please try again", Snackbar.LENGTH_LONG).show();
                     }
                 }
@@ -61,10 +56,10 @@ public class LoginActivity extends Activity {
         });
     }
 
-    // Set TextView text and click event for account creation
     private void initCreateAccountTextView() {
         TextView textViewCreateAccount = findViewById(R.id.textViewCreateAccount);
-        textViewCreateAccount.setText(fromHtml("<font color='#ffffff'>I don't have account yet. </font><font color='#0c0099'>create one</font>"));
+        textViewCreateAccount.setText(fromHtml("<font color='#ffffff'>I don't have account yet." +
+                "</font><font color='#0c0099'>create one</font>"));
         textViewCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,7 +69,6 @@ public class LoginActivity extends Activity {
         });
     }
 
-    // Connect XML views to their objects
     private void initViews() {
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
@@ -83,42 +77,42 @@ public class LoginActivity extends Activity {
         buttonLogin = findViewById(R.id.buttonLogin);
     }
 
-    // Handling fromHtml method deprecation
     @SuppressWarnings("deprecation")
     public static Spanned fromHtml(String html) {
         Spanned result;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
             result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
-        } else {
+        }
+        else {
             result = Html.fromHtml(html);
         }
         return result;
     }
 
-    // Validate user input
     public boolean validate() {
         boolean valid = false;
         String Email = editTextEmail.getText().toString();
         String Password = editTextPassword.getText().toString();
 
-        // Validate Email field
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
             valid = false;
             textInputLayoutEmail.setError("Invalid email address");
-        } else {
+        }
+        else {
             valid = true;
             textInputLayoutEmail.setError(null);
         }
 
-        // Validate Password field
         if (Password.isEmpty()) {
             valid = false;
             textInputLayoutPassword.setError("Invalid password");
-        } else {
+        }
+        else {
             if (Password.length() > 5) {
                 valid = true;
                 textInputLayoutPassword.setError(null);
-            } else {
+            }
+            else {
                 valid = false;
                 textInputLayoutPassword.setError("Password is too short!");
             }

@@ -12,28 +12,11 @@ import java.util.HashMap;
 import java.util.List;
 
 public class LiftingActivity extends Activity {
-    private LiftSqliteHelper db;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lifting);
 
-        db = new LiftSqliteHelper(this);
-
-        db.addLift(new Lift("Deadlift", "5 sets of 5 reps, increase weight each set"));
-        db.addLift(new Lift("Front Squat", "7 sets of 3 reps, increase weight each set"));
-        db.addLift(new Lift("Shoulder Press", "3 sets of 5 reps, then 3 sets of 3 reps heavier"));
-        db.addLift(new Lift("Bench Press", "4 sets of 12 reps, work up to one heavy weight"));
-        db.addLift(new Lift("Back Squat", "5 sets of 6 reps, increase weight each set"));
-        db.addLift(new Lift("Overhead Squat", "5 sets of 3 reps, work up to one heavy weight"));
-        db.addLift(new Lift("Power Clean", "4 sets of 4 reps, increase weight each set"));
-        db.addLift(new Lift("Dumbbell Bench Press", "4 sets of 12 reps, work up to one heavy weight"));
-        db.addLift(new Lift("Dumbbell Shrug", "4 sets of 12 reps, increase weight each set"));
-        db.addLift(new Lift("Dumbbell or Barbell Row", "3 sets of 12 reps, work up to one heavy weight"));
-        db.addLift(new Lift("Kettlebell Clean and Jerk", "3 sets of 10 reps, work up to one heavy weight"));
-
-        // Presentation string array output to ListView
         final ListView listViewLifts = findViewById(R.id.listViewLifts);
         String[] values = new String[]{ "Deadlift\n5 sets of 5 reps, increase weight each set",
                 "Front Squat\n7 sets of 3 reps, increase weight each set",
