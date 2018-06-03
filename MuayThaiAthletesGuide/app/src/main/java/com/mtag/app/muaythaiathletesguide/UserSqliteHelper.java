@@ -49,6 +49,8 @@ public class UserSqliteHelper extends SQLiteOpenHelper {
         values.put(KEY_EMAIL, user.email);
         values.put(KEY_PASSWORD, user.password);
         values.put(KEY_RANK, user.rank);
+
+        long todo_id = db.insert(TABLE_USERS, null, values);
     }
 
     public User Authenticate(User user) {

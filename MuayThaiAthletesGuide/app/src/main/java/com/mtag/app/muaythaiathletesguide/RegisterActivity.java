@@ -21,7 +21,6 @@ public class RegisterActivity extends Activity {
     TextInputLayout textInputLayoutPassword;
     TextInputLayout textInputLayoutRank;
     Button buttonRegister;
-
     UserSqliteHelper userSqliteHelper;
 
     @Override
@@ -50,7 +49,8 @@ public class RegisterActivity extends Activity {
                                 finish();
                             }
                         }, Snackbar.LENGTH_LONG);
-                    }else {
+                    }
+                    else {
                         Snackbar.make(buttonRegister, "User already exists with same email ", Snackbar.LENGTH_LONG).show();
                     }
                 }
